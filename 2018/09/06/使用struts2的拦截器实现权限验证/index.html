@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="应用场景：对于需要用户登录的网页进行身份验证，比如未登录不能浏览相关内容并跳转到登录页面。 一、在struts.xml配置文件中定义拦截器123456&amp;lt;package name=&amp;quot;default&amp;quot; extends=&amp;quot;struts-default&amp;quot;&amp;gt;   &amp;lt;!-- 定义了一个名为authority的拦截器 --&amp;gt;   &amp;lt;inter">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用struts2的拦截器实现权限验证">
+<meta property="og:url" content="http://yoursite.com/2018/09/06/使用struts2的拦截器实现权限验证/index.html">
+<meta property="og:site_name" content="Wangsr&#39;s Notes">
+<meta property="og:description" content="应用场景：对于需要用户登录的网页进行身份验证，比如未登录不能浏览相关内容并跳转到登录页面。 一、在struts.xml配置文件中定义拦截器123456&amp;lt;package name=&amp;quot;default&amp;quot; extends=&amp;quot;struts-default&amp;quot;&amp;gt;   &amp;lt;!-- 定义了一个名为authority的拦截器 --&amp;gt;   &amp;lt;inter">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-09-06T11:42:01.641Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="使用struts2的拦截器实现权限验证">
+<meta name="twitter:description" content="应用场景：对于需要用户登录的网页进行身份验证，比如未登录不能浏览相关内容并跳转到登录页面。 一、在struts.xml配置文件中定义拦截器123456&amp;lt;package name=&amp;quot;default&amp;quot; extends=&amp;quot;struts-default&amp;quot;&amp;gt;   &amp;lt;!-- 定义了一个名为authority的拦截器 --&amp;gt;   &amp;lt;inter">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/09/06/使用struts2的拦截器实现权限验证/"/>
+
+
+
+
+
+  <title>使用struts2的拦截器实现权限验证 | Wangsr's Notes</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Wangsr's Notes</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/06/使用struts2的拦截器实现权限验证/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="子非鱼">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wangsr's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">使用struts2的拦截器实现权限验证</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-06T00:00:00+08:00">
+                2018-09-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>应用场景：对于需要用户登录的网页进行身份验证，比如未登录不能浏览相关内容并跳转到登录页面。</p>
+<h2 id="一、在struts-xml配置文件中定义拦截器"><a href="#一、在struts-xml配置文件中定义拦截器" class="headerlink" title="一、在struts.xml配置文件中定义拦截器"></a>一、在struts.xml配置文件中定义拦截器</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;package name=&quot;default&quot; extends=&quot;struts-default&quot;&gt;</span><br><span class="line">   &lt;!-- 定义了一个名为authority的拦截器 --&gt;</span><br><span class="line">   &lt;interceptors&gt;</span><br><span class="line">        &lt;interceptor name=&quot;authority&quot; class=&quot;cn.wangsr.AuthorityInterceptor&quot;/&gt;</span><br><span class="line">   &lt;/interceptors&gt;</span><br><span class="line">&lt;/package&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="二、在需要进行拦截的action中使用拦截器"><a href="#二、在需要进行拦截的action中使用拦截器" class="headerlink" title="二、在需要进行拦截的action中使用拦截器"></a>二、在需要进行拦截的action中使用拦截器</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;interceptor-ref name=&quot;defaultStack&quot;&gt;&lt;/interceptor-ref&gt;</span><br><span class="line">&lt;interceptor-ref name=&quot;authority&quot;&gt;&lt;/interceptor-ref&gt;</span><br></pre></td></tr></table></figure>
+<p>注：第一行为默认拦截器，如果不适用通过拦截器后将会丢失表单所提交数据。</p>
+<h2 id="三、定义全局结果映射"><a href="#三、定义全局结果映射" class="headerlink" title="三、定义全局结果映射"></a>三、定义全局结果映射</h2><p>如果在多个action中使用了拦截器，可以定义一个全局结果映射来作为拦截器处理后的结果页。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;global-results&gt;</span><br><span class="line"> 			&lt;result name=&quot;login&quot;&gt;/WEB-INF/contents/index.jsp&lt;/result&gt;</span><br><span class="line">&lt;/global-results&gt;</span><br></pre></td></tr></table></figure></p>
+<h2 id="四、定义一个拦截器实现类"><a href="#四、定义一个拦截器实现类" class="headerlink" title="四、定义一个拦截器实现类"></a>四、定义一个拦截器实现类</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">public class AuthorityInterceptor extends AbstractInterceptor&#123;</span><br><span class="line"></span><br><span class="line">	@Override</span><br><span class="line">	public String intercept(ActionInvocation invocation) throws Exception &#123;</span><br><span class="line">		// TODO Auto-generated method stub</span><br><span class="line">		ActionContext ctx = invocation.getInvocationContext();</span><br><span class="line">		User user = (User)ctx.getSession().get(&quot;user&quot;);//在拦截器获取session中的值</span><br><span class="line"></span><br><span class="line">		if(user!=null) &#123;</span><br><span class="line">			return invocation.invoke();//继续执行其它拦截器或action</span><br><span class="line">		&#125;</span><br><span class="line">		ctx.put(&quot;timeout_tip&quot;, &quot;请重新登录&quot;);</span><br><span class="line">		return Action.LOGIN;//返回字符串所对应的result结果页</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/25/python操作excel/" rel="next" title="python使用openpyxl库操作Excel">
+                <i class="fa fa-chevron-left"></i> python使用openpyxl库操作Excel
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/09/08/Linux常用操作/" rel="prev" title="Linux 常用操作">
+                Linux 常用操作 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="子非鱼" />
+            
+              <p class="site-author-name" itemprop="name">子非鱼</p>
+              <p class="site-description motion-element" itemprop="description">人生如逆旅，我亦是闲鱼</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">28</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、在struts-xml配置文件中定义拦截器"><span class="nav-number">1.</span> <span class="nav-text">一、在struts.xml配置文件中定义拦截器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、在需要进行拦截的action中使用拦截器"><span class="nav-number">2.</span> <span class="nav-text">二、在需要进行拦截的action中使用拦截器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、定义全局结果映射"><span class="nav-number">3.</span> <span class="nav-text">三、定义全局结果映射</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、定义一个拦截器实现类"><span class="nav-number">4.</span> <span class="nav-text">四、定义一个拦截器实现类</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">子非鱼</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
