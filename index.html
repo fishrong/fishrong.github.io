@@ -1,281 +1,1862 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
+
+
 
   
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="人生如逆旅，我亦是闲鱼">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Wangsr&#39;s Notes">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="default">
+<meta property="og:site_name" content="Wangsr&#39;s Notes">
+<meta property="og:description" content="人生如逆旅，我亦是闲鱼">
+<meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="Wangsr&#39;s Notes">
+<meta name="twitter:description" content="人生如逆旅，我亦是闲鱼">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/"/>
+
+
+
+
+
+  <title>Wangsr's Notes</title>
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
+
+
+
+
+
+
+
+
 </head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Wangsr's Notes</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="posts-2017-12-16-常用Markdown语法" class="article article-type-posts" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/10/06/2017-12-16-常用Markdown语法/" class="article-date">
-  <time datetime="2018-10-06T12:16:44.061Z" itemprop="datePublished">2018-10-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/06/2017-12-16-常用Markdown语法/">常用Markdown语法</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="一、标题"><a href="#一、标题" class="headerlink" title="一、标题"></a><span>一、标题</span></h2><p>语法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 这是一级标题</span><br><span class="line">## 这是二级标题</span><br><span class="line">### 这是三级标题</span><br></pre></td></tr></table></figure></p>
-<h2 id="二、列表"><a href="#二、列表" class="headerlink" title="二、列表"></a><span>二、列表</span></h2><p>无序列表：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* one</span><br><span class="line">* two</span><br><span class="line">* three</span><br></pre></td></tr></table></figure></p>
-<p>有序列表：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. one</span><br><span class="line">2. two</span><br><span class="line">3. three</span><br></pre></td></tr></table></figure></p>
-<h2 id="三、代码"><a href="#三、代码" class="headerlink" title="三、代码"></a><span>三、代码</span></h2><p>一段代码:写在两个反引号` this is a code segement`之间<br>多段代码：写在6个反引号之间```this is a code segement```效果如图：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fist code</span><br><span class="line">second code</span><br><span class="line">third code</span><br></pre></td></tr></table></figure></p>
-<h2 id="四、链接"><a href="#四、链接" class="headerlink" title="四、链接"></a><span>四、链接</span></h2><p>语法：<code>[点击文字](这里放链接&quot;这里放鼠标停留的显示文字&quot;)</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[an example](http://example.com/ &quot;Title&quot;).</span><br></pre></td></tr></table></figure></p>
-<p>效果如图：<br><a href="http://example.com/" title="Title" target="_blank" rel="noopener">an example</a>.</p>
-<h2 id="五、图片"><a href="#五、图片" class="headerlink" title="五、图片"></a><span>五、图片</span></h2><p>语法：！<code>[加载失败时显示的文字](图片链接&quot;hover文字&quot;)</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![图片](http://img3.imgtn.bdimg.com/it/u=2386421788,3830689113&amp;fm=27&amp;gp=0.jpg &quot;图片测试&quot;)</span><br></pre></td></tr></table></figure></p>
-<p><img src="http://img3.imgtn.bdimg.com/it/u=2386421788,3830689113&amp;fm=27&amp;gp=0.jpg" alt="图片" title="图片测试"></p>
-<h2 id="几点注意事项"><a href="#几点注意事项" class="headerlink" title="几点注意事项"></a><span>几点注意事项</span></h2><p>　　1.markdown标记与文章内容要用空格隔开，否则不解析。<br>　　2.markdown语法兼容HTML,所以可以在md文件中用HTML标签。<br>　　3.图片只支持网络地址。<br>　　4.首行缩进没有专门的符号，可以将输入法切换到全角然后按两次空格实现缩进。<br>　　5.换行，段落后面敲两次以上空格回车。<br>    6.代码高亮<a href="https://highlightjs.org/usage/" target="_blank" rel="noopener">使用highlightjs</a></p>
-
+        <p class="site-subtitle"></p>
       
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/06/2017-12-16-常用Markdown语法/" data-id="cjmxfqlpk000130uik917il8e" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="posts-2017-12-17-Jekyll安装" class="article article-type-posts" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/10/06/2017-12-17-Jekyll安装/" class="article-date">
-  <time datetime="2018-10-06T12:16:44.012Z" itemprop="datePublished">2018-10-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/06/2017-12-17-Jekyll安装/">Windows上安装Jekyll</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>　　简单三步实现本地博客可进行Jekyll解析，从而可以在本地预览博客。</p>
-<h3 id="一、安装Ruby"><a href="#一、安装Ruby" class="headerlink" title="一、安装Ruby"></a>一、安装Ruby</h3><p>　　1. 前往<a href="http://rubyinstaller.org/downloads/" target="_blank" rel="noopener">Ruby官网</a><br>　　2. 下载与自己电脑对应的版本<br>　　3. 下载后点击安装。<br>　　　<em> 安装的路劲不要使用有空格的文件夹。  
-　　　</em> 勾选”Add Ruby excutables to your PATH”。<br>　　4. 打开cmd检测是否安装成功。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ruby -v</span><br></pre></td></tr></table></figure></p>
-<p>输出示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ruby 2.4.2p198 (2017-09-14 revision 59899) [x64-mingw32]</span><br><span class="line">```		</span><br><span class="line">### 二、安装Jekyll  </span><br><span class="line">　　1. 确保gem已经正确安装cmd输入以下内容。</span><br></pre></td></tr></table></figure></p>
-<p>gem -v<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">输出示例：</span><br></pre></td></tr></table></figure></p>
-<p>2.6.13<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">　　2. 安装Jekyll gem</span><br></pre></td></tr></table></figure></p>
-<p>gem install jekyll<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">### 三、启动Jekyll</span><br><span class="line">　　1. 找到项目文件夹    </span><br><span class="line">　　2. 按住shift键点击右键选择&quot;在此处打开命令窗口&quot;(也可以直接打开cmd切换到该目录)   </span><br><span class="line">　　3. 输入以下内容就可以在localhost:4000上浏览你的博客了</span><br></pre></td></tr></table></figure></p>
-<p>jekyll serve<br><code>`</code></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/06/2017-12-17-Jekyll安装/" data-id="cjmxfqlpd000030uiuz31wjrt" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/10/06/hello-world/" class="article-date">
-  <time datetime="2018-10-06T12:09:48.739Z" itemprop="datePublished">2018-10-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/06/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/06/hello-world/" data-id="cjmxfqlpn000230ui7nrmly2o" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li></ul>
-    </div>
   </div>
 
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
 
   
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
+    <ul id="menu" class="menu">
+      
         
-          <li>
-            <a href="/2018/10/06/2017-12-16-常用Markdown语法/">常用Markdown语法</a>
-          </li>
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
         
-          <li>
-            <a href="/2018/10/06/2017-12-17-Jekyll安装/">Windows上安装Jekyll</a>
-          </li>
-        
-          <li>
-            <a href="/2018/10/06/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
 
+      
+    </ul>
   
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2018 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
+
   
 </nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/06/2017-12-29-Java利用JDBC连接SQL-server数据库/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="子非鱼">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wangsr's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/06/2017-12-29-Java利用JDBC连接SQL-server数据库/" itemprop="url">Java利用JDBC连接SQLserver数据库及简单的增删改操作</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-06T21:38:11+08:00">
+                2018-10-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><h4 id="1-下载JDBC驱动包。sqljdbc4-jar-也可以从官网下载https-www-microsoft-com-zh-cn-download-details-aspx-id-11774。"><a href="#1-下载JDBC驱动包。sqljdbc4-jar-也可以从官网下载https-www-microsoft-com-zh-cn-download-details-aspx-id-11774。" class="headerlink" title="1.下载JDBC驱动包。sqljdbc4.jar,也可以从官网下载https://www.microsoft.com/zh-cn/download/details.aspx?id=11774。"></a>1.下载JDBC驱动包。<a href="https://pan.baidu.com/s/1kU9JoLD" target="_blank" rel="noopener">sqljdbc4.jar</a>,也可以从官网下载<a href="https://www.microsoft.com/zh-cn/download/details.aspx?id=11774" target="_blank" rel="noopener">https://www.microsoft.com/zh-cn/download/details.aspx?id=11774</a>。</h4><h4 id="2-用sql-server身份验证方式连接数据库。"><a href="#2-用sql-server身份验证方式连接数据库。" class="headerlink" title="2.用sql server身份验证方式连接数据库。"></a>2.用sql server身份验证方式连接数据库。</h4><p>如果安装sql server时是以windows身份验证安装的，没有为sql server添加sql sever身份用户，需要首先添加用户：<br>打开Microsoft SQL Server Management Studio并以windows验证方式登录，左侧的对象资源管理器-&gt;安全性-&gt;登录名，右击sa-&gt;属性，为sa用户添加密码，选择sql server身份验证，在“状态”项中授予连接到数据库和登录启用;</p>
+<h4 id="3-以下代码是基于新建了一个名为test的数据库，在该库下的建了一个student表。"><a href="#3-以下代码是基于新建了一个名为test的数据库，在该库下的建了一个student表。" class="headerlink" title="3.以下代码是基于新建了一个名为test的数据库，在该库下的建了一个student表。"></a>3.以下代码是基于新建了一个名为<code>test</code>的数据库，在该库下的建了一个<code>student</code>表。</h4><p>　　1.表的结构如下：<br><img src="http://onkin31ah.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20171229135531.jpg" alt=""><br>　　2.可以先在表中增加一些值。右键<code>dbo.student</code>这个表-&gt;编辑前200行。<br><img src="http://onkin31ah.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE.jpg" alt=""></p>
+<h2 id="开始编程"><a href="#开始编程" class="headerlink" title="开始编程"></a>开始编程</h2><h4 id="1-打开Eclipse新建一个项目。"><a href="#1-打开Eclipse新建一个项目。" class="headerlink" title="1.打开Eclipse新建一个项目。"></a>1.打开Eclipse新建一个项目。</h4><h4 id="2-在项目目录下右键src-gt-Build-Path-gt-Configure-Build-Path-gt-Libraries-gt-Add-External-JARs-gt-找到之前下载的JDBC驱动包，添加即可。"><a href="#2-在项目目录下右键src-gt-Build-Path-gt-Configure-Build-Path-gt-Libraries-gt-Add-External-JARs-gt-找到之前下载的JDBC驱动包，添加即可。" class="headerlink" title="2.在项目目录下右键src-&gt;Build Path-&gt;Configure Build Path-&gt;Libraries-&gt;Add External JARs-&gt;找到之前下载的JDBC驱动包，添加即可。"></a>2.在项目目录下右键<code>src</code>-&gt;Build Path-&gt;Configure Build Path-&gt;Libraries-&gt;Add External JARs-&gt;找到之前下载的JDBC驱动包，添加即可。</h4><h4 id="3-在项目下添加以下三个class。"><a href="#3-在项目下添加以下三个class。" class="headerlink" title="3.在项目下添加以下三个class。"></a>3.在项目下添加以下三个class。</h4><h5 id="Student-java"><a href="#Student-java" class="headerlink" title="Student.java"></a>Student.java</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public class Student &#123;</span><br><span class="line">	String No;//学号</span><br><span class="line">	String Name;//姓名</span><br><span class="line">	public Student(String sNo,String sName)&#123;</span><br><span class="line">		No=sNo;//成员变量初始化</span><br><span class="line">		Name=sName;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="StudentSystem-java"><a href="#StudentSystem-java" class="headerlink" title="StudentSystem.java"></a>StudentSystem.java</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">import java.sql.*;//导入包</span><br><span class="line">public class StudentSystem &#123;</span><br><span class="line">	Connection conn; //数据库连接对象</span><br><span class="line">    Statement stmt;//执行简单的SQL语句</span><br><span class="line">    PreparedStatement pstm;//执行带参数的SQL语句</span><br><span class="line">   ResultSet rs;//保存查询结果</span><br><span class="line">   String url = &quot;jdbc:sqlserver://localhost:1433;DatabaseName=test;&quot;;//本地数据库地址及数据库名（DatabaseName是自己建立的数据库名）</span><br><span class="line">   StudentSystem()throws Exception&#123;</span><br><span class="line">	   conn = DriverManager.getConnection(url, &quot;sa&quot;, &quot;123456&quot;);//加载驱动并连接数据库（其中第一个参数为数据库地址，第二、三个参数分别为数据库用户名和密码）</span><br><span class="line">   &#125;</span><br><span class="line">   //查询并显示全部学生信息</span><br><span class="line">   void selectAll()throws SQLException&#123;</span><br><span class="line">	   stmt = conn.createStatement();//创建Statement对象</span><br><span class="line">	   rs = stmt.executeQuery(&quot;select * from student&quot;);//执行SQL语句</span><br><span class="line">	   while(rs.next())&#123;</span><br><span class="line">           String name = rs.getString(&quot;Name&quot;);</span><br><span class="line">           String No = rs.getString(&quot;No&quot;);</span><br><span class="line">           System.out.println(&quot;No:&quot; + No + &quot;\tName:&quot; + name);</span><br><span class="line">	   &#125;</span><br><span class="line">   &#125;</span><br><span class="line">   //查找特定学生信息</span><br><span class="line">   void selectNo(String No)throws SQLException&#123;</span><br><span class="line">	   stmt = conn.createStatement();</span><br><span class="line">	   rs = stmt.executeQuery(&quot;select * from student where No=&apos;&quot;+No+&quot;&apos;&quot;);</span><br><span class="line">	   if(rs.next())&#123;</span><br><span class="line">		   String name = rs.getString(&quot;Name&quot;);</span><br><span class="line">           String No1 = rs.getString(&quot;No&quot;);</span><br><span class="line">           System.out.println(&quot;No:&quot; + No1 + &quot;\tName:&quot; + name);</span><br><span class="line">	   &#125;</span><br><span class="line">   &#125;</span><br><span class="line"> //插入学生信息</span><br><span class="line">   void insertStudent(Student s)throws SQLException&#123;</span><br><span class="line">	   pstm=conn.prepareStatement(&quot;insert into student values(?,?)&quot;);</span><br><span class="line">	   pstm.setString(1,s.No);//插入values的第一个参数；</span><br><span class="line">	   pstm.setString(2, s.Name);</span><br><span class="line">	   </span><br><span class="line">	   pstm.executeUpdate();</span><br><span class="line">	   pstm.close();</span><br><span class="line">   &#125;</span><br><span class="line">   //删除指定学生信息</span><br><span class="line">   void deleteNo(String No)throws SQLException&#123;</span><br><span class="line">	   pstm=conn.prepareStatement(&quot;delete from student where No=?&quot;);</span><br><span class="line">	   pstm.setString(1, No);</span><br><span class="line">	   pstm.executeUpdate();</span><br><span class="line">	   pstm.close();</span><br><span class="line">   &#125;</span><br><span class="line">   //修改学生信息</span><br><span class="line">   void updateStudent(Student s)throws SQLException&#123;</span><br><span class="line">	   pstm=conn.prepareStatement(&quot;update student set Name=? where No=?&quot;);</span><br><span class="line">	   pstm.setString(1,s.Name);//插入values的第一个参数；</span><br><span class="line">	   pstm.setString(2, s.No);</span><br><span class="line">	   pstm.executeUpdate();</span><br><span class="line">	   pstm.close();</span><br><span class="line">   &#125;</span><br><span class="line">   void closeConn()throws SQLException&#123;conn.close();&#125;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="MainStudent-java"><a href="#MainStudent-java" class="headerlink" title="MainStudent.java"></a>MainStudent.java</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public class MainStudent &#123;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args)throws Exception &#123;</span><br><span class="line">		</span><br><span class="line">		StudentSystem ss=new StudentSystem();//创建数据库操作实例</span><br><span class="line">		Student s=new Student(&quot;2017&quot;,&quot;st1&quot;);//创建学生对象</span><br><span class="line">//		ss.insertStudent(s);//将学生信息插入到数据库</span><br><span class="line">//		ss.deleteNo(&quot;001&quot;);//删除学号为001学生的信息</span><br><span class="line">//		ss.updateStudent(s);//修改学号为s.No学生的姓名</span><br><span class="line">//以上三条语句根据需要选择打开</span><br><span class="line">		ss.selectAll();//查询并显示所有学生信息</span><br><span class="line">		ss.closeConn();//关闭数据库连接</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以上程序运行后会输出数据库中的所有信息。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/06/2017-12-26-php学习笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="子非鱼">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wangsr's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/06/2017-12-26-php学习笔记/" itemprop="url">PHP学习笔记</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-06T21:38:11+08:00">
+                2018-10-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="1-定义常量"><a href="#1-定义常量" class="headerlink" title="1.定义常量"></a>1.定义常量</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">	header(&quot;Content-type:text/html;charset=utf-8&quot;);</span><br><span class="line">	define(&apos;HOST&apos;, &apos;127.0.0.1&apos;);</span><br><span class="line">	define(&apos;USERNAME&apos;, &apos;root&apos;);</span><br><span class="line">	define(&apos;PASSWORD&apos;, &apos;1111&apos;);</span><br><span class="line">?&gt;</span><br><span class="line">```  </span><br><span class="line">### 2.引用其它页面</span><br></pre></td></tr></table></figure>
+<p>&lt;?php<br>    require_once(‘config.php’);<br>?&gt;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">### 3.连接MySQL数据库并设定数据库字符集</span><br></pre></td></tr></table></figure></p>
+<p>&lt;?php </p>
+<pre><code>require_once(&apos;config.php&apos;);
+$con=mysqli_connect(HOST,USERNAME,PASSWORD,&quot;mydb&quot;); //mydb为数据库名
+mysqli_set_charset($con,&quot;utf8&quot;);
+</code></pre><p>?&gt;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">### 4.获取POST请求的变量</span><br></pre></td></tr></table></figure></p>
+<p>&lt;?php<br>    require_once(‘../connect.php’);//连接数据库<br>    print_r($_POST);//输出表单提交的数据<br>    if (!(isset($_POST[‘title’])&amp;&amp;(!empty($_POST[‘title’])))) {//判断变量是否设置以及是否为空<br>        echo “<script>alert(‘标题不能为空’);window.location.href=’xxxx.html’</script>“;//执行js代码<br>    }<br>    $title=$_POST[‘title’];//获取表单中name对应的value<br>    date_default_timezone_set(‘Asia/Shanghai’);//设置时区<br>    $Date=date(‘Y-m-d H:i:s’);//获取系统时间<br>?&gt;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">### 5.MySQL插入语句</span><br></pre></td></tr></table></figure></p>
+<p>&lt;?php<br>    require_once(‘../connect.php’);//连接数据库<br>    $title=$_POST[‘title’];<br>    $insertsql=”insert into test(title) values(‘$title’)”;//其中test为表名<br>    echo $insertsql;//打印sql语句，可以复制到客户端执行检查是否正确<br>    if(mysqli_query($con,$insertsql)){<br>        echo “<script>alert(‘插入成功’)</script>“;</p>
+<pre><code>}
+else {    echo &quot;&lt;script&gt;alert(&apos;插入失败&apos;)&quot;;
+}
+</code></pre><p>?&gt;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">### 6.MySQL查询(实现登录实例)</span><br></pre></td></tr></table></figure></p>
+<p>&lt;?php<br>    require_once(‘../connect.php’);<br>    $name=$_POST[‘name’];<br>    $password=$_POST[‘password’];<br>    $sql=”select <em> from user where name=’$name’”;//从user的表中查询name为’$name’的全部属性<br>     $query=mysqli_query($con,$sql);//执行sql语句<br>     $pass=mysqli_fetch_assoc($query);//结果转化为关联数组<br>     $temp=$pass[‘password’];<br>     if ($temp==$password) {<br>         setcookie(“username”,$name,time()+3600</em>3);//设置cookie<br>         echo “<script><br>         alert(‘登录成功’);window.location.href=’xxx.html’<br>         </script>“;<br>     }<br>    else echo “<script>alert(‘用户名或密码错误，请重试’);window.location.href=’login.html’</script>“;<br>?&gt;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">### 7.MySQL删除</span><br><span class="line">&#123;% highlight php %&#125;</span><br><span class="line">&lt;?php</span><br><span class="line">	require_once(&apos;../connect.php&apos;);</span><br><span class="line">	$id=$_GET[&apos;id&apos;];</span><br><span class="line">	$deletsql=&quot;delete from test where id=$id&quot;;</span><br><span class="line">	if (mysqli_query($con,$deletsql)) &#123;</span><br><span class="line">		echo &quot;&lt;script&gt;alert(&apos;删除成功&apos;)&lt;/script&gt;&quot;;&#125;</span><br><span class="line">	else&#123;echo &quot;&lt;script&gt;alert(&apos;删除失败&apos;)&lt;/script&gt;&quot;;&#125;</span><br><span class="line">?&gt;</span><br><span class="line">&#123;% endhighlight %&#125;</span><br><span class="line">### 8.设置及获取cookie</span><br></pre></td></tr></table></figure></p>
+<p>setcookie(“username”,$name,time()+3600*3);//设置cookie<br>&lt;?php echo $_COOKIE[“username”]?&gt;;//获取cookie<br><code>`</code></p>
+<h3 id="注："><a href="#注：" class="headerlink" title="注："></a>注：</h3><h4 id="1-php是在服务端解析的，所以需要在服务端配置php环境。"><a href="#1-php是在服务端解析的，所以需要在服务端配置php环境。" class="headerlink" title="1.php是在服务端解析的，所以需要在服务端配置php环境。"></a>1.php是在服务端解析的，所以需要在服务端配置php环境。</h4><h4 id="2-html可以嵌套php语句但文件后缀需命名为-php-否则不解析。"><a href="#2-html可以嵌套php语句但文件后缀需命名为-php-否则不解析。" class="headerlink" title="2.html可以嵌套php语句但文件后缀需命名为.php,否则不解析。"></a>2.html可以嵌套php语句但文件后缀需命名为.php,否则不解析。</h4><h4 id="3-php5版本以后连数据库用的是mysqli和PDO-需要在配置文件中打开相应扩展。"><a href="#3-php5版本以后连数据库用的是mysqli和PDO-需要在配置文件中打开相应扩展。" class="headerlink" title="3.php5版本以后连数据库用的是mysqli和PDO,需要在配置文件中打开相应扩展。"></a>3.php5版本以后连数据库用的是mysqli和PDO,需要在配置文件中打开相应扩展。</h4>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
 
 
-<script src="/js/script.js"></script>
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/06/2017-12-18-JS常见问题及解决办法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="子非鱼">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wangsr's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/06/2017-12-18-JS常见问题及解决办法/" itemprop="url">网页编程常见问题及解决办法</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-06T21:38:11+08:00">
+                2018-10-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="一、JS方面"><a href="#一、JS方面" class="headerlink" title="一、JS方面"></a>一、JS方面</h2><h3 id="引用外部的js文件"><a href="#引用外部的js文件" class="headerlink" title="引用外部的js文件"></a>引用外部的js文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="作用域问题"><a href="#作用域问题" class="headerlink" title="作用域问题"></a>作用域问题</h3><p>　　1. 放在<code>&lt;head&gt;</code>部分<br>    head部分的代码会先于其余部分解析，所以如果要获取元素节点需要在js中加入<code>window.onload=function(){}</code>这个函数(加载完所有资源后执行)并把代码写在function中，这样才能获取到html定义的节点。<br>　　2. 放在<code>&lt;body&gt;</code>部分<br>    JavaScript代码在网页读取到该语句的时候就会执行。</p>
+<h3 id="全局变量与局部变量"><a href="#全局变量与局部变量" class="headerlink" title="全局变量与局部变量"></a>全局变量与局部变量</h3><p>　　1. 局部变量定义在function内部，格式为var+变量名<br>　　2. 全局变量两种常用的声明方式：<br>　　　１.定义在函数外部<br>　　　２.函数内部的变量上升为全局变量：不用var直接给变量赋值</p>
+<h2 id="二、CSS方面"><a href="#二、CSS方面" class="headerlink" title="二、CSS方面"></a>二、CSS方面</h2><h3 id="div元素居中问题"><a href="#div元素居中问题" class="headerlink" title="div元素居中问题"></a><code>div</code>元素居中问题</h3><pre><code>* 1、使用`margin`居中  
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">margin-left:50%;</span><br><span class="line">margin-rigth:50%;</span><br></pre></td></tr></table></figure>
+
+* 2、使用`inline-block`居中  
+将元素设为`inline-block`,然后将父类元素设为`text-align:center;`
+</code></pre><h3 id="CSS设置鼠标悬浮样式"><a href="#CSS设置鼠标悬浮样式" class="headerlink" title="CSS设置鼠标悬浮样式"></a>CSS设置鼠标悬浮样式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">th:hover&#123;</span><br><span class="line">	background-color:blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>　　</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
 
 
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/06/2018-10-06-树莓派爬坑系列（五）使用snowboy做热词唤醒/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="子非鱼">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wangsr's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/06/2018-10-06-树莓派爬坑系列（五）使用snowboy做热词唤醒/" itemprop="url">树莓派爬坑系列（五）使用snowboy做热词唤醒</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-06T21:38:11+08:00">
+                2018-10-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="一、简要说明"><a href="#一、简要说明" class="headerlink" title="一、简要说明"></a>一、简要说明</h4><p>snowboy所实现的功能就是对说的话进行检测，如果与预设的语音信号匹配则做出响应。和微软小娜的唤醒功能类似。<br>官方文档：<a href="http://docs.kitt.ai/snowboy/" target="_blank" rel="noopener">http://docs.kitt.ai/snowboy/</a>里面有具体介绍如何使用。</p>
+<h4 id="二、使用"><a href="#二、使用" class="headerlink" title="二、使用"></a>二、使用</h4><p>snowboy可以使编译好的文件，也可以从github<a href="https://github.com/Kitt-AI/snowboy" target="_blank" rel="noopener">https://github.com/Kitt-AI/snowboy</a>下载源文件针对自己电脑环境进行编译。<br>需要注意的是：下载编译好的树莓派版本不能使用python3执行。</p>
+<h4 id="三、自己编译成Python3版本"><a href="#三、自己编译成Python3版本" class="headerlink" title="三、自己编译成Python3版本"></a>三、自己编译成Python3版本</h4><ul>
+<li>1、从GitHub<a href="https://github.com/Kitt-AI/snowboy" target="_blank" rel="noopener">https://github.com/Kitt-AI/snowboy</a>中下载压缩包，解压。</li>
+<li><p>2、切换到swig/Python目录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd swig/Python</span><br><span class="line">make</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>3、执行完后在swig/Python目录下会生成几个文件，其中<code>snowboydetect.py</code>和<code>_snowboydetect.so</code><br>就是我们需要的，可以把它拷贝到我们的项目中</p>
+</li>
+<li><p>4、完整的执行snowboy还需要examples/Python3目录下的<code>snowboydecoder.py</code>和<code>demo.py</code>及根目录下的<code>resources</code>文件夹。<br>当然，还需要在官网训练自己的声音模型，然后下载下来放到相应目录。</p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/06/2018-09-30-树莓派爬坑系列（四）安装浏览器驱动/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="子非鱼">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wangsr's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/06/2018-09-30-树莓派爬坑系列（四）安装浏览器驱动/" itemprop="url">树莓派爬坑系列（四）安装浏览器驱动</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-06T21:38:11+08:00">
+                2018-10-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>使用树莓派做爬虫或一些自动化测试时难免需要安装浏览器驱动。<br>树莓派原装系统带的浏览器为Chromium,是谷歌浏览器的一个开源版本。但用正常的chromedeiver却<br>不能驱动，需要使用<a href="https://launchpad.net/ubuntu/xenial/arm64/chromium-chromedriver" target="_blank" rel="noopener">chromium-chromedriver</a>来驱动Chromium。</p>
+<h2 id="一、下载相应版本的chromium-chromedriver"><a href="#一、下载相应版本的chromium-chromedriver" class="headerlink" title="一、下载相应版本的chromium-chromedriver"></a>一、下载相应版本的<a href="https://launchpad.net/ubuntu/xenial/arm64/chromium-chromedriver" target="_blank" rel="noopener">chromium-chromedriver</a></h2><h2 id="二、执行安装"><a href="#二、执行安装" class="headerlink" title="二、执行安装"></a>二、执行安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg -i chromium-chromedriver_65.0.3325.181-0ubuntu0.14.04.1_armhf.deb</span><br></pre></td></tr></table></figure>
+<p>注意安装后在/usr/lib/chromium-chromedriver下会多一个chromedriver文件</p>
+<h2 id="三、编写代码"><a href="#三、编写代码" class="headerlink" title="三、编写代码"></a>三、编写代码</h2><p>注意驱动路径<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">from selenium import webdriver</span><br><span class="line">browser = webdriver.Chrome(executable_path=&quot;/usr/lib/chromium-browser/chromedriver&quot;)</span><br><span class="line">browser.get(&quot;http://www.kugou.com/&quot;)</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/06/2018-09-19-树莓派爬坑系列（三）使用USB麦克风进行录音/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="子非鱼">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wangsr's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/06/2018-09-19-树莓派爬坑系列（三）使用USB麦克风进行录音/" itemprop="url">树莓派爬坑系列（三）使用USB录音设备进行录音</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-06T21:38:11+08:00">
+                2018-10-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>  树莓派本身不带录音功能，即使连接有麦的耳机也不ok。所以需要另外购买麦克风设备<br>  可以是下面这种：<br>  <img src="!--￼7--&gt;/source/img/micro.jpg" alt="麦克风"></p>
+<h2 id="第一步【连接】"><a href="#第一步【连接】" class="headerlink" title="第一步【连接】"></a>第一步【连接】</h2><pre><code>将麦克风插到树莓派上。
+</code></pre><h2 id="第二步【配置】"><a href="#第二步【配置】" class="headerlink" title="第二步【配置】"></a>第二步【配置】</h2><p>  树莓派没有设置默认的录音设备，而且我们需要使用不同的声卡进行录音和播放。<br>  所以需要进行配置。否则就可能出现下面这种报错：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">raspberry rec FAIL formats: can&apos;t open input `default&apos;: snd_pcm_open error: No such file or directory</span><br></pre></td></tr></table></figure></p>
+<p>首先进入配置文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nano ~/.asoundrc</span><br></pre></td></tr></table></figure></p>
+<p>把配置文件替换为以下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">pcm.!default &#123;</span><br><span class="line">type asym</span><br><span class="line">    playback.pcm &#123;</span><br><span class="line">        type plug</span><br><span class="line">        slave.pcm &quot;hw:0,0&quot;</span><br><span class="line">      &#125;</span><br><span class="line">capture.pcm &#123;</span><br><span class="line">    type plug</span><br><span class="line">    slave.pcm &quot;hw:1,0&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>配置的意思为：输入使用声卡1（即USB声卡），输出使用板载的声卡0（这样耳机才能有声音）</p>
+<h2 id="第三步【使用】"><a href="#第三步【使用】" class="headerlink" title="第三步【使用】"></a>第三步【使用】</h2><p>录音：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rec temp.wav</span><br></pre></td></tr></table></figure></p>
+<p>播放：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mplayer temp.wav</span><br></pre></td></tr></table></figure></p>
+<p>其中录音、播放命令可视自己喜好选择</p>
+<h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><ul>
+<li><p>1、查看播放设备：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">aplay -l</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>2、查看录音设备</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arecord -l</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/06/2018-09-16-树莓派爬坑系列（一）电脑连接树莓派/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="子非鱼">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wangsr's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/06/2018-09-16-树莓派爬坑系列（一）电脑连接树莓派/" itemprop="url">树莓派爬坑系列（一）电脑连接树莓派</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-06T21:38:11+08:00">
+                2018-10-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>电脑连接树莓派有以下几种方式：</p>
+<ul>
+<li>1、ssh连接</li>
+<li>2、Windows远程桌面连接</li>
+<li>3、VNC连接</li>
+</ul>
+<p>不管是以上哪一种都需要先知道树莓派ip。</p>
+<h2 id="树莓派IP的获取"><a href="#树莓派IP的获取" class="headerlink" title="树莓派IP的获取"></a>树莓派IP的获取</h2><ul>
+<li>第一种方式：与电脑连接在同一个路由器或者wifi下。然后通过路由器查看树莓派IP（带屏幕的可在树莓派上查看）。<br>前提是在该网络中没有对一些端口（如3389、22）屏蔽，这种方法才适用。</li>
+<li>第二种方式：网线直连。用网线直接连接树莓派和电脑，将电脑的无线的网络分享到以太网还能实现访问互联网。<br>命令行使用<code>arp -a</code>来查看树莓派ip,其IP在192.168.137.1接口下，一般为第一个。如图：<br><img src="!--￼3--&gt;/source/img/arp.png" alt="arp -a"><h2 id="获取IP后"><a href="#获取IP后" class="headerlink" title="获取IP后"></a>获取IP后</h2>获取IP后就可以连接了，但需要注意以下几点。<ul>
+<li>1、ssh连接时，使用以下命令：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh pi@host_ip</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<p>其中host_ip为树莓派IP，如果是新装系统，需在SD卡根目录新建一个ssh的文件(无后缀)</p>
+<ul>
+<li><p>2、对于第二种连接方式：需要在树莓派中先安装依赖：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install xrdp;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>3、对于VNC连接需要在设置中打开允许VNC连接：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo raspi-config</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="!--￼4--&gt;/source/img/vnc1.png" alt="vnc1"><br>进入选择vnc ENABLE 就ok.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/06/2018-09-16-树莓派爬坑系列（二）配置WiFi热点/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="子非鱼">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wangsr's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/06/2018-09-16-树莓派爬坑系列（二）配置WiFi热点/" itemprop="url">树莓派爬坑系列（二）配置WiFi热点</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-06T21:38:11+08:00">
+                2018-10-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="实现功能"><a href="#实现功能" class="headerlink" title="实现功能"></a>实现功能</h2><p>   使其它设备可以连接树莓派的热点，并实现上网。</p>
+<h2 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h2><p>  基本上有两种方式：1、手动配置，2、使用开源库</p>
+<h2 id="方式二的具体操作"><a href="#方式二的具体操作" class="headerlink" title="方式二的具体操作"></a>方式二的具体操作</h2><p>  使用GitHub开源库<a href="https://github.com/oblique/create_ap" target="_blank" rel="noopener">https://github.com/oblique/create_ap</a>来配置WiFi热点，<br>  此种方式简单快捷。</p>
+<ul>
+<li><p>1、安装依赖</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install dnsmasq hostapd</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>2、</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/oblique/create_ap</span><br><span class="line">cd create_ap</span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>3、开启热点并设置无线和有线共享网络，设置后只要有线可以访问互联网连接热点的设备才能正常上网。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo create_ap wlan0 eth0 WiFi名称 WiFi密码</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>***设置后如果可以搜索到热点就ok了。</p>
+</li>
+<li>3、设置开机启动<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano /etc/rc.local</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>添加以下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo create_ap wlan0 eth0 WiFi名称 WiFi密码</span><br></pre></td></tr></table></figure></p>
+<h2 id="其它问题"><a href="#其它问题" class="headerlink" title="其它问题"></a>其它问题</h2><ul>
+<li><p>1、使用时如果报错<code>Error: Failed to run hostapd, maybe a program is interfering</code><br>尝试执行以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service dhcpcd restart</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>2、隐藏WiFi热点</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo create_ap --hidden wlan0 eth0 WiFi名称 WiFi密码</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/06/2018-09-08-Linux常用操作/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="子非鱼">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wangsr's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/06/2018-09-08-Linux常用操作/" itemprop="url">Linux 常用操作</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-06T21:38:11+08:00">
+                2018-10-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="一、python相关"><a href="#一、python相关" class="headerlink" title="一、python相关"></a>一、python相关</h2><ul>
+<li><p>1、安装python包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 install baidu-aip</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>2、列出所安装的python包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 list</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>3、卸载包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 unstall baidu-aip</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>4、使用python模拟键盘输入（输入快捷键）<br>安装PyUserInput包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 install PyUserInput</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>导入包<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">from pymouse import PyMouse</span><br><span class="line">from pykeyboard import PyKeyboard</span><br><span class="line">m = PyMouse()#鼠标</span><br><span class="line">k = PyKeyboard()#键盘</span><br></pre></td></tr></table></figure></p>
+<p>使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">x_dim, y_dim = m.screen_size()</span><br><span class="line">m.click(x_dim/2, y_dim/2, 1)#点击屏幕中间</span><br><span class="line">k.type_string(&apos;Hello, World!&apos;)#输入&quot;Hello,World&quot;</span><br><span class="line"># pressing a key</span><br><span class="line">k.press_key(&apos;H&apos;)#按下键</span><br><span class="line"># which you then follow with a release of the key</span><br><span class="line">k.release_key(&apos;H&apos;)#松开键</span><br><span class="line"># or you can &apos;tap&apos; a key which does both</span><br><span class="line">k.tap_key(&apos;e&apos;)</span><br><span class="line"># note that that tap_key does support a way of     repeating keystrokes with a interval time between each</span><br><span class="line">k.tap_key(&apos;l&apos;,n=2,interval=5)#隔5秒点击</span><br><span class="line"></span><br><span class="line">k.press_keys([k.windows_l_key,&apos;d&apos;])#组合键</span><br></pre></td></tr></table></figure></p>
+<h2 id="二、网络相关"><a href="#二、网络相关" class="headerlink" title="二、网络相关"></a>二、网络相关</h2><ul>
+<li>1、查询IP地址<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ifconfig</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="三、文件-文件夹相关"><a href="#三、文件-文件夹相关" class="headerlink" title="三、文件/文件夹相关"></a>三、文件/文件夹相关</h2><ul>
+<li>1、列出当前目录文件</li>
+<li>*ls</li>
+<li>*ls -a:列出包含隐藏文件</li>
+<li><p>2、新建目录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir filename</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>3、重命名或移动文件<br>重命名：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv filename_old filename_new</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>移动到上一级：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv file ../</span><br></pre></td></tr></table></figure></p>
+<h2 id="系统相关"><a href="#系统相关" class="headerlink" title="系统相关"></a>系统相关</h2><ul>
+<li>1、播放音频<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mplayer auido.mp3</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>注：可以播放地址为url的音乐</p>
+<ul>
+<li><p>2、执行定时任务</p>
+</li>
+<li><p>crontab -e 进入编辑</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#min hour date month week command</span><br><span class="line">0 11 * * * /usr/bin/python3 /home/pi/PycharmProjects/alarm.py</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>上面代码意思：每天11点执行<code>python3 alarm.py</code>这个脚本</p>
+<ul>
+<li>crontab -l 列出当前任务<br>具体参考<a href="http://man.linuxde.net/crontab" target="_blank" rel="noopener">http://man.linuxde.net/crontab</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/06/2018-09-06-使用struts2的拦截器实现权限验证/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="子非鱼">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wangsr's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/06/2018-09-06-使用struts2的拦截器实现权限验证/" itemprop="url">使用struts2的拦截器实现权限验证</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-06T21:38:11+08:00">
+                2018-10-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>应用场景：对于需要用户登录的网页进行身份验证，比如未登录不能浏览相关内容并跳转到登录页面。</p>
+<h2 id="一、在struts-xml配置文件中定义拦截器"><a href="#一、在struts-xml配置文件中定义拦截器" class="headerlink" title="一、在struts.xml配置文件中定义拦截器"></a>一、在struts.xml配置文件中定义拦截器</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;package name=&quot;default&quot; extends=&quot;struts-default&quot;&gt;</span><br><span class="line">   &lt;!-- 定义了一个名为authority的拦截器 --&gt;</span><br><span class="line">   &lt;interceptors&gt;</span><br><span class="line">        &lt;interceptor name=&quot;authority&quot; class=&quot;cn.wangsr.AuthorityInterceptor&quot;/&gt;</span><br><span class="line">   &lt;/interceptors&gt;</span><br><span class="line">&lt;/package&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="二、在需要进行拦截的action中使用拦截器"><a href="#二、在需要进行拦截的action中使用拦截器" class="headerlink" title="二、在需要进行拦截的action中使用拦截器"></a>二、在需要进行拦截的action中使用拦截器</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;interceptor-ref name=&quot;defaultStack&quot;&gt;&lt;/interceptor-ref&gt;</span><br><span class="line">&lt;interceptor-ref name=&quot;authority&quot;&gt;&lt;/interceptor-ref&gt;</span><br></pre></td></tr></table></figure>
+<p>注：第一行为默认拦截器，如果不适用通过拦截器后将会丢失表单所提交数据。</p>
+<h2 id="三、定义全局结果映射"><a href="#三、定义全局结果映射" class="headerlink" title="三、定义全局结果映射"></a>三、定义全局结果映射</h2><p>如果在多个action中使用了拦截器，可以定义一个全局结果映射来作为拦截器处理后的结果页。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;global-results&gt;</span><br><span class="line"> 			&lt;result name=&quot;login&quot;&gt;/WEB-INF/contents/index.jsp&lt;/result&gt;</span><br><span class="line">&lt;/global-results&gt;</span><br></pre></td></tr></table></figure></p>
+<h2 id="四、定义一个拦截器实现类"><a href="#四、定义一个拦截器实现类" class="headerlink" title="四、定义一个拦截器实现类"></a>四、定义一个拦截器实现类</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">public class AuthorityInterceptor extends AbstractInterceptor&#123;</span><br><span class="line"></span><br><span class="line">	@Override</span><br><span class="line">	public String intercept(ActionInvocation invocation) throws Exception &#123;</span><br><span class="line">		// TODO Auto-generated method stub</span><br><span class="line">		ActionContext ctx = invocation.getInvocationContext();</span><br><span class="line">		User user = (User)ctx.getSession().get(&quot;user&quot;);//在拦截器获取session中的值</span><br><span class="line"></span><br><span class="line">		if(user!=null) &#123;</span><br><span class="line">			return invocation.invoke();//继续执行其它拦截器或action</span><br><span class="line">		&#125;</span><br><span class="line">		ctx.put(&quot;timeout_tip&quot;, &quot;请重新登录&quot;);</span><br><span class="line">		return Action.LOGIN;//返回字符串所对应的result结果页</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">子非鱼</p>
+              <p class="site-description motion-element" itemprop="description">人生如逆旅，我亦是闲鱼</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">子非鱼</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
 
   </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
 </body>
 </html>
