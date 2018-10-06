@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Windows上安装Jekyll | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="简单三步实现本地博客可进行Jekyll解析，从而可以在本地预览博客。 一、安装Ruby　　1. 前往Ruby官网　　2. 下载与自己电脑对应的版本　　3. 下载后点击安装。　　　 安装的路劲不要使用有空格的文件夹。   　　　 勾选”Add Ruby excutables to your PATH”。　　4. 打开cmd检测是否安装成功。1ruby -v 输出示例：1234ruby 2.4.2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Windows上安装Jekyll">
+<meta property="og:url" content="http://yoursite.com/2018/10/06/2017-12-17-Jekyll安装/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="简单三步实现本地博客可进行Jekyll解析，从而可以在本地预览博客。 一、安装Ruby　　1. 前往Ruby官网　　2. 下载与自己电脑对应的版本　　3. 下载后点击安装。　　　 安装的路劲不要使用有空格的文件夹。   　　　 勾选”Add Ruby excutables to your PATH”。　　4. 打开cmd检测是否安装成功。1ruby -v 输出示例：1234ruby 2.4.2">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2017-12-18T12:56:07.166Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Windows上安装Jekyll">
+<meta name="twitter:description" content="简单三步实现本地博客可进行Jekyll解析，从而可以在本地预览博客。 一、安装Ruby　　1. 前往Ruby官网　　2. 下载与自己电脑对应的版本　　3. 下载后点击安装。　　　 安装的路劲不要使用有空格的文件夹。   　　　 勾选”Add Ruby excutables to your PATH”。　　4. 打开cmd检测是否安装成功。1ruby -v 输出示例：1234ruby 2.4.2">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="posts-2017-12-17-Jekyll安装" class="article article-type-posts" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/10/06/2017-12-17-Jekyll安装/" class="article-date">
+  <time datetime="2018-10-06T12:16:44.012Z" itemprop="datePublished">2018-10-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Windows上安装Jekyll
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>　　简单三步实现本地博客可进行Jekyll解析，从而可以在本地预览博客。</p>
+<h3 id="一、安装Ruby"><a href="#一、安装Ruby" class="headerlink" title="一、安装Ruby"></a>一、安装Ruby</h3><p>　　1. 前往<a href="http://rubyinstaller.org/downloads/" target="_blank" rel="noopener">Ruby官网</a><br>　　2. 下载与自己电脑对应的版本<br>　　3. 下载后点击安装。<br>　　　<em> 安装的路劲不要使用有空格的文件夹。  
+　　　</em> 勾选”Add Ruby excutables to your PATH”。<br>　　4. 打开cmd检测是否安装成功。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ruby -v</span><br></pre></td></tr></table></figure></p>
+<p>输出示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ruby 2.4.2p198 (2017-09-14 revision 59899) [x64-mingw32]</span><br><span class="line">```		</span><br><span class="line">### 二、安装Jekyll  </span><br><span class="line">　　1. 确保gem已经正确安装cmd输入以下内容。</span><br></pre></td></tr></table></figure></p>
+<p>gem -v<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">输出示例：</span><br></pre></td></tr></table></figure></p>
+<p>2.6.13<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">　　2. 安装Jekyll gem</span><br></pre></td></tr></table></figure></p>
+<p>gem install jekyll<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">### 三、启动Jekyll</span><br><span class="line">　　1. 找到项目文件夹    </span><br><span class="line">　　2. 按住shift键点击右键选择&quot;在此处打开命令窗口&quot;(也可以直接打开cmd切换到该目录)   </span><br><span class="line">　　3. 输入以下内容就可以在localhost:4000上浏览你的博客了</span><br></pre></td></tr></table></figure></p>
+<p>jekyll serve<br><code>`</code></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/10/06/2017-12-17-Jekyll安装/" data-id="cjmxekxe700011suit4pac6gd" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/10/06/2017-12-16-常用Markdown语法/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          常用Markdown语法
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/10/06/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/10/06/2017-12-16-常用Markdown语法/">常用Markdown语法</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/06/2017-12-17-Jekyll安装/">Windows上安装Jekyll</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/06/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
