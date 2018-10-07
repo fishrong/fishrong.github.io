@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="一、加载表格12wb = openpyxl.load_workbook(&amp;quot;abc.xlsx&amp;quot;)#加载工作簿ws = wb[&amp;quot;Sheet2&amp;quot;]#加载工作表 二、读取单元格数值1ws[&amp;quot;A1&amp;quot;].value#读取A1单元格的值 三、单元格填充颜色123fill = PatternFill(fill_type=&amp;quot;solid&amp;quot;">
+<meta name="description" content="一、加载表格12wb = openpyxl.load_workbook(&quot;abc.xlsx&quot;)#加载工作簿ws = wb[&quot;Sheet2&quot;]#加载工作表 二、读取单元格数值1ws[&quot;A1&quot;].value#读取A1单元格的值 三、单元格填充颜色123fill = PatternFill(fill_type=&quot;solid&quot;, fgColor=&quot;54FF9F&quot;)ws[&quot;A1&quot;].fill = fillw">
 <meta name="keywords" content="python,openpyxl">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python使用openpyxl库操作Excel">
 <meta property="og:url" content="http://yoursite.com/2018/08/25/python操作excel/index.html">
 <meta property="og:site_name" content="Wangsr&#39;s Notes">
-<meta property="og:description" content="一、加载表格12wb = openpyxl.load_workbook(&amp;quot;abc.xlsx&amp;quot;)#加载工作簿ws = wb[&amp;quot;Sheet2&amp;quot;]#加载工作表 二、读取单元格数值1ws[&amp;quot;A1&amp;quot;].value#读取A1单元格的值 三、单元格填充颜色123fill = PatternFill(fill_type=&amp;quot;solid&amp;quot;">
+<meta property="og:description" content="一、加载表格12wb = openpyxl.load_workbook(&quot;abc.xlsx&quot;)#加载工作簿ws = wb[&quot;Sheet2&quot;]#加载工作表 二、读取单元格数值1ws[&quot;A1&quot;].value#读取A1单元格的值 三、单元格填充颜色123fill = PatternFill(fill_type=&quot;solid&quot;, fgColor=&quot;54FF9F&quot;)ws[&quot;A1&quot;].fill = fillw">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-10-07T01:01:34.430Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python使用openpyxl库操作Excel">
-<meta name="twitter:description" content="一、加载表格12wb = openpyxl.load_workbook(&amp;quot;abc.xlsx&amp;quot;)#加载工作簿ws = wb[&amp;quot;Sheet2&amp;quot;]#加载工作表 二、读取单元格数值1ws[&amp;quot;A1&amp;quot;].value#读取A1单元格的值 三、单元格填充颜色123fill = PatternFill(fill_type=&amp;quot;solid&amp;quot;">
+<meta name="twitter:description" content="一、加载表格12wb = openpyxl.load_workbook(&quot;abc.xlsx&quot;)#加载工作簿ws = wb[&quot;Sheet2&quot;]#加载工作表 二、读取单元格数值1ws[&quot;A1&quot;].value#读取A1单元格的值 三、单元格填充颜色123fill = PatternFill(fill_type=&quot;solid&quot;, fgColor=&quot;54FF9F&quot;)ws[&quot;A1&quot;].fill = fillw">
 
 
 
@@ -391,9 +391,9 @@
       
 
       
-        <h2 id="一、加载表格"><a href="#一、加载表格" class="headerlink" title="一、加载表格"></a>一、加载表格</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wb = openpyxl.load_workbook(&quot;abc.xlsx&quot;)#加载工作簿</span><br><span class="line">ws = wb[&quot;Sheet2&quot;]#加载工作表</span><br></pre></td></tr></table></figure>
-<h2 id="二、读取单元格数值"><a href="#二、读取单元格数值" class="headerlink" title="二、读取单元格数值"></a>二、读取单元格数值</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ws[&quot;A1&quot;].value#读取A1单元格的值</span><br></pre></td></tr></table></figure>
-<h2 id="三、单元格填充颜色"><a href="#三、单元格填充颜色" class="headerlink" title="三、单元格填充颜色"></a>三、单元格填充颜色</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fill = PatternFill(fill_type=&quot;solid&quot;, fgColor=&quot;54FF9F&quot;)</span><br><span class="line">ws[&quot;A1&quot;].fill = fill</span><br><span class="line">wb.save(&quot;abc.xlsx&quot;)</span><br></pre></td></tr></table></figure>
+        <h2 id="一、加载表格"><a href="#一、加载表格" class="headerlink" title="一、加载表格"></a>一、加载表格</h2><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wb = openpyxl.load_workbook(<span class="string">"abc.xlsx"</span>)<span class="comment">#加载工作簿</span></span><br><span class="line">ws = wb[<span class="string">"Sheet2"</span>]<span class="comment">#加载工作表</span></span><br></pre></td></tr></table></figure>
+<h2 id="二、读取单元格数值"><a href="#二、读取单元格数值" class="headerlink" title="二、读取单元格数值"></a>二、读取单元格数值</h2><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ws[<span class="string">"A1"</span>].<span class="keyword">value</span><span class="meta">#读取A1单元格的值</span></span><br></pre></td></tr></table></figure>
+<h2 id="三、单元格填充颜色"><a href="#三、单元格填充颜色" class="headerlink" title="三、单元格填充颜色"></a>三、单元格填充颜色</h2><figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fill = PatternFill(fill_type=<span class="string">"solid"</span>, fgColor=<span class="string">"54FF9F"</span>)</span><br><span class="line">ws[<span class="string">"A1"</span>].fill = fill</span><br><span class="line">wb.save(<span class="string">"abc.xlsx"</span>)</span><br></pre></td></tr></table></figure>
 <p>注：操作一次就执行一次<code>save()</code>方法，否则可能只保留最后一次的操作</p>
 
       

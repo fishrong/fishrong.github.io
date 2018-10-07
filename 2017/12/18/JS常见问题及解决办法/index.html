@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="一、JS方面引用外部的js文件1&amp;lt;script src=&amp;quot;script.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; 作用域问题　　1. 放在&amp;lt;head&amp;gt;部分    head部分的代码会先于其余部分解析，所以如果要获取元素节点需要在js中加入window.onload=function(){}这个函数(加载完所有资源后执行)并把代码写在function中，这样">
+<meta name="description" content="一、JS方面引用外部的js文件1&amp;lt;script src=&quot;script.js&quot;&amp;gt;&amp;lt;/script&amp;gt; 作用域问题　　1. 放在&amp;lt;head&amp;gt;部分    head部分的代码会先于其余部分解析，所以如果要获取元素节点需要在js中加入window.onload=function(){}这个函数(加载完所有资源后执行)并把代码写在function中，这样才能获取到html定">
 <meta name="keywords" content="JS,CS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="网页编程常见问题及解决办法">
 <meta property="og:url" content="http://yoursite.com/2017/12/18/JS常见问题及解决办法/index.html">
 <meta property="og:site_name" content="Wangsr&#39;s Notes">
-<meta property="og:description" content="一、JS方面引用外部的js文件1&amp;lt;script src=&amp;quot;script.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; 作用域问题　　1. 放在&amp;lt;head&amp;gt;部分    head部分的代码会先于其余部分解析，所以如果要获取元素节点需要在js中加入window.onload=function(){}这个函数(加载完所有资源后执行)并把代码写在function中，这样">
+<meta property="og:description" content="一、JS方面引用外部的js文件1&amp;lt;script src=&quot;script.js&quot;&amp;gt;&amp;lt;/script&amp;gt; 作用域问题　　1. 放在&amp;lt;head&amp;gt;部分    head部分的代码会先于其余部分解析，所以如果要获取元素节点需要在js中加入window.onload=function(){}这个函数(加载完所有资源后执行)并把代码写在function中，这样才能获取到html定">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-10-07T01:09:37.916Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网页编程常见问题及解决办法">
-<meta name="twitter:description" content="一、JS方面引用外部的js文件1&amp;lt;script src=&amp;quot;script.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; 作用域问题　　1. 放在&amp;lt;head&amp;gt;部分    head部分的代码会先于其余部分解析，所以如果要获取元素节点需要在js中加入window.onload=function(){}这个函数(加载完所有资源后执行)并把代码写在function中，这样">
+<meta name="twitter:description" content="一、JS方面引用外部的js文件1&amp;lt;script src=&quot;script.js&quot;&amp;gt;&amp;lt;/script&amp;gt; 作用域问题　　1. 放在&amp;lt;head&amp;gt;部分    head部分的代码会先于其余部分解析，所以如果要获取元素节点需要在js中加入window.onload=function(){}这个函数(加载完所有资源后执行)并把代码写在function中，这样才能获取到html定">
 
 
 
@@ -391,15 +391,15 @@
       
 
       
-        <h2 id="一、JS方面"><a href="#一、JS方面" class="headerlink" title="一、JS方面"></a>一、JS方面</h2><h3 id="引用外部的js文件"><a href="#引用外部的js文件" class="headerlink" title="引用外部的js文件"></a>引用外部的js文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+        <h2 id="一、JS方面"><a href="#一、JS方面" class="headerlink" title="一、JS方面"></a>一、JS方面</h2><h3 id="引用外部的js文件"><a href="#引用外部的js文件" class="headerlink" title="引用外部的js文件"></a>引用外部的js文件</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"script.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="作用域问题"><a href="#作用域问题" class="headerlink" title="作用域问题"></a>作用域问题</h3><p>　　1. 放在<code>&lt;head&gt;</code>部分<br>    head部分的代码会先于其余部分解析，所以如果要获取元素节点需要在js中加入<code>window.onload=function(){}</code>这个函数(加载完所有资源后执行)并把代码写在function中，这样才能获取到html定义的节点。<br>　　2. 放在<code>&lt;body&gt;</code>部分<br>    JavaScript代码在网页读取到该语句的时候就会执行。</p>
 <h3 id="全局变量与局部变量"><a href="#全局变量与局部变量" class="headerlink" title="全局变量与局部变量"></a>全局变量与局部变量</h3><p>　　1. 局部变量定义在function内部，格式为var+变量名<br>　　2. 全局变量两种常用的声明方式：<br>　　　１.定义在函数外部<br>　　　２.函数内部的变量上升为全局变量：不用var直接给变量赋值</p>
 <h2 id="二、CSS方面"><a href="#二、CSS方面" class="headerlink" title="二、CSS方面"></a>二、CSS方面</h2><h3 id="div元素居中问题"><a href="#div元素居中问题" class="headerlink" title="div元素居中问题"></a><code>div</code>元素居中问题</h3><pre><code>* 1、使用`margin`居中  
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">margin-left:50%;</span><br><span class="line">margin-rigth:50%;</span><br></pre></td></tr></table></figure>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">margin-left</span>:<span class="number">50%</span>;</span><br><span class="line"><span class="attribute">margin</span>-rigth:<span class="number">50%</span>;</span><br></pre></td></tr></table></figure>
 
 * 2、使用`inline-block`居中  
 将元素设为`inline-block`,然后将父类元素设为`text-align:center;`
-</code></pre><h3 id="CSS设置鼠标悬浮样式"><a href="#CSS设置鼠标悬浮样式" class="headerlink" title="CSS设置鼠标悬浮样式"></a>CSS设置鼠标悬浮样式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">th:hover&#123;</span><br><span class="line">	background-color:blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</code></pre><h3 id="CSS设置鼠标悬浮样式"><a href="#CSS设置鼠标悬浮样式" class="headerlink" title="CSS设置鼠标悬浮样式"></a>CSS设置鼠标悬浮样式</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">th</span><span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line">	<span class="attribute">background-color</span>:blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>　　</p>
 
       

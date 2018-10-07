@@ -393,23 +393,23 @@
       
         <h2 id="一、python相关"><a href="#一、python相关" class="headerlink" title="一、python相关"></a>一、python相关</h2><ul>
 <li><p>1、安装python包</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 install baidu-aip</span><br></pre></td></tr></table></figure>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 <span class="keyword">install</span> baidu-aip</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>2、列出所安装的python包</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 list</span><br></pre></td></tr></table></figure>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 <span class="built_in">list</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>3、卸载包</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 unstall baidu-aip</span><br></pre></td></tr></table></figure>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">pip3</span> unstall baidu-aip</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>4、使用python模拟键盘输入（输入快捷键）<br>安装PyUserInput包</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 install PyUserInput</span><br></pre></td></tr></table></figure>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 <span class="keyword">install</span> PyUserInput</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <a id="more"></a>
-<p>导入包<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">from pymouse import PyMouse</span><br><span class="line">from pykeyboard import PyKeyboard</span><br><span class="line">m = PyMouse()#鼠标</span><br><span class="line">k = PyKeyboard()#键盘</span><br></pre></td></tr></table></figure></p>
-<p>使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">x_dim, y_dim = m.screen_size()</span><br><span class="line">m.click(x_dim/2, y_dim/2, 1)#点击屏幕中间</span><br><span class="line">k.type_string(&apos;Hello, World!&apos;)#输入&quot;Hello,World&quot;</span><br><span class="line"># pressing a key</span><br><span class="line">k.press_key(&apos;H&apos;)#按下键</span><br><span class="line"># which you then follow with a release of the key</span><br><span class="line">k.release_key(&apos;H&apos;)#松开键</span><br><span class="line"># or you can &apos;tap&apos; a key which does both</span><br><span class="line">k.tap_key(&apos;e&apos;)</span><br><span class="line"># note that that tap_key does support a way of     repeating keystrokes with a interval time between each</span><br><span class="line">k.tap_key(&apos;l&apos;,n=2,interval=5)#隔5秒点击</span><br><span class="line"></span><br><span class="line">k.press_keys([k.windows_l_key,&apos;d&apos;])#组合键</span><br></pre></td></tr></table></figure></p>
+<p>导入包<br><figure class="highlight capnproto"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pymouse <span class="keyword">import</span> PyMouse</span><br><span class="line"><span class="keyword">from</span> pykeyboard <span class="keyword">import</span> PyKeyboard</span><br><span class="line">m = PyMouse()<span class="comment">#鼠标</span></span><br><span class="line">k = PyKeyboard()<span class="comment">#键盘</span></span><br></pre></td></tr></table></figure></p>
+<p>使用<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">x_dim, y_dim = m.screen_size()</span><br><span class="line">m.click(x_dim<span class="regexp">/2, y_dim/</span><span class="number">2</span>, <span class="number">1</span>)<span class="comment">#点击屏幕中间</span></span><br><span class="line">k.type_string(<span class="string">'Hello, World!'</span>)<span class="comment">#输入"Hello,World"</span></span><br><span class="line"><span class="comment"># pressing a key</span></span><br><span class="line">k.press_key(<span class="string">'H'</span>)<span class="comment">#按下键</span></span><br><span class="line"><span class="comment"># which you then follow with a release of the key</span></span><br><span class="line">k.release_key(<span class="string">'H'</span>)<span class="comment">#松开键</span></span><br><span class="line"><span class="comment"># or you can 'tap' a key which does both</span></span><br><span class="line">k.tap_key(<span class="string">'e'</span>)</span><br><span class="line"><span class="comment"># note that that tap_key does support a way of     repeating keystrokes with a interval time between each</span></span><br><span class="line">k.tap_key(<span class="string">'l'</span>,n=<span class="number">2</span>,interval=<span class="number">5</span>)<span class="comment">#隔5秒点击</span></span><br><span class="line"></span><br><span class="line">k.press_keys([k.windows_l_key,<span class="string">'d'</span>])<span class="comment">#组合键</span></span><br></pre></td></tr></table></figure></p>
 <h2 id="二、网络相关"><a href="#二、网络相关" class="headerlink" title="二、网络相关"></a>二、网络相关</h2><ul>
-<li>1、查询IP地址<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ifconfig</span><br></pre></td></tr></table></figure>
+<li>1、查询IP地址<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">ifconfig</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="三、文件-文件夹相关"><a href="#三、文件-文件夹相关" class="headerlink" title="三、文件/文件夹相关"></a>三、文件/文件夹相关</h2><ul>
@@ -417,15 +417,15 @@
 <li>*ls</li>
 <li>*ls -a:列出包含隐藏文件</li>
 <li><p>2、新建目录</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir filename</span><br></pre></td></tr></table></figure>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> filename</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>3、重命名或移动文件<br>重命名：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv filename_old filename_new</span><br></pre></td></tr></table></figure>
+<figure class="highlight cos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">mv</span> filename_old filename_new</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>移动到上一级：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv file ../</span><br></pre></td></tr></table></figure></p>
+<p>移动到上一级：<br><figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">mv</span></span> <span class="keyword">file</span> ../</span><br></pre></td></tr></table></figure></p>
 <h2 id="系统相关"><a href="#系统相关" class="headerlink" title="系统相关"></a>系统相关</h2><ul>
-<li>1、播放音频<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mplayer auido.mp3</span><br></pre></td></tr></table></figure>
+<li>1、播放音频<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">mplayer</span> <span class="selector-tag">auido</span><span class="selector-class">.mp3</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <p>注：可以播放地址为url的音乐</p>
@@ -433,7 +433,7 @@
 <li><p>2、执行定时任务</p>
 </li>
 <li><p>crontab -e 进入编辑</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#min hour date month week command</span><br><span class="line">0 11 * * * /usr/bin/python3 /home/pi/PycharmProjects/alarm.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#<span class="built_in">min</span> <span class="built_in">hour</span> <span class="built_in">date</span> <span class="built_in">month</span> week command</span><br><span class="line"><span class="number">0</span> <span class="number">11</span> * * * /usr/bin/python3 /home/<span class="built_in">pi</span>/PycharmProjects/alarm.py</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <p>上面代码意思：每天11点执行<code>python3 alarm.py</code>这个脚本</p>
