@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="树莓派,网线直连树莓派," />
 
 
 
@@ -80,6 +80,7 @@
 
 
 <meta name="description" content="电脑连接树莓派有以下几种方式：  1、ssh连接 2、Windows远程桌面连接 3、VNC连接  不管是以上哪一种都需要先知道树莓派ip。 树莓派IP的获取 第一种方式：与电脑连接在同一个路由器或者wifi下。然后通过路由器查看树莓派IP（带屏幕的可在树莓派上查看）。前提是在该网络中没有对一些端口（如3389、22）屏蔽，这种方法才适用。 第二种方式：网线直连。用网线直接连接树莓派和电脑，将电脑">
+<meta name="keywords" content="树莓派,网线直连树莓派">
 <meta property="og:type" content="article">
 <meta property="og:title" content="树莓派爬坑系列（一）电脑连接树莓派">
 <meta property="og:url" content="http://yoursite.com/2018/09/16/树莓派爬坑系列（一）电脑连接树莓派/index.html">
@@ -88,7 +89,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/source/images/arp.png">
 <meta property="og:image" content="http://yoursite.com/2018/09/16/树莓派爬坑系列（一）电脑连接树莓派/!--￼5--%3E/source/img/vnc1.png">
-<meta property="og:updated_time" content="2018-10-06T16:13:15.563Z">
+<meta property="og:updated_time" content="2018-10-07T01:14:47.383Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="树莓派爬坑系列（一）电脑连接树莓派">
 <meta name="twitter:description" content="电脑连接树莓派有以下几种方式：  1、ssh连接 2、Windows远程桌面连接 3、VNC连接  不管是以上哪一种都需要先知道树莓派ip。 树莓派IP的获取 第一种方式：与电脑连接在同一个路由器或者wifi下。然后通过路由器查看树莓派IP（带屏幕的可在树莓派上查看）。前提是在该网络中没有对一些端口（如3389、22）屏蔽，这种方法才适用。 第二种方式：网线直连。用网线直接连接树莓派和电脑，将电脑">
@@ -111,9 +112,9 @@
       author: '博主'
     },
     algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
+      applicationID: '0Z56XAHP9L',
+      apiKey: '9a1e2fe58aaf49839e1fe3907e8ceeae',
+      indexName: 'myPosts',
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
@@ -163,7 +164,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle"></p>
+        <p class="site-subtitle">Just Go</p>
       
   </div>
 
@@ -202,11 +203,69 @@
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
 
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
       
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
   
 </nav>
 
@@ -275,12 +334,45 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/树莓派爬坑系列/" itemprop="url" rel="index">
+                    <span itemprop="name">树莓派爬坑系列</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
           
 
           
+          
+             <span id="/2018/09/16/树莓派爬坑系列（一）电脑连接树莓派/" class="leancloud_visitors" data-flag-title="树莓派爬坑系列（一）电脑连接树莓派">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
           
 
           
@@ -312,10 +404,11 @@
 <h2 id="树莓派IP的获取"><a href="#树莓派IP的获取" class="headerlink" title="树莓派IP的获取"></a>树莓派IP的获取</h2><ul>
 <li>第一种方式：与电脑连接在同一个路由器或者wifi下。然后通过路由器查看树莓派IP（带屏幕的可在树莓派上查看）。<br>前提是在该网络中没有对一些端口（如3389、22）屏蔽，这种方法才适用。</li>
 <li>第二种方式：网线直连。用网线直接连接树莓派和电脑，将电脑的无线的网络分享到以太网还能实现访问互联网。<br>命令行使用<code>arp -a</code>来查看树莓派ip,其IP在192.168.137.1接口下，一般为第一个。如图：<br><img src="/source/images/arp.png" alt="arp -a"><br>注意：使用网线直连，默认树莓派为自动获取ip,也就意味着，ip地址是动态变化的。可以使用以下方法设置静态ip:</li>
-<li>1、第一种方式：树莓派图形界面</li>
+<li>1、第一种方式：树莓派图形界面进行配置网络参数</li>
 <li>2、第二种方式：编辑配置文件<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/dhcpcd.conf</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
+<a id="more"></a>
 <p>在末尾添加以下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">interface eth0</span><br><span class="line">inform 192.168.137.2</span><br><span class="line">static routers=192.168.1.1</span><br></pre></td></tr></table></figure></p>
 <p>注意自己的网卡名字是否一致。</p>
 <h2 id="获取IP后"><a href="#获取IP后" class="headerlink" title="获取IP后"></a>获取IP后</h2><p>  获取IP后就可以连接了，但需要注意以下几点。</p>
@@ -347,6 +440,14 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/树莓派/" rel="tag"># 树莓派</a>
+          
+            <a href="/tags/网线直连树莓派/" rel="tag"># 网线直连树莓派</a>
+          
+        </div>
       
 
       
@@ -457,13 +558,47 @@
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">35</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
             
 
           </nav>
 
           
 
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/fishrong/" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://weibo.com/u/3995987729" target="_blank" title="微博">
+                      
+                        <i class="fa fa-fw fa-globe"></i>微博</a>
+                  </span>
+                
+            </div>
           
 
           
@@ -572,6 +707,8 @@
   
 
 
+  
+
 
 
 
@@ -610,6 +747,11 @@
   
   
     <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
   
 
 
@@ -683,8 +825,128 @@
 
 
 
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
 
   
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("u4IOrd2mX1SvL1Glvo0FyE4b-gzGzoHsz", "74rzqLmJ9BKdVz6NNUw5C9Ry");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
 

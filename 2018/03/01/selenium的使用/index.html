@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="python,selenium," />
 
 
 
@@ -80,13 +80,14 @@
 
 
 <meta name="description" content="下载相应浏览器驱动放在python的根目录下 初始化1234567from selenium import webdriverfrom selenium.common.exceptions import TimeoutExceptionfrom selenium.webdriver.common.by import Byfrom selenium.webdriver.support.ui impo">
+<meta name="keywords" content="python,selenium">
 <meta property="og:type" content="article">
 <meta property="og:title" content="selenium的使用">
 <meta property="og:url" content="http://yoursite.com/2018/03/01/selenium的使用/index.html">
 <meta property="og:site_name" content="Wangsr&#39;s Notes">
 <meta property="og:description" content="下载相应浏览器驱动放在python的根目录下 初始化1234567from selenium import webdriverfrom selenium.common.exceptions import TimeoutExceptionfrom selenium.webdriver.common.by import Byfrom selenium.webdriver.support.ui impo">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-26T11:48:19.951Z">
+<meta property="og:updated_time" content="2018-10-07T01:05:47.700Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="selenium的使用">
 <meta name="twitter:description" content="下载相应浏览器驱动放在python的根目录下 初始化1234567from selenium import webdriverfrom selenium.common.exceptions import TimeoutExceptionfrom selenium.webdriver.common.by import Byfrom selenium.webdriver.support.ui impo">
@@ -108,9 +109,9 @@
       author: '博主'
     },
     algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
+      applicationID: '0Z56XAHP9L',
+      apiKey: '9a1e2fe58aaf49839e1fe3907e8ceeae',
+      indexName: 'myPosts',
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
@@ -160,7 +161,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle"></p>
+        <p class="site-subtitle">Just Go</p>
       
   </div>
 
@@ -199,11 +200,69 @@
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
 
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
       
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
   
 </nav>
 
@@ -272,12 +331,45 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">python学习笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
           
 
           
+          
+             <span id="/2018/03/01/selenium的使用/" class="leancloud_visitors" data-flag-title="selenium的使用">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
           
 
           
@@ -303,6 +395,7 @@
 <h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">from selenium import webdriver</span><br><span class="line">from selenium.common.exceptions import TimeoutException</span><br><span class="line">from selenium.webdriver.common.by import By</span><br><span class="line">from selenium.webdriver.support.ui import WebDriverWait</span><br><span class="line">from selenium.webdriver.support import expected_conditions as EC</span><br><span class="line">browser = webdriver.Chrome()#驱动谷歌浏览器</span><br><span class="line">wait = WebDriverWait(browser,10)#等待时间</span><br></pre></td></tr></table></figure>
 <p>需下载谷歌浏览器驱动<a href="http://npm.taobao.org/mirrors/chromedriver/" target="_blank" rel="noopener">chromedriver</a>。注意不同版本浏览器需下载相应的驱动。<br>将下载的chromedriver解压后移动到/usr/local/bin</p>
 <h2 id="输入文本及点击按钮"><a href="#输入文本及点击按钮" class="headerlink" title="输入文本及点击按钮"></a>输入文本及点击按钮</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">def search():</span><br><span class="line">    try:</span><br><span class="line">        browser.get(&apos;https://www.taobao.com/&apos;)</span><br><span class="line">        input = wait.until(</span><br><span class="line">            EC.presence_of_element_located((By.CSS_SELECTOR,&apos;#q&apos;))</span><br><span class="line">        )</span><br><span class="line">        submit = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR,&apos;#J_TSearchForm &gt; div.search-button &gt; button&apos;)))</span><br><span class="line">        input.send_keys(&apos;美食&apos;)#输入文字</span><br><span class="line">        submit.click()#点击按钮</span><br><span class="line">        total = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR,&apos;#mainsrp-pager &gt; div &gt; div &gt; div &gt; div.total&apos;)))</span><br><span class="line">        get_products()</span><br><span class="line">        return total.text</span><br><span class="line">    except TimeoutException:</span><br><span class="line">        return search()#发生错误再执行一遍</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <h2 id="利用pyquery解析网页"><a href="#利用pyquery解析网页" class="headerlink" title="利用pyquery解析网页"></a>利用pyquery解析网页</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">from pyquery import PyQuery as pq</span><br><span class="line">def get_products():</span><br><span class="line">    wait.until(EC.presence_of_element_located((By.CSS_SELECTOR,&apos;#mainsrp-itemlist .items .item&apos;)))</span><br><span class="line">    html = browser.page_source#获取网页源代码</span><br><span class="line">    doc = pq(html)</span><br><span class="line">    items = doc(&apos;#mainsrp-itemlist .items .item&apos;).items()</span><br><span class="line">    for item in items:</span><br><span class="line">        product = &#123;</span><br><span class="line">            &apos;image&apos;:&apos;https:&apos;+item.find(&apos;.pic .img&apos;).attr(&apos;src&apos;),</span><br><span class="line">            &apos;title&apos;:item.find(&apos;.title&apos;).text()</span><br><span class="line">        &#125;</span><br><span class="line">        print(product)</span><br></pre></td></tr></table></figure>
 <h2 id="模拟手机点击"><a href="#模拟手机点击" class="headerlink" title="模拟手机点击"></a>模拟手机点击</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TouchActions(browser).tap(return_name).perform()#模拟手机点击tap里为获取元素，broswer：浏览器实例</span><br></pre></td></tr></table></figure>
 <h2 id="进行翻页操作"><a href="#进行翻页操作" class="headerlink" title="进行翻页操作"></a>进行翻页操作</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">browser.execute_script(&quot;window.scrollBy(0, 10000)&quot;)</span><br></pre></td></tr></table></figure>
@@ -335,6 +428,14 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/python/" rel="tag"># python</a>
+          
+            <a href="/tags/selenium/" rel="tag"># selenium</a>
+          
+        </div>
       
 
       
@@ -445,13 +546,47 @@
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">35</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
             
 
           </nav>
 
           
 
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/fishrong/" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://weibo.com/u/3995987729" target="_blank" title="微博">
+                      
+                        <i class="fa fa-fw fa-globe"></i>微博</a>
+                  </span>
+                
+            </div>
           
 
           
@@ -560,6 +695,8 @@
   
 
 
+  
+
 
 
 
@@ -598,6 +735,11 @@
   
   
     <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
   
 
 
@@ -671,8 +813,128 @@
 
 
 
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
 
   
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("u4IOrd2mX1SvL1Glvo0FyE4b-gzGzoHsz", "74rzqLmJ9BKdVz6NNUw5C9Ry");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
 
