@@ -713,7 +713,7 @@
 
       
         
-          <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>  树莓派本身不带录音功能，即使连接有麦的耳机也不ok。所以需要另外购买麦克风设备<br>  可以是下面这种：<br>  <img src="!--￼7--&gt;/source/img/micro.jpg" alt="麦克风"></p>
+          <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>  树莓派本身不带录音功能，即使连接有麦的耳机也不ok。所以需要另外购买麦克风设备<br>  可以是下面这种：<br>  <img src="/images/micro.jpg" alt="麦克风"></p>
 <h2 id="第一步【连接】"><a href="#第一步【连接】" class="headerlink" title="第一步【连接】"></a>第一步【连接】</h2><pre><code>将麦克风插到树莓派上。
 </code></pre><h2 id="第二步【配置】"><a href="#第二步【配置】" class="headerlink" title="第二步【配置】"></a>第二步【配置】</h2><p>  树莓派没有设置默认的录音设备，而且我们需要使用不同的声卡进行录音和播放。<br>  所以需要进行配置。否则就可能出现下面这种报错：<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">raspberry rec FAIL formats: can't <span class="keyword">open</span> <span class="keyword">input</span> <span class="symbol">`default'</span>: snd_pcm_open <span class="keyword">error</span>: <span class="keyword">No</span> such <span class="keyword">file</span> or directory</span><br></pre></td></tr></table></figure></p>
 <p>首先进入配置文件：<br><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nano ~<span class="string">/.asoundrc</span></span><br></pre></td></tr></table></figure></p>
@@ -1045,7 +1045,7 @@
 <p>不管是以上哪一种都需要先知道树莓派ip。</p>
 <h2 id="树莓派IP的获取"><a href="#树莓派IP的获取" class="headerlink" title="树莓派IP的获取"></a>树莓派IP的获取</h2><ul>
 <li>第一种方式：与电脑连接在同一个路由器或者wifi下。然后通过路由器查看树莓派IP（带屏幕的可在树莓派上查看）。<br>前提是在该网络中没有对一些端口（如3389、22）屏蔽，这种方法才适用。</li>
-<li>第二种方式：网线直连。用网线直接连接树莓派和电脑，将电脑的无线的网络分享到以太网还能实现访问互联网。<br>命令行使用<code>arp -a</code>来查看树莓派ip,其IP在192.168.137.1接口下，一般为第一个。如图：<br><img src="/source/images/arp.png" alt="arp -a"><br>注意：使用网线直连，默认树莓派为自动获取ip,也就意味着，ip地址是动态变化的。可以使用以下方法设置静态ip:</li>
+<li>第二种方式：网线直连。用网线直接连接树莓派和电脑，将电脑的无线的网络分享到以太网还能实现访问互联网。<br>命令行使用<code>arp -a</code>来查看树莓派ip,其IP在192.168.137.1接口下，一般为第一个。如图：<br><img src="/images/arp.png" alt="arp -a"><br>注意：使用网线直连，默认树莓派为自动获取ip,也就意味着，ip地址是动态变化的。可以使用以下方法设置静态ip:</li>
 <li>1、第一种方式：树莓派图形界面进行配置网络参数</li>
 <li>2、第二种方式：编辑配置文件<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="keyword">vim</span> /etc/dhcpcd.<span class="keyword">conf</span></span><br></pre></td></tr></table></figure>
 </li>

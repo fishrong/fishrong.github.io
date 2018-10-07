@@ -87,12 +87,12 @@
 <meta property="og:site_name" content="Wangsr&#39;s Notes">
 <meta property="og:description" content="说明  树莓派本身不带录音功能，即使连接有麦的耳机也不ok。所以需要另外购买麦克风设备  可以是下面这种：   第一步【连接】将麦克风插到树莓派上。 第二步【配置】  树莓派没有设置默认的录音设备，而且我们需要使用不同的声卡进行录音和播放。  所以需要进行配置。否则就可能出现下面这种报错：1raspberry rec FAIL formats: can&apos;t open input `default&apos;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://wangsr.cn/2018/09/19/树莓派爬坑系列（三）使用USB麦克风进行录音/!--￼7--%3E/source/img/micro.jpg">
-<meta property="og:updated_time" content="2018-10-07T00:59:27.577Z">
+<meta property="og:image" content="https://wangsr.cn/images/micro.jpg">
+<meta property="og:updated_time" content="2018-10-07T07:47:35.027Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="树莓派爬坑系列（三）使用USB录音设备进行录音">
 <meta name="twitter:description" content="说明  树莓派本身不带录音功能，即使连接有麦的耳机也不ok。所以需要另外购买麦克风设备  可以是下面这种：   第一步【连接】将麦克风插到树莓派上。 第二步【配置】  树莓派没有设置默认的录音设备，而且我们需要使用不同的声卡进行录音和播放。  所以需要进行配置。否则就可能出现下面这种报错：1raspberry rec FAIL formats: can&apos;t open input `default&apos;">
-<meta name="twitter:image" content="https://wangsr.cn/2018/09/19/树莓派爬坑系列（三）使用USB麦克风进行录音/!--￼7--%3E/source/img/micro.jpg">
+<meta name="twitter:image" content="https://wangsr.cn/images/micro.jpg">
 
 
 
@@ -393,7 +393,7 @@
       
 
       
-        <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>  树莓派本身不带录音功能，即使连接有麦的耳机也不ok。所以需要另外购买麦克风设备<br>  可以是下面这种：<br>  <img src="!--￼7--&gt;/source/img/micro.jpg" alt="麦克风"></p>
+        <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>  树莓派本身不带录音功能，即使连接有麦的耳机也不ok。所以需要另外购买麦克风设备<br>  可以是下面这种：<br>  <img src="/images/micro.jpg" alt="麦克风"></p>
 <h2 id="第一步【连接】"><a href="#第一步【连接】" class="headerlink" title="第一步【连接】"></a>第一步【连接】</h2><pre><code>将麦克风插到树莓派上。
 </code></pre><h2 id="第二步【配置】"><a href="#第二步【配置】" class="headerlink" title="第二步【配置】"></a>第二步【配置】</h2><p>  树莓派没有设置默认的录音设备，而且我们需要使用不同的声卡进行录音和播放。<br>  所以需要进行配置。否则就可能出现下面这种报错：<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">raspberry rec FAIL formats: can't <span class="keyword">open</span> <span class="keyword">input</span> <span class="symbol">`default'</span>: snd_pcm_open <span class="keyword">error</span>: <span class="keyword">No</span> such <span class="keyword">file</span> or directory</span><br></pre></td></tr></table></figure></p>
 <p>首先进入配置文件：<br><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nano ~<span class="string">/.asoundrc</span></span><br></pre></td></tr></table></figure></p>
