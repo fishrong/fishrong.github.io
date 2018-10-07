@@ -87,13 +87,13 @@
 <meta property="og:site_name" content="Wangsr&#39;s Notes">
 <meta property="og:description" content="电脑连接树莓派有以下几种方式：  1、ssh连接 2、Windows远程桌面连接 3、VNC连接  不管是以上哪一种都需要先知道树莓派ip。 树莓派IP的获取 第一种方式：与电脑连接在同一个路由器或者wifi下。然后通过路由器查看树莓派IP（带屏幕的可在树莓派上查看）。前提是在该网络中没有对一些端口（如3389、22）屏蔽，这种方法才适用。 第二种方式：网线直连。用网线直接连接树莓派和电脑，将电脑">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://wangsr.cn/images/arp.png">
+<meta property="og:image" content="https://wangsr.cn/image/arp.png">
 <meta property="og:image" content="https://wangsr.cn/images/vnc1.png">
-<meta property="og:updated_time" content="2018-10-07T07:45:54.995Z">
+<meta property="og:updated_time" content="2018-10-07T08:15:48.347Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="树莓派爬坑系列（一）电脑连接树莓派">
 <meta name="twitter:description" content="电脑连接树莓派有以下几种方式：  1、ssh连接 2、Windows远程桌面连接 3、VNC连接  不管是以上哪一种都需要先知道树莓派ip。 树莓派IP的获取 第一种方式：与电脑连接在同一个路由器或者wifi下。然后通过路由器查看树莓派IP（带屏幕的可在树莓派上查看）。前提是在该网络中没有对一些端口（如3389、22）屏蔽，这种方法才适用。 第二种方式：网线直连。用网线直接连接树莓派和电脑，将电脑">
-<meta name="twitter:image" content="https://wangsr.cn/images/arp.png">
+<meta name="twitter:image" content="https://wangsr.cn/image/arp.png">
 
 
 
@@ -403,7 +403,7 @@
 <p>不管是以上哪一种都需要先知道树莓派ip。</p>
 <h2 id="树莓派IP的获取"><a href="#树莓派IP的获取" class="headerlink" title="树莓派IP的获取"></a>树莓派IP的获取</h2><ul>
 <li>第一种方式：与电脑连接在同一个路由器或者wifi下。然后通过路由器查看树莓派IP（带屏幕的可在树莓派上查看）。<br>前提是在该网络中没有对一些端口（如3389、22）屏蔽，这种方法才适用。</li>
-<li>第二种方式：网线直连。用网线直接连接树莓派和电脑，将电脑的无线的网络分享到以太网还能实现访问互联网。<br>命令行使用<code>arp -a</code>来查看树莓派ip,其IP在192.168.137.1接口下，一般为第一个。如图：<br><img src="/images/arp.png" alt="arp -a"><br>注意：使用网线直连，默认树莓派为自动获取ip,也就意味着，ip地址是动态变化的。可以使用以下方法设置静态ip:</li>
+<li>第二种方式：网线直连。用网线直接连接树莓派和电脑，将电脑的无线的网络分享到以太网还能实现访问互联网。<br>命令行使用<code>arp -a</code>来查看树莓派ip,其IP在192.168.137.1接口下，一般为第一个。如图：<br><img src="/image/arp.png" alt="arp -a"><br>注意：使用网线直连，默认树莓派为自动获取ip,也就意味着，ip地址是动态变化的。可以使用以下方法设置静态ip:</li>
 <li>1、第一种方式：树莓派图形界面进行配置网络参数</li>
 <li>2、第二种方式：编辑配置文件<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="keyword">vim</span> /etc/dhcpcd.<span class="keyword">conf</span></span><br></pre></td></tr></table></figure>
 </li>
