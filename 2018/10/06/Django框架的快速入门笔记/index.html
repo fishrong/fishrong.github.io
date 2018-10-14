@@ -87,12 +87,13 @@
 <meta property="og:site_name" content="Wangsr&#39;s Notes">
 <meta property="og:description" content="安装Django1pip install django 创建项目1django-admin startproject mysite">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://wangsr.cn/images/defender.png">
 <meta property="og:image" content="https://wangsr.cn/images/django.jpg">
-<meta property="og:updated_time" content="2018-10-12T13:26:52.626Z">
+<meta property="og:updated_time" content="2018-10-14T13:01:14.079Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Django框架的快速入门笔记">
 <meta name="twitter:description" content="安装Django1pip install django 创建项目1django-admin startproject mysite">
-<meta name="twitter:image" content="https://wangsr.cn/images/django.jpg">
+<meta name="twitter:image" content="https://wangsr.cn/images/defender.png">
 
 
 
@@ -403,7 +404,8 @@
 <p><strong>几点理解：</strong></p>
 <ul>
 <li>1、<code>views.py</code>里的一个函数对应一个请求控制。类似于Java web中struts2的作用。</li>
-<li>2、通过return 可以跳转到相应的html页面并且<code>render</code>函数会把请求转发到该页面。</li>
+<li>2、通过return <code>render()</code>函数可以跳转到相应的html页面并且把参数转发到该页面。</li>
+<li>3、可直接通过<code>return HttpResponse(&quot;info&quot;)</code>来返回一个response。</li>
 </ul>
 <h2 id="配置路由"><a href="#配置路由" class="headerlink" title="配置路由"></a>配置路由</h2><p>配置路由是为了让浏览者输入相应的链接时可以访问相应的内容。</p>
 <ul>
@@ -448,10 +450,19 @@
 <li><p><code>settings.py</code>中<code>ALLOWED_HOSTS</code>设置如下：</p>
 <figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">ALLOWED_HOSTS</span> = [<span class="string">'*'</span>,]</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>打开电脑的8000端口，设置入站规则即可。<br><strong>三步缺一不可</strong></p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>Django框架整体的运行流程如图：<br><img src="/images/django.jpg" alt="Django整体的运行流程"></p>
+<li><p>打开电脑的8000端口，设置入站规则即可。<br>windows设置如图：<br><img src="/images/defender.png" alt="windows设置防火墙"><br><strong>三步缺一不可</strong></p>
+<h3 id="Django-runserver配置https"><a href="#Django-runserver配置https" class="headerlink" title="Django runserver配置https"></a>Django runserver配置https</h3></li>
+<li><p>pip命令安装以下包</p>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pip <span class="keyword">install </span>django-<span class="keyword">extensions</span></span><br><span class="line"><span class="keyword">pip </span><span class="keyword">install </span>django-werkzeug-debugger-runserver</span><br><span class="line">pip <span class="keyword">install </span>pyOpenSSL</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在<code>settings.py</code>加入以下两项</p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">'werkzeug_debugger_runserver',</span><br><span class="line">'django_extensions',</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>用以下命令开启服务</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage<span class="selector-class">.py</span> runserver_plus --cert server<span class="selector-class">.crt</span> <span class="number">0</span>:<span class="number">8000</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>Django框架整体的运行流程如图：<br><img src="/images/django.jpg" alt="Django整体的运行流程"></p>
 <h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p>Django中文官方文档<br>[<a href="https://docs.djangoproject.com/zh-hans/2.1/]https://docs.djangoproject.com/zh-hans/2.1/" target="_blank" rel="noopener">https://docs.djangoproject.com/zh-hans/2.1/]https://docs.djangoproject.com/zh-hans/2.1/</a></p>
 
       
@@ -649,7 +660,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Django"><span class="nav-number">1.</span> <span class="nav-text">安装Django</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建项目"><span class="nav-number">2.</span> <span class="nav-text">创建项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建应用"><span class="nav-number">3.</span> <span class="nav-text">创建应用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编写视图控制函数"><span class="nav-number">4.</span> <span class="nav-text">编写视图控制函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置路由"><span class="nav-number">5.</span> <span class="nav-text">配置路由</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编写视图"><span class="nav-number">6.</span> <span class="nav-text">编写视图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启动网站服务"><span class="nav-number">7.</span> <span class="nav-text">启动网站服务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其它几点问题"><span class="nav-number">8.</span> <span class="nav-text">其它几点问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#获取表单数据"><span class="nav-number">8.1.</span> <span class="nav-text">获取表单数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#让其他人可以访问Django应用"><span class="nav-number">8.2.</span> <span class="nav-text">让其他人可以访问Django应用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">9.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考链接"><span class="nav-number">10.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Django"><span class="nav-number">1.</span> <span class="nav-text">安装Django</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建项目"><span class="nav-number">2.</span> <span class="nav-text">创建项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建应用"><span class="nav-number">3.</span> <span class="nav-text">创建应用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编写视图控制函数"><span class="nav-number">4.</span> <span class="nav-text">编写视图控制函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置路由"><span class="nav-number">5.</span> <span class="nav-text">配置路由</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编写视图"><span class="nav-number">6.</span> <span class="nav-text">编写视图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启动网站服务"><span class="nav-number">7.</span> <span class="nav-text">启动网站服务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其它几点问题"><span class="nav-number">8.</span> <span class="nav-text">其它几点问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#获取表单数据"><span class="nav-number">8.1.</span> <span class="nav-text">获取表单数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#让其他人可以访问Django应用"><span class="nav-number">8.2.</span> <span class="nav-text">让其他人可以访问Django应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Django-runserver配置https"><span class="nav-number">8.3.</span> <span class="nav-text">Django runserver配置https</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">9.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考链接"><span class="nav-number">10.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
             
 
           </div>
