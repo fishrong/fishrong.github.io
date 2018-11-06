@@ -290,6 +290,166 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://Wangsr.cn/2018/09/06/使用struts2的拦截器实现权限验证/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="子非鱼">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wangsr's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/06/使用struts2的拦截器实现权限验证/" itemprop="url">使用struts2的拦截器实现权限验证</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-06T00:00:00+08:00">
+                2018-09-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">Java学习笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/09/06/使用struts2的拦截器实现权限验证/" class="leancloud_visitors" data-flag-title="使用struts2的拦截器实现权限验证">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>应用场景：对于需要用户登录的网页进行身份验证，比如未登录不能浏览相关内容并跳转到登录页面。</p>
+<h2 id="一、在struts-xml配置文件中定义拦截器"><a href="#一、在struts-xml配置文件中定义拦截器" class="headerlink" title="一、在struts.xml配置文件中定义拦截器"></a>一、在struts.xml配置文件中定义拦截器</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">package</span> <span class="attr">name</span>=<span class="string">"default"</span> <span class="attr">extends</span>=<span class="string">"struts-default"</span>&gt;</span></span><br><span class="line">   <span class="comment">&lt;!-- 定义了一个名为authority的拦截器 --&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">interceptors</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">interceptor</span> <span class="attr">name</span>=<span class="string">"authority"</span> <span class="attr">class</span>=<span class="string">"cn.wangsr.AuthorityInterceptor"</span>/&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">interceptors</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">package</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="二、在需要进行拦截的action中使用拦截器"><a href="#二、在需要进行拦截的action中使用拦截器" class="headerlink" title="二、在需要进行拦截的action中使用拦截器"></a>二、在需要进行拦截的action中使用拦截器</h2><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;interceptor-<span class="keyword">ref</span> <span class="built_in">name</span>=<span class="string">"defaultStack"</span>&gt;&lt;/interceptor-<span class="keyword">ref</span>&gt;</span><br><span class="line">&lt;interceptor-<span class="keyword">ref</span> <span class="built_in">name</span>=<span class="string">"authority"</span>&gt;&lt;/interceptor-<span class="keyword">ref</span>&gt;</span><br></pre></td></tr></table></figure>
+<p>注：第一行为默认拦截器，如果不适用通过拦截器后将会丢失表单所提交数据。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/09/06/使用struts2的拦截器实现权限验证/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://Wangsr.cn/2018/08/25/python操作excel/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1732,166 +1892,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://Wangsr.cn/2018/03/01/selenium的使用/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="子非鱼">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wangsr's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/01/selenium的使用/" itemprop="url">selenium的使用</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-01T00:00:00+08:00">
-                2018-03-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/python学习笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">python学习笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2018/03/01/selenium的使用/" class="leancloud_visitors" data-flag-title="selenium的使用">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="下载相应浏览器驱动"><a href="#下载相应浏览器驱动" class="headerlink" title="下载相应浏览器驱动"></a>下载相应浏览器驱动</h2><p>放在python的根目录下</p>
-<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">from</span> selenium.common.exceptions <span class="keyword">import</span> TimeoutException</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.common.<span class="keyword">by</span> <span class="keyword">import</span> By</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.support.ui <span class="keyword">import</span> WebDriverWait</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.support <span class="keyword">import</span> expected_conditions <span class="keyword">as</span> EC</span><br><span class="line">browser = webdriver.Chrome()<span class="comment">#驱动谷歌浏览器</span></span><br><span class="line">wait = WebDriverWait(browser,<span class="number">10</span>)<span class="comment">#等待时间</span></span><br></pre></td></tr></table></figure>
-<p>需下载谷歌浏览器驱动<a href="http://npm.taobao.org/mirrors/chromedriver/" target="_blank" rel="noopener">chromedriver</a>。注意不同版本浏览器需下载相应的驱动。<br>将下载的chromedriver解压后移动到/usr/local/bin</p>
-<h2 id="输入文本及点击按钮"><a href="#输入文本及点击按钮" class="headerlink" title="输入文本及点击按钮"></a>输入文本及点击按钮</h2><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">def search():</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        browser.<span class="built_in">get</span>(<span class="string">'https://www.taobao.com/'</span>)</span><br><span class="line">        input = <span class="built_in">wait</span>.<span class="keyword">until</span>(</span><br><span class="line">            EC.presence_of_element_located((By.CSS_SELECTOR,<span class="string">'#q'</span>))</span><br><span class="line">        )</span><br><span class="line">        submit = <span class="built_in">wait</span>.<span class="keyword">until</span>(EC.element_to_be_clickable((By.CSS_SELECTOR,<span class="string">'#J_TSearchForm &gt; div.search-button &gt; button'</span>)))</span><br><span class="line">        input.send_keys(<span class="string">'美食'</span>)<span class="comment">#输入文字</span></span><br><span class="line">        submit.click()<span class="comment">#点击按钮</span></span><br><span class="line">        total = <span class="built_in">wait</span>.<span class="keyword">until</span>(EC.presence_of_element_located((By.CSS_SELECTOR,<span class="string">'#mainsrp-pager &gt; div &gt; div &gt; div &gt; div.total'</span>)))</span><br><span class="line">        get_products()</span><br><span class="line">        <span class="literal">return</span> total.<span class="keyword">text</span></span><br><span class="line">    except TimeoutException:</span><br><span class="line">        <span class="literal">return</span> search()<span class="comment">#发生错误再执行一遍</span></span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/01/selenium的使用/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1946,7 +1946,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-count">32</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1957,7 +1957,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1968,7 +1968,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">38</span>
+                  <span class="site-state-item-count">39</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
