@@ -89,11 +89,12 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://wangsr.cn/images/apple_home.png">
 <meta property="og:image" content="https://wangsr.cn/images/clover1.jpg">
-<meta property="og:image" content="https://wangsr.cn/images/touchpad.png">
 <meta property="og:image" content="https://wangsr.cn/images/voice.png">
 <meta property="og:image" content="https://wangsr.cn/images/voiceconfig.png">
 <meta property="og:image" content="https://wangsr.cn/images/liangdu.png">
-<meta property="og:updated_time" content="2018-11-06T12:07:27.840Z">
+<meta property="og:image" content="https://wangsr.cn/images/touchpad.png">
+<meta property="og:image" content="https://wangsr.cn/images/finger_gesture.png">
+<meta property="og:updated_time" content="2018-11-09T03:46:37.190Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="黑苹果的折腾手记">
 <meta name="twitter:description" content="写在前面情不知所起，一往而深。也不知道为什么突然就想折腾一下黑苹果，确实不负人们所说，黑苹果果然是比较难折腾的。但如果能顺利装上黑苹果，那你对装系统肯定会有更深的认识。苹果系统使用起来确实感觉比Windows有很多人性化的设计，界面也更加漂亮，酷炫，还是值得折腾的。花了一周左右的时间成功装上了10.14，目前已经驱动集显、声卡、网卡、电量显示、亮度调节基本使用了，简单记录一下自己爬过的那些坑。下面">
@@ -398,8 +399,13 @@
       
 
       
-        <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>情不知所起，一往而深。也不知道为什么突然就想折腾一下黑苹果，确实不负人们所说，黑苹果果然是比较难折腾的。<br>但如果能顺利装上黑苹果，那你对装系统肯定会有更深的认识。苹果系统使用起来确实感觉比Windows有很多人性化的设计，界面也更加漂亮，酷炫，还是值得折腾的。花了一周左右的时间成功装上了<code>10.14</code>，目前已经驱动集显、声卡、网卡、电量显示、亮度调节基本使用了，简单记录一下自己爬过的那些坑。<br>下面是系统界面。<br><img src="/images/apple_home.png" alt="桌面"><br>需要注意的是每个人的电脑配置几乎都不一样，不可生搬硬套，方法仅供参考。<br>我的电脑配置如下：<br>电脑型号:ASUS FL5500L<br>主板：X555LD<br>处理器：i7 4510U<br>显卡（核显）：hd4400  </p>
-<a id="more"></a>
+        <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>情不知所起，一往而深。也不知道为什么突然就想折腾一下黑苹果，确实不负人们所说，黑苹果果然是比较难折腾的。<br>但如果能顺利装上黑苹果，那你对装系统肯定会有更深的认识。苹果系统使用起来确实感觉比Windows有很多人性化的设计，界面也更加漂亮，酷炫，还是值得折腾的。花了一周左右的时间成功装上了<code>10.14</code>，目前已经驱动集显、声卡、网卡、电量显示、亮度调节基本使用了，简单记录一下自己爬过的那些坑。<br>下面是系统界面。<br><img src="/images/apple_home.png" alt="桌面"><br>需要注意的是每个人的电脑配置几乎都不一样，不可生搬硬套，方法仅供参考。<br>我的电脑配置如下：<br>电脑型号:ASUS FL5500L<br>主板：X555LD<br>处理器：i7 4510U<br>显卡（核显）：hd4400<br><strong>折腾黑苹果的几点建议</strong></p>
+<ol>
+<li>准备两个u盘，一个做苹果镜像，一个做成pe盘。因为可能会经常进不去系统，所以需要pe盘来做修复。</li>
+<li>善于使用搜索引擎，多尝试。每个人的硬件都不太一样，同一个问题别人的方法不一定适合你，但肯定是能找到一个解决办法的。</li>
+<li>耐心。<a id="more"></a>
+</li>
+</ol>
 <h1 id="整个流程"><a href="#整个流程" class="headerlink" title="整个流程"></a>整个流程</h1><p>整个装黑苹果主要分成两部分工作：</p>
 <ul>
 <li>装系统</li>
@@ -428,9 +434,6 @@
 <li>买一个USB无线网卡，插上装个驱动即可。</li>
 </ol>
 <h3 id="显卡"><a href="#显卡" class="headerlink" title="显卡"></a>显卡</h3><p>显卡正确驱动的话dock应该是半透明的，且在关于本机中显存不会是7m或者其它更小的值。<br>成功驱动显卡在于，选择正确的<code>ig-platform-id</code>,可以使用<a href="https://mackie100projects.altervista.org/clover-configurator/" target="_blank" rel="noopener">clover configurator</a><br>根据自己显卡的型号选择合适的<code>ig-platform-id</code>,而且这里还跟<code>smbios</code>的机型有关，这里需要设置成和自己cpu参数相近的参数。<br><strong>这两个参数还会影响到声卡是否能正常驱动</strong></p>
-<h3 id="触摸板"><a href="#触摸板" class="headerlink" title="触摸板"></a>触摸板</h3><ul>
-<li>使用<code>ApplePS2SmartTouchPad.kext</code>，正常驱动设置界面如下：<br><img src="/images/touchpad.png" alt="触摸板"><br>可能会出现以下情况，触摸板可以正常用，比如双指滑动，但是可能不能点击，设置中还是没有找到触摸板。<br>我遇到这种情况在装上电源驱动，打上<code>dsdt</code>补丁后就又正常显示了。</li>
-</ul>
 <h3 id="声卡"><a href="#声卡" class="headerlink" title="声卡"></a>声卡</h3><p>两种方式  </p>
 <ul>
 <li><p>使用万能声卡驱动<code>VoodooHDA.kext</code>放在clover/kexts目录下.重启，成功驱动界面应该如下<br><img src="/images/voice.png" alt=""><br>我的放上这个驱动后直接不能开机，所以我选择了第二种方式。</p>
@@ -446,13 +449,30 @@
 <li>打完补丁后把<code>ACPIBatteryManager.kext</code>放在clover的驱动目录下，重启。<br>如果没有显示，尝试拔下充电线，重启是否有正常显示。</li>
 </ul>
 <h3 id="亮度"><a href="#亮度" class="headerlink" title="亮度"></a>亮度</h3><p>将<code>SSDT-PNLF.aml</code>、<code>SSDT-ALS0.aml</code>两个文件放在<code>clover/ACPI/patch</code>目录下，另外一个就是<br>跟前面提的<code>ig-platform-id</code>设置也有关系，平台选对了就能正常显示。<br>设置成功后应该有亮度调节滑块如下图：<br><img src="/images/liangdu.png" alt="亮度"></p>
+<h3 id="触摸板"><a href="#触摸板" class="headerlink" title="触摸板"></a>触摸板</h3><ul>
+<li>使用<code>ApplePS2SmartTouchPad.kext</code>，正常驱动设置界面如下：<br><img src="/images/touchpad.png" alt="触摸板"><br>可能会出现以下情况，触摸板可以正常用，比如双指滑动，但是可能不能点击，设置中还是没有找到触摸板。<br>我遇到这种情况在装上电源驱动，打上<code>dsdt</code>补丁后就又正常显示了。</li>
+<li>修改<code>ApplePS2SmartTouchPad.kext</code>，定制自己的手势。<br>驱动触摸板后发现一些双指和三指的手势并没有效果，这时候就需要修改源文件了。<br>在<code>ApplePS2SmartTouchPad.kext/Resources</code>目录下有一个说明文档，给出了手势相对应的编号，我的版本是v 4.6.8,<br>需要注意的是，有些编号已经失效，如3对应的启动器已失效，<code>f13-f24</code> 应对应<code>21-32</code>，33应为右键。<br><img src="/images/finger_gesture.png" alt=""><br>修改思路：修改<code>ApplePS2SmartTouchPad.kext/info.plist</code>中的<code>preferences</code>相应手势对应动作编号,如果需要绑定其它快捷键，可以先在电脑中设置好快捷键，再修改<br><code>ApplePS2SmartTouchPad.kext/plugins</code>中的<code>ApplePS2Keyboard.kext</code>,将<code>f13-f24</code>定义为你设置的快捷键，再修改<code>ApplePS2SmartTouchPad.kext/info.plist</code>中手势对应<code>f13-f24</code>相应的编号。<br>修改后手势功能如下：<br><strong>双指：</strong></li>
+</ul>
+<ol>
+<li>点击———右键</li>
+<li>左边缘往右—-切换到左空间</li>
+<li>有边缘往左—-切换到右空间<br><strong>三指：</strong></li>
+<li>点击—–启动器（系统设置启动器快捷键为ALT CMD L）</li>
+<li>向上—–桌面</li>
+<li>向下—–调度器</li>
+<li>向左—–后退</li>
+<li>向右—–前进<br><strong>四指：</strong></li>
+<li>点击—–全屏</li>
+<li>向上—–关闭应用</li>
+<li>向下—–最小化应用<br>发现问题：不知道什么原因，手势不能映射为锁屏快捷键。</li>
+</ol>
 <h2 id="其它问题"><a href="#其它问题" class="headerlink" title="其它问题"></a>其它问题</h2><ul>
 <li><p>开机启动后8个苹果，登陆界面分裂花屏，按一下睡眠后唤醒又显示正常（对于1920<em>1080屏）。<br>解决方案有两种：<br>1、进入bios将<code>csm</code>设置为<code>enable</code>.<br>2、将clover的分辨率设置为`1280</em>1024`,这种方式开机会由大苹果变成小苹果</p>
 </li>
 <li><p><code>appstore</code>不能登录问题，如果你有appleid但是没有进过App Store那很可能不能登录。最快也是最方便的方法是，使用iPhone登录一下你的账号完善信息就OK。</p>
 </li>
 </ul>
-<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>   感谢论坛、博客的各位大佬提供的资源及各种问题的解决方案。每个人的机型都不一样，它人的设置只能是当作参考，切勿生搬硬套。<br>   **配置文件可到github <a href="https://github.com/fishrong/ASUS-FL5500L-EFI" target="_blank" rel="noopener">下载</a>。</p>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>   感谢论坛、博客的各位大佬提供的资源及各种问题的解决方案。每个人的机型都不一样，它人的设置只能是当作参考，切勿生搬硬套。<br>   <strong>配置文件可到github <a href="https://github.com/fishrong/ASUS-FL5500L-EFI" target="_blank" rel="noopener">下载</a>。</strong></p>
 
       
     </div>
@@ -643,7 +663,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#整个流程"><span class="nav-number">2.</span> <span class="nav-text">整个流程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#具体操作及注意事项"><span class="nav-number">3.</span> <span class="nav-text">具体操作及注意事项</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#找合适的efi和系统镜像"><span class="nav-number">3.1.</span> <span class="nav-text">找合适的efi和系统镜像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始装系统"><span class="nav-number">3.2.</span> <span class="nav-text">开始装系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用etcher烧写系统"><span class="nav-number">3.2.1.</span> <span class="nav-text">使用etcher烧写系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用Windows磁盘管理工具分出一块磁盘来装系统"><span class="nav-number">3.2.2.</span> <span class="nav-text">使用Windows磁盘管理工具分出一块磁盘来装系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开始装系统-1"><span class="nav-number">3.2.3.</span> <span class="nav-text">开始装系统</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#驱动安装及clover文件配置"><span class="nav-number">3.3.</span> <span class="nav-text">驱动安装及clover文件配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#网卡"><span class="nav-number">3.3.1.</span> <span class="nav-text">网卡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#显卡"><span class="nav-number">3.3.2.</span> <span class="nav-text">显卡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#触摸板"><span class="nav-number">3.3.3.</span> <span class="nav-text">触摸板</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#声卡"><span class="nav-number">3.3.4.</span> <span class="nav-text">声卡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#电量显示"><span class="nav-number">3.3.5.</span> <span class="nav-text">电量显示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#亮度"><span class="nav-number">3.3.6.</span> <span class="nav-text">亮度</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其它问题"><span class="nav-number">3.4.</span> <span class="nav-text">其它问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最后"><span class="nav-number">3.5.</span> <span class="nav-text">最后</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#整个流程"><span class="nav-number">2.</span> <span class="nav-text">整个流程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#具体操作及注意事项"><span class="nav-number">3.</span> <span class="nav-text">具体操作及注意事项</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#找合适的efi和系统镜像"><span class="nav-number">3.1.</span> <span class="nav-text">找合适的efi和系统镜像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始装系统"><span class="nav-number">3.2.</span> <span class="nav-text">开始装系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用etcher烧写系统"><span class="nav-number">3.2.1.</span> <span class="nav-text">使用etcher烧写系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用Windows磁盘管理工具分出一块磁盘来装系统"><span class="nav-number">3.2.2.</span> <span class="nav-text">使用Windows磁盘管理工具分出一块磁盘来装系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开始装系统-1"><span class="nav-number">3.2.3.</span> <span class="nav-text">开始装系统</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#驱动安装及clover文件配置"><span class="nav-number">3.3.</span> <span class="nav-text">驱动安装及clover文件配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#网卡"><span class="nav-number">3.3.1.</span> <span class="nav-text">网卡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#显卡"><span class="nav-number">3.3.2.</span> <span class="nav-text">显卡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#声卡"><span class="nav-number">3.3.3.</span> <span class="nav-text">声卡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#电量显示"><span class="nav-number">3.3.4.</span> <span class="nav-text">电量显示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#亮度"><span class="nav-number">3.3.5.</span> <span class="nav-text">亮度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#触摸板"><span class="nav-number">3.3.6.</span> <span class="nav-text">触摸板</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其它问题"><span class="nav-number">3.4.</span> <span class="nav-text">其它问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最后"><span class="nav-number">3.5.</span> <span class="nav-text">最后</span></a></li></ol></li></ol></div>
             
 
           </div>
