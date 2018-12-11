@@ -6,10 +6,10 @@
 
 
 <html class="theme-next pisces use-motion" lang="zh-Hans">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="theme-color" content="#222">
 
 
@@ -20,8 +20,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -40,7 +40,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -48,9 +48,9 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Android," />
+  <meta name="keywords" content="Android,">
 
 
 
@@ -79,19 +79,19 @@
 
 
 
-<meta name="description" content="实现效果自定义一个view绘制一个小方块，使其不断移动。 原理绘制代码如下：12canvas.translate(x,y);//设置偏移距离canvas.drawRect(0,0,100,100,paint); 绘制矩形时会加上x、y的偏移量，可以通过不断的改变x、y来改变绘制矩形的位置。 步骤自定义view123456789101112131415161718192021public class">
+<meta name="description" content="实现效果自定义一个view绘制一个小方块，使其不断移动。 方式一设置矩形坐标为变量并动态改变变量的值，重复调用重绘即可实现移动效果。 #方式二 原理绘制代码如下：">
 <meta name="keywords" content="Android">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android初体验(九)canvas绘制动画">
 <meta property="og:url" content="https://Wangsr.cn/2018/12/09/2018-2018-12-09-Android初体验-九-canvas绘制动画/index.html">
 <meta property="og:site_name" content="Wangsr&#39;s Notes">
-<meta property="og:description" content="实现效果自定义一个view绘制一个小方块，使其不断移动。 原理绘制代码如下：12canvas.translate(x,y);//设置偏移距离canvas.drawRect(0,0,100,100,paint); 绘制矩形时会加上x、y的偏移量，可以通过不断的改变x、y来改变绘制矩形的位置。 步骤自定义view123456789101112131415161718192021public class">
+<meta property="og:description" content="实现效果自定义一个view绘制一个小方块，使其不断移动。 方式一设置矩形坐标为变量并动态改变变量的值，重复调用重绘即可实现移动效果。 #方式二 原理绘制代码如下：">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://wangsr.cn/images/android_canvas.gif">
-<meta property="og:updated_time" content="2018-12-09T04:39:08.420Z">
+<meta property="og:updated_time" content="2018-12-09T13:28:01.080Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android初体验(九)canvas绘制动画">
-<meta name="twitter:description" content="实现效果自定义一个view绘制一个小方块，使其不断移动。 原理绘制代码如下：12canvas.translate(x,y);//设置偏移距离canvas.drawRect(0,0,100,100,paint); 绘制矩形时会加上x、y的偏移量，可以通过不断的改变x、y来改变绘制矩形的位置。 步骤自定义view123456789101112131415161718192021public class">
+<meta name="twitter:description" content="实现效果自定义一个view绘制一个小方块，使其不断移动。 方式一设置矩形坐标为变量并动态改变变量的值，重复调用重绘即可实现移动效果。 #方式二 原理绘制代码如下：">
 <meta name="twitter:image" content="https://wangsr.cn/images/android_canvas.gif">
 
 
@@ -122,7 +122,7 @@
 
 
 
-  <link rel="canonical" href="https://Wangsr.cn/2018/12/09/2018-2018-12-09-Android初体验-九-canvas绘制动画/"/>
+  <link rel="canonical" href="https://Wangsr.cn/2018/12/09/2018-2018-12-09-Android初体验-九-canvas绘制动画/">
 
 
 
@@ -140,7 +140,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
@@ -150,13 +150,13 @@
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">Wangsr's Notes</span>
         <span class="logo-line-after"><i></i></span>
@@ -186,7 +186,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
           </a>
@@ -196,7 +196,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
             归档
           </a>
@@ -206,7 +206,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
             标签
           </a>
@@ -216,7 +216,7 @@
         <li class="menu-item menu-item-categories">
           <a href="/categories/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
             分类
           </a>
@@ -229,7 +229,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
             
             搜索
           </a>
@@ -288,20 +288,20 @@
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://Wangsr.cn/2018/12/09/2018-2018-12-09-Android初体验-九-canvas绘制动画/">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="子非鱼">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.png">
     </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Wangsr's Notes">
     </span>
 
@@ -333,7 +333,7 @@
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -344,7 +344,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
                   <a href="/categories/Android学习笔记/" itemprop="url" rel="index">
                     <span itemprop="name">Android学习笔记</span>
                   </a>
@@ -394,10 +394,12 @@
 
       
         <h1 id="实现效果"><a href="#实现效果" class="headerlink" title="实现效果"></a>实现效果</h1><p>自定义一个<code>view</code>绘制一个小方块，使其不断移动。<br><img src="/images/android_canvas.gif" alt=""></p>
-<h1 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h1><p>绘制代码如下：<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">canvas.translate(x,y);<span class="comment">//设置偏移距离</span></span><br><span class="line">canvas.drawRect(<span class="number">0</span>,<span class="number">0</span>,<span class="number">100</span>,<span class="number">100</span>,paint);</span><br></pre></td></tr></table></figure></p>
-<p>绘制矩形时会加上<code>x</code>、<code>y</code>的偏移量，可以通过不断的改变<code>x</code>、<code>y</code>来改变绘制矩形的位置。</p>
-<h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><h2 id="自定义view"><a href="#自定义view" class="headerlink" title="自定义view"></a>自定义view</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TopView</span> <span class="keyword">extends</span> <span class="title">View</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> x,y=<span class="number">200</span>;<span class="comment">//方块的初始位置</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">TopView</span><span class="params">(Context context)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(context);</span><br><span class="line">    &#125;<span class="comment">//重写view方法</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">TopView</span><span class="params">(Context context, AttributeSet attrs)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(context, attrs);</span><br><span class="line">    &#125;<span class="comment">//重写view方法</span></span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onDraw</span><span class="params">(Canvas canvas)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onDraw(canvas);</span><br><span class="line">        Paint paint = <span class="keyword">new</span> Paint();</span><br><span class="line">        paint.setColor(<span class="number">0xff123456</span>);</span><br><span class="line"></span><br><span class="line">        canvas.translate(x,y);<span class="comment">//设置偏移距离</span></span><br><span class="line">        canvas.drawRect(<span class="number">0</span>,<span class="number">0</span>,<span class="number">100</span>,<span class="number">100</span>,paint);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="activity中改变x，y的值"><a href="#activity中改变x，y的值" class="headerlink" title="activity中改变x，y的值"></a>activity中改变x，y的值</h2><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//使用handler更新UI</span></span><br><span class="line"><span class="meta">@SuppressLint</span>(<span class="string">"HandlerLeak"</span>)</span><br><span class="line">Handler <span class="keyword">handler</span> = <span class="keyword">new</span> Handler()&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">handleMessage</span><span class="params">(Message msg)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (msg.what==<span class="number">0x123</span>) topView.invalidate();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//按钮事件</span></span><br><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">run</span><span class="params">(View view)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">new</span> Thread()&#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            topView.x=<span class="number">0</span>;topView.y=<span class="number">200</span>;</span><br><span class="line">            <span class="keyword">while</span> (topView.x&lt;<span class="number">500</span> || topView.y&lt;<span class="number">500</span>) &#123;</span><br><span class="line">               <span class="keyword">if</span> (topView.x&lt;<span class="number">500</span>) topView.x += <span class="number">10</span>;<span class="comment">//改变x值</span></span><br><span class="line">               <span class="keyword">if</span> (topView.y&lt;<span class="number">500</span>) topView.y +=<span class="number">10</span>;<span class="comment">//改变y值</span></span><br><span class="line">                <span class="keyword">handler</span>.sendEmptyMessage(<span class="number">0x123</span>);<span class="comment">//让主线程更新UI</span></span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    Thread.sleep(<span class="number">300</span>);</span><br><span class="line">                &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;.start();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="方式一"><a href="#方式一" class="headerlink" title="方式一"></a>方式一</h1><p>设置矩形坐标为变量并动态改变变量的值，重复调用重绘即可实现移动效果。</p>
+<p>#方式二</p>
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>绘制代码如下：<br><a id="more"></a><br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">canvas.translate(x,y);<span class="comment">//设置偏移距离</span></span><br><span class="line">canvas.drawRect(<span class="number">0</span>,<span class="number">0</span>,<span class="number">100</span>,<span class="number">100</span>,paint);</span><br></pre></td></tr></table></figure></p>
+<p>绘制矩形时会加上<code>x</code>、<code>y</code>的偏移量，可以通过不断的改变<code>x</code>、<code>y</code>来移动画布从而移动矩形。</p>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="自定义view"><a href="#自定义view" class="headerlink" title="自定义view"></a>自定义view</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TopView</span> <span class="keyword">extends</span> <span class="title">View</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> x,y=<span class="number">200</span>;<span class="comment">//方块的初始位置</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">TopView</span><span class="params">(Context context)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(context);</span><br><span class="line">    &#125;<span class="comment">//重写view方法</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">TopView</span><span class="params">(Context context, AttributeSet attrs)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(context, attrs);</span><br><span class="line">    &#125;<span class="comment">//重写view方法</span></span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onDraw</span><span class="params">(Canvas canvas)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onDraw(canvas);</span><br><span class="line">        Paint paint = <span class="keyword">new</span> Paint();</span><br><span class="line">        paint.setColor(<span class="number">0xff123456</span>);</span><br><span class="line"></span><br><span class="line">        canvas.translate(x,y);<span class="comment">//设置偏移距离</span></span><br><span class="line">        canvas.drawRect(<span class="number">0</span>,<span class="number">0</span>,<span class="number">100</span>,<span class="number">100</span>,paint);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="activity中改变x，y的值"><a href="#activity中改变x，y的值" class="headerlink" title="activity中改变x，y的值"></a>activity中改变x，y的值</h3><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//使用handler更新UI</span></span><br><span class="line"><span class="meta">@SuppressLint</span>(<span class="string">"HandlerLeak"</span>)</span><br><span class="line">Handler <span class="keyword">handler</span> = <span class="keyword">new</span> Handler()&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">handleMessage</span><span class="params">(Message msg)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (msg.what==<span class="number">0x123</span>) topView.invalidate();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//按钮事件</span></span><br><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">run</span><span class="params">(View view)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">new</span> Thread()&#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            topView.x=<span class="number">0</span>;topView.y=<span class="number">200</span>;</span><br><span class="line">            <span class="keyword">while</span> (topView.x&lt;<span class="number">500</span> || topView.y&lt;<span class="number">500</span>) &#123;</span><br><span class="line">               <span class="keyword">if</span> (topView.x&lt;<span class="number">500</span>) topView.x += <span class="number">10</span>;<span class="comment">//改变x值</span></span><br><span class="line">               <span class="keyword">if</span> (topView.y&lt;<span class="number">500</span>) topView.y +=<span class="number">10</span>;<span class="comment">//改变y值</span></span><br><span class="line">                <span class="keyword">handler</span>.sendEmptyMessage(<span class="number">0x123</span>);<span class="comment">//让主线程更新UI</span></span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    Thread.sleep(<span class="number">300</span>);</span><br><span class="line">                &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;.start();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -437,6 +439,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/12/09/2018-2018-12-09-Android初体验-十-layer-list/" rel="prev" title="Android初体验(十)layer-list">
+                Android初体验(十)layer-list <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -500,11 +506,9 @@
 
       <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image"
-                src="/images/avatar.png"
-                alt="子非鱼" />
+              <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="子非鱼">
             
               <p class="site-author-name" itemprop="name">子非鱼</p>
               <p class="site-description motion-element" itemprop="description">人生如逆旅，我亦是闲鱼</p>
@@ -517,7 +521,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">42</span>
+                  <span class="site-state-item-count">43</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -539,7 +543,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">40</span>
+                  <span class="site-state-item-count">41</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -588,7 +592,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#实现效果"><span class="nav-number">1.</span> <span class="nav-text">实现效果</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#原理"><span class="nav-number">2.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#步骤"><span class="nav-number">3.</span> <span class="nav-text">步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义view"><span class="nav-number">3.1.</span> <span class="nav-text">自定义view</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#activity中改变x，y的值"><span class="nav-number">3.2.</span> <span class="nav-text">activity中改变x，y的值</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#实现效果"><span class="nav-number">1.</span> <span class="nav-text">实现效果</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#方式一"><span class="nav-number">2.</span> <span class="nav-text">方式一</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#原理"><span class="nav-number">2.1.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#步骤"><span class="nav-number">2.2.</span> <span class="nav-text">步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义view"><span class="nav-number">2.2.1.</span> <span class="nav-text">自定义view</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#activity中改变x，y的值"><span class="nav-number">2.2.2.</span> <span class="nav-text">activity中改变x，y的值</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
