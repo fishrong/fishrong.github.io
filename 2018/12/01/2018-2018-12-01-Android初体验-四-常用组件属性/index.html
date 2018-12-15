@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Wangsr&#39;s Notes">
 <meta property="og:description" content="自定义组件不同状态时的背景 1、在drawable目录下新建drawable resource file。 2、以下代码是新建一个橙色带圆角的边框（enable状态下，可以是其它如选中状态等）123456789&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&amp;gt;&amp;lt;selector xmlns:android=&quot;http://schemas.android.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-12T04:35:52.280Z">
+<meta property="og:updated_time" content="2018-12-13T05:32:55.860Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android初体验(四)常用组件属性">
 <meta name="twitter:description" content="自定义组件不同状态时的背景 1、在drawable目录下新建drawable resource file。 2、以下代码是新建一个橙色带圆角的边框（enable状态下，可以是其它如选中状态等）123456789&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&amp;gt;&amp;lt;selector xmlns:android=&quot;http://schemas.android.">
@@ -412,6 +412,12 @@
 <ul>
 <li>长度，如<code>width</code>、<code>height</code>使用<code>dp</code></li>
 <li>文字大小，使用<code>sp</code></li>
+<li><p><code>dp</code>转<code>px</code></p>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int height = (<span class="name">int</span>)(<span class="name">myView</span>.getHeight()/(<span class="name">getResources</span>().getDisplayMetrics().density)<span class="number">+0.5</span>f)<span class="comment">;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>px</code>转<code>dp</code></p>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int height = (<span class="name">int</span>)(<span class="name">myView</span>.getHeight()*(getResources().getDisplayMetrics().density)+0.5f);</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 <h1 id="背景着色"><a href="#背景着色" class="headerlink" title="背景着色"></a>背景着色</h1><p><code>android:tint=&quot;@color/tab_bar&quot;</code>:这个属性可以改变背景图片的颜色，比如背景图片是由灰色线条组成的图，使用这个属性后可以让线条变成设置的颜色。</p>
 <h1 id="组件边框阴影"><a href="#组件边框阴影" class="headerlink" title="组件边框阴影"></a>组件边框阴影</h1><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">android:</span>elevation=<span class="string">"3dp"</span></span><br></pre></td></tr></table></figure>
@@ -538,7 +544,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">43</span>
+                  <span class="site-state-item-count">44</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -560,7 +566,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">41</span>
+                  <span class="site-state-item-count">43</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -694,8 +700,6 @@
   
 
 
-  
-
 
 
 
@@ -734,11 +738,6 @@
   
   
     <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
   
 
 
