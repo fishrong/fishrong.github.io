@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Wangsr&#39;s Notes">
 <meta property="og:description" content="一、python相关 1、安装python包 1pip3 install baidu-aip  2、列出所安装的python包 1pip3 list  3、卸载包 1pip3 unstall baidu-aip  4、使用python模拟键盘输入（输入快捷键）安装PyUserInput包 1pip3 install PyUserInput">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-07T01:00:48.000Z">
+<meta property="og:updated_time" content="2019-01-14T14:13:37.080Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux 常用操作">
 <meta name="twitter:description" content="一、python相关 1、安装python包 1pip3 install baidu-aip  2、列出所安装的python包 1pip3 list  3、卸载包 1pip3 unstall baidu-aip  4、使用python模拟键盘输入（输入快捷键）安装PyUserInput包 1pip3 install PyUserInput">
@@ -414,8 +414,8 @@
 </ul>
 <h2 id="三、文件-文件夹相关"><a href="#三、文件-文件夹相关" class="headerlink" title="三、文件/文件夹相关"></a>三、文件/文件夹相关</h2><ul>
 <li>1、列出当前目录文件</li>
-<li>*ls</li>
-<li>*ls -a:列出包含隐藏文件</li>
+<li>ls</li>
+<li>ls -a:列出包含隐藏文件</li>
 <li><p>2、新建目录</p>
 <figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> filename</span><br></pre></td></tr></table></figure>
 </li>
@@ -424,21 +424,29 @@
 </li>
 </ul>
 <p>移动到上一级：<br><figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">mv</span></span> <span class="keyword">file</span> ../</span><br></pre></td></tr></table></figure></p>
-<h2 id="系统相关"><a href="#系统相关" class="headerlink" title="系统相关"></a>系统相关</h2><ul>
-<li>1、播放音频<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">mplayer</span> <span class="selector-tag">auido</span><span class="selector-class">.mp3</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>4、删除文件<br><code>rm file</code></li>
+<li>5、删除文件夹<br><code>rm -rf youdir</code></li>
+<li>6、复制文件到远程服务器<br><code>scp -r youdir root@123.123.123.123:~</code><h2 id="系统相关"><a href="#系统相关" class="headerlink" title="系统相关"></a>系统相关</h2><h3 id="1、播放音频"><a href="#1、播放音频" class="headerlink" title="1、播放音频"></a>1、播放音频</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">mplayer</span> <span class="selector-tag">auido</span><span class="selector-class">.mp3</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <p>注：可以播放地址为url的音乐</p>
-<ul>
-<li><p>2、执行定时任务</p>
-</li>
-<li><p>crontab -e 进入编辑</p>
-<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#<span class="built_in">min</span> <span class="built_in">hour</span> <span class="built_in">date</span> <span class="built_in">month</span> week command</span><br><span class="line"><span class="number">0</span> <span class="number">11</span> * * * /usr/bin/python3 /home/<span class="built_in">pi</span>/PycharmProjects/alarm.py</span><br></pre></td></tr></table></figure>
+<h3 id="2、执行定时任务"><a href="#2、执行定时任务" class="headerlink" title="2、执行定时任务"></a>2、执行定时任务</h3><ul>
+<li>crontab -e 进入编辑<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#<span class="built_in">min</span> <span class="built_in">hour</span> <span class="built_in">date</span> <span class="built_in">month</span> week command</span><br><span class="line"><span class="number">0</span> <span class="number">11</span> * * * /usr/bin/python3 /home/<span class="built_in">pi</span>/PycharmProjects/alarm.py</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <p>上面代码意思：每天11点执行<code>python3 alarm.py</code>这个脚本</p>
 <ul>
-<li>crontab -l 列出当前任务<br>具体参考<a href="http://man.linuxde.net/crontab" target="_blank" rel="noopener">http://man.linuxde.net/crontab</a></li>
+<li>crontab -l 列出当前任务<br>具体参考<a href="http://man.linuxde.net/crontab" target="_blank" rel="noopener">http://man.linuxde.net/crontab</a><h3 id="3、解决中文问题"><a href="#3、解决中文问题" class="headerlink" title="3、解决中文问题"></a>3、解决中文问题</h3>终端连接远程服务器时，<code>中文乱码</code>，不能输入中文，以及不能显示中文等。</li>
+<li>编辑<code>/etc/locale.gen</code>去掉zh_CN.utf8的注释</li>
+<li>执行<code>locale-gen</code></li>
+<li><code>sudo nano .bashrc</code>打开这个文件</li>
+<li>在末尾加上<code>export LANG=zh_CN.UTF-8</code><br><strong>注：</strong><br>1、纯中文的系统，设置LC_ALL=zh_CN.XXXX，或者LANG=zh_CN.XXXX都可以<br>2、系统提示，标题为英文，中文输入环境，设定 LC_CTYPE=zh_CN.XXXX，LANG=en_US.XXXX就可以了。<h3 id="4、多个命令行窗口"><a href="#4、多个命令行窗口" class="headerlink" title="4、多个命令行窗口"></a>4、多个命令行窗口</h3></li>
+<li>创建窗口<code>screen</code></li>
+<li><code>ctrl+A+D</code>将会话放入后台，回到之前会话</li>
+<li><code>screen -ls</code>查看当前创建的会话</li>
+<li>回到之前挂起的会话，<code>screen -r 1234</code>,参数为上一步查出的id</li>
+<li>终止会话，<code>ctrl +d</code></li>
 </ul>
 
       
@@ -470,8 +478,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/04/2018-2018-09-16-树莓派爬坑系列（一）电脑连接树莓派/" rel="next" title="树莓派爬坑系列（一）电脑连接树莓派">
-                <i class="fa fa-chevron-left"></i> 树莓派爬坑系列（一）电脑连接树莓派
+              <a href="/2018/11/04/2018-2018-08-19-hibernate的基本使用/" rel="next" title="hibernate的基本使用">
+                <i class="fa fa-chevron-left"></i> hibernate的基本使用
               </a>
             
           </div>
@@ -480,8 +488,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/11/04/2018-2018-08-25-python操作excel/" rel="prev" title="python使用openpyxl库操作Excel">
-                python使用openpyxl库操作Excel <i class="fa fa-chevron-right"></i>
+              <a href="/2018/11/04/2018-2018-08-19-hibernate常见问题/" rel="prev" title="hibernate常见问题">
+                hibernate常见问题 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -561,7 +569,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">46</span>
+                  <span class="site-state-item-count">47</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -632,7 +640,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、python相关"><span class="nav-number">1.</span> <span class="nav-text">一、python相关</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、网络相关"><span class="nav-number">2.</span> <span class="nav-text">二、网络相关</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、文件-文件夹相关"><span class="nav-number">3.</span> <span class="nav-text">三、文件/文件夹相关</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#系统相关"><span class="nav-number">4.</span> <span class="nav-text">系统相关</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、python相关"><span class="nav-number">1.</span> <span class="nav-text">一、python相关</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、网络相关"><span class="nav-number">2.</span> <span class="nav-text">二、网络相关</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、文件-文件夹相关"><span class="nav-number">3.</span> <span class="nav-text">三、文件/文件夹相关</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#系统相关"><span class="nav-number">4.</span> <span class="nav-text">系统相关</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、播放音频"><span class="nav-number">4.1.</span> <span class="nav-text">1、播放音频</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、执行定时任务"><span class="nav-number">4.2.</span> <span class="nav-text">2、执行定时任务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、解决中文问题"><span class="nav-number">4.3.</span> <span class="nav-text">3、解决中文问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、多个命令行窗口"><span class="nav-number">4.4.</span> <span class="nav-text">4、多个命令行窗口</span></a></li></ol></li></ol></div>
             
 
           </div>

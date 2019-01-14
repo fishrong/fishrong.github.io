@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Wangsr&#39;s Notes">
 <meta property="og:description" content="canvas标签可用来在在网页中绘画，使用步骤如下： html中定义标签123&amp;lt;div class=&quot;CanvasContainer&quot;&amp;gt;    &amp;lt;canvas id=&quot;myCanvas&quot; width=&quot;740&quot; height=&quot;400&quot;&amp;gt;&amp;lt;/canvas&amp;gt;&amp;lt;/div&amp;gt;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-06T13:36:56.710Z">
+<meta property="og:updated_time" content="2019-01-08T03:17:43.220Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Html5中Canvas标签的使用">
 <meta name="twitter:description" content="canvas标签可用来在在网页中绘画，使用步骤如下： html中定义标签123&amp;lt;div class=&quot;CanvasContainer&quot;&amp;gt;    &amp;lt;canvas id=&quot;myCanvas&quot; width=&quot;740&quot; height=&quot;400&quot;&amp;gt;&amp;lt;/canvas&amp;gt;&amp;lt;/div&amp;gt;">
@@ -379,11 +379,15 @@
 <li><code>fillStyle</code>:设置填充颜色</li>
 <li><code>fill()</code>:填充</li>
 <li><code>stroke()</code>:绘画</li>
-<li><code>drawImage(img,top,left,width,height)</code>: 加载图片到画布中，<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var img = new Image();   <span class="comment">// 创建img元素</span></span><br><span class="line">img.src = <span class="string">"&#123;&#123;url_for('static',filename=picName)&#125;&#125;"</span>; <span class="comment">// 设置图片源地址</span></span><br><span class="line">context.drawImage(img,<span class="number">0</span>,<span class="number">0</span>,<span class="number">740</span>,<span class="number">400</span>);</span><br></pre></td></tr></table></figure>
+<li><code>drawImage(img,top,left,width,height)</code>: 加载图片到画布中，</li>
+<li><code>完成撤销操作</code>：1、获取上一次操作数据：myImageData = context.getImageData(0, 0, canvas.width, canvas.height);<br>2、将数据放到画布中：context.putImageData(myImageData, 0, 0);<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var img = new Image();   <span class="comment">// 创建img元素</span></span><br><span class="line">img.src = <span class="string">"&#123;&#123;url_for('static',filename=picName)&#125;&#125;"</span>; <span class="comment">// 设置图片源地址</span></span><br><span class="line">context.drawImage(img,<span class="number">0</span>,<span class="number">0</span>,<span class="number">740</span>,<span class="number">400</span>);</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="canvas常用方法"><a href="#canvas常用方法" class="headerlink" title="canvas常用方法"></a>canvas常用方法</h2><ul>
-<li><code>onmousedown</code>：鼠标按下</li>
+<li><p><code>toDataURL(&quot;image/png&quot;)</code>:转换成urldata数据，用于保存为图片。</p>
+</li>
+<li><p><code>onmousedown</code>：鼠标按下</p>
+</li>
 <li><code>onmousemove</code>：鼠标移动</li>
 <li><code>onmouseup</code>：鼠标抬起</li>
 <li><code>onmouseout</code>：鼠标移除画布<br>参考文档：<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API</a></li>
@@ -429,6 +433,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/01/14/Linux服务器上安装dlib/" rel="prev" title="Linux服务器上安装dlib">
+                Linux服务器上安装dlib <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -507,7 +515,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">46</span>
+                  <span class="site-state-item-count">47</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

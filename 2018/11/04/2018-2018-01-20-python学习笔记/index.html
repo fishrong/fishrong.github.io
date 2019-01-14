@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Wangsr&#39;s Notes">
 <meta property="og:description" content="文件操作有关列出指定文件夹及后缀的所有文件名1[x for x in os.listdir(&apos;./static/images&apos;) if os.path.splitext(x)[1] == &apos;.jpg&apos;] dataURL转化为文件并保存本地">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-06T13:44:50.480Z">
+<meta property="og:updated_time" content="2019-01-14T06:47:16.730Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python学习笔记">
 <meta name="twitter:description" content="文件操作有关列出指定文件夹及后缀的所有文件名1[x for x in os.listdir(&apos;./static/images&apos;) if os.path.splitext(x)[1] == &apos;.jpg&apos;] dataURL转化为文件并保存本地">
@@ -394,6 +394,10 @@
         <h1 id="文件操作有关"><a href="#文件操作有关" class="headerlink" title="文件操作有关"></a>文件操作有关</h1><h2 id="列出指定文件夹及后缀的所有文件名"><a href="#列出指定文件夹及后缀的所有文件名" class="headerlink" title="列出指定文件夹及后缀的所有文件名"></a>列出指定文件夹及后缀的所有文件名</h2><figure class="highlight scheme"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="name">x</span> for x in os.listdir(<span class="symbol">'./static/images</span>') if os.path.splitext(<span class="name">x</span>)[<span class="name">1</span>] == <span class="symbol">'.jpg</span>']</span><br></pre></td></tr></table></figure>
 <h2 id="dataURL转化为文件并保存本地"><a href="#dataURL转化为文件并保存本地" class="headerlink" title="dataURL转化为文件并保存本地"></a>dataURL转化为文件并保存本地</h2><a id="more"></a>
 <figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">dataURL = request.form.<span class="built_in">get</span>(<span class="string">'file'</span>)</span><br><span class="line">imgdata = base64.b64decode(dataURL.<span class="built_in">split</span>(<span class="string">','</span>)[<span class="number">1</span>])</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">"./static/edittedIamges/Edited_"</span>+picName, <span class="string">'wb'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.<span class="built_in">write</span>(imgdata)</span><br></pre></td></tr></table></figure>
+<h1 id="项目相关"><a href="#项目相关" class="headerlink" title="项目相关"></a>项目相关</h1><h2 id="requirements-txt的使用"><a href="#requirements-txt的使用" class="headerlink" title="requirements.txt的使用"></a>requirements.txt的使用</h2><ul>
+<li>生成，<code>pip freeze &gt;requirements.txt</code>.</li>
+<li>使用，<code>pip install -r requirements.txt</code></li>
+</ul>
 
       
     </div>
@@ -424,8 +428,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/04/2018-2018-01-30-python爬虫/" rel="next" title="python爬虫">
-                <i class="fa fa-chevron-left"></i> python爬虫
+              <a href="/2018/11/04/2018-2018-08-25-python操作excel/" rel="next" title="python使用openpyxl库操作Excel">
+                <i class="fa fa-chevron-left"></i> python使用openpyxl库操作Excel
               </a>
             
           </div>
@@ -434,8 +438,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/11/04/2018-2018-10-06-树莓派爬坑系列（五）使用snowboy做热词唤醒/" rel="prev" title="树莓派爬坑系列（五）使用snowboy做热词唤醒">
-                树莓派爬坑系列（五）使用snowboy做热词唤醒 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/11/04/2018-2018-09-06-使用struts2的拦截器实现权限验证/" rel="prev" title="使用struts2的拦截器实现权限验证">
+                使用struts2的拦截器实现权限验证 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -515,7 +519,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">46</span>
+                  <span class="site-state-item-count">47</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -586,7 +590,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#文件操作有关"><span class="nav-number">1.</span> <span class="nav-text">文件操作有关</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#列出指定文件夹及后缀的所有文件名"><span class="nav-number">1.1.</span> <span class="nav-text">列出指定文件夹及后缀的所有文件名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dataURL转化为文件并保存本地"><span class="nav-number">1.2.</span> <span class="nav-text">dataURL转化为文件并保存本地</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#文件操作有关"><span class="nav-number">1.</span> <span class="nav-text">文件操作有关</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#列出指定文件夹及后缀的所有文件名"><span class="nav-number">1.1.</span> <span class="nav-text">列出指定文件夹及后缀的所有文件名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dataURL转化为文件并保存本地"><span class="nav-number">1.2.</span> <span class="nav-text">dataURL转化为文件并保存本地</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#项目相关"><span class="nav-number">2.</span> <span class="nav-text">项目相关</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#requirements-txt的使用"><span class="nav-number">2.1.</span> <span class="nav-text">requirements.txt的使用</span></a></li></ol></li></ol></div>
             
 
           </div>

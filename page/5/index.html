@@ -290,7 +290,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://Wangsr.cn/2018/11/04/2017-2017-12-17-Jekyll安装/">
+    <link itemprop="mainEntityOfPage" href="https://Wangsr.cn/2018/11/04/2017-2017-12-16-常用Markdown语法/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="子非鱼">
@@ -309,7 +309,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/11/04/2017-2017-12-17-Jekyll安装/" itemprop="url">Windows上安装Jekyll</a></h1>
+                <a class="post-title-link" href="/2018/11/04/2017-2017-12-16-常用Markdown语法/" itemprop="url">常用Markdown语法</a></h1>
         
 
         <div class="post-meta">
@@ -344,8 +344,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/常用的命令行工具/" itemprop="url" rel="index">
-                    <span itemprop="name">常用的命令行工具</span>
+                  <a href="/categories/其它/" itemprop="url" rel="index">
+                    <span itemprop="name">其它</span>
                   </a>
                 </span>
 
@@ -361,7 +361,7 @@
 
           
           
-             <span id="/2018/11/04/2017-2017-12-17-Jekyll安装/" class="leancloud_visitors" data-flag-title="Windows上安装Jekyll">
+             <span id="/2018/11/04/2017-2017-12-16-常用Markdown语法/" class="leancloud_visitors" data-flag-title="常用Markdown语法">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -394,174 +394,17 @@
       
         
           
-            <p>　　简单三步实现本地博客可进行Jekyll解析，从而可以在本地预览博客。</p>
-<h3 id="一、安装Ruby"><a href="#一、安装Ruby" class="headerlink" title="一、安装Ruby"></a>一、安装Ruby</h3><p>　　1. 前往<a href="http://rubyinstaller.org/downloads/" target="_blank" rel="noopener">Ruby官网</a><br>　　2. 下载与自己电脑对应的版本<br>　　3. 下载后点击安装。<br>　　　<em> 安装的路劲不要使用有空格的文件夹。  
-　　　</em> 勾选”Add Ruby excutables to your PATH”。<br>　　4. 打开cmd检测是否安装成功。<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">ruby -v</span></span><br></pre></td></tr></table></figure></p>
-<p>输出示例：<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ruby <span class="number">2.4</span><span class="number">.2</span>p198 (<span class="number">2017</span><span class="number">-09</span><span class="number">-14</span> revision <span class="number">59899</span>) [x64-mingw32]</span><br><span class="line">```		</span><br><span class="line">### 二、安装Jekyll  </span><br><span class="line">　　<span class="number">1.</span> 确保gem已经正确安装cmd输入以下内容。</span><br></pre></td></tr></table></figure></p>
-<p>gem -v<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">输出示例：</span><br></pre></td></tr></table></figure></p>
-<p>2.6.13<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">　　<span class="number">2.</span> 安装Jekyll gem</span><br></pre></td></tr></table></figure></p>
-<p>gem install jekyll<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">### 三、启动Jekyll</span><br><span class="line">　　<span class="number">1.</span> 找到项目文件夹    </span><br><span class="line">　　<span class="number">2.</span> 按住shift键点击右键选择<span class="string">"在此处打开命令窗口"</span>(也可以直接打开cmd切换到该目录)   </span><br><span class="line">　　<span class="number">3.</span> 输入以下内容就可以在localhost:<span class="number">4000</span>上浏览你的博客了</span><br></pre></td></tr></table></figure></p>
-<p>jekyll serve<br><code>`</code></p>
+            <h2 id="一、标题"><a href="#一、标题" class="headerlink" title="一、标题"></a><span>一、标题</span></h2><p>语法：<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 这是一级标题</span><br><span class="line">## 这是二级标题</span><br><span class="line">### 这是三级标题</span><br></pre></td></tr></table></figure></p>
+<h2 id="二、列表"><a href="#二、列表" class="headerlink" title="二、列表"></a><span>二、列表</span></h2><p>无序列表：<br><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">* </span>one</span><br><span class="line"><span class="bullet">* </span>two</span><br><span class="line"><span class="bullet">* </span>three</span><br></pre></td></tr></table></figure></p>
+<p>有序列表：<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1. </span>one</span><br><span class="line"><span class="bullet">2. </span>two</span><br><span class="line"><span class="bullet">3. </span>three</span><br></pre></td></tr></table></figure></p>
+<h2 id="三、代码"><a href="#三、代码" class="headerlink" title="三、代码"></a><span>三、代码</span></h2><p>一段代码:写在两个反引号` this is a code segement`之间<br>多段代码：写在6个反引号之间```this is a code segement```效果如图：<br><figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fist <span class="built_in">code</span></span><br><span class="line"><span class="built_in">second</span> <span class="built_in">code</span></span><br><span class="line">third <span class="built_in">code</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="四、链接"><a href="#四、链接" class="headerlink" title="四、链接"></a><span>四、链接</span></h2><p>语法：<code>[点击文字](这里放链接&quot;这里放鼠标停留的显示文字&quot;)</code><br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">an example</span>](<span class="link">http://example.com/ "Title"</span>).</span><br></pre></td></tr></table></figure></p>
+<p>效果如图：<br><a href="http://example.com/" title="Title" target="_blank" rel="noopener">an example</a>.</p>
+<h2 id="五、图片"><a href="#五、图片" class="headerlink" title="五、图片"></a><span>五、图片</span></h2><p>语法：！<code>[加载失败时显示的文字](图片链接&quot;hover文字&quot;)</code><br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">图片</span>](<span class="link">http://img3.imgtn.bdimg.com/it/u=2386421788,3830689113&amp;fm=27&amp;gp=0.jpg "图片测试"</span>)</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://img3.imgtn.bdimg.com/it/u=2386421788,3830689113&amp;fm=27&amp;gp=0.jpg" alt="图片" title="图片测试"></p>
+<h2 id="几点注意事项"><a href="#几点注意事项" class="headerlink" title="几点注意事项"></a><span>几点注意事项</span></h2><p>　　1.markdown标记与文章内容要用空格隔开，否则不解析。<br>　　2.markdown语法兼容HTML,所以可以在md文件中用HTML标签。<br>　　3.图片只支持网络地址。<br>　　4.首行缩进没有专门的符号，可以将输入法切换到全角然后按两次空格实现缩进。<br>　　5.换行，段落后面敲两次以上空格回车。<br>    6.代码高亮<a href="https://highlightjs.org/usage/" target="_blank" rel="noopener">使用highlightjs</a></p>
 
           
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://Wangsr.cn/2018/11/04/2017-2017-12-18-使用Jekyll搭建博客/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="子非鱼">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wangsr's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/04/2017-2017-12-18-使用Jekyll搭建博客/" itemprop="url">利用Jekyll搭建自己的GitHub博客</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-04T11:19:28+08:00">
-                2018-11-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/爬坑小项目/" itemprop="url" rel="index">
-                    <span itemprop="name">爬坑小项目</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2018/11/04/2017-2017-12-18-使用Jekyll搭建博客/" class="leancloud_visitors" data-flag-title="利用Jekyll搭建自己的GitHub博客">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>　　GitHub提供一种功能叫做GitHub Pages,可以利用它来搭建自己博客或者网站(只支持静态站点的搭建)。不仅如此，GitHub还<br>支持Jekyll解析。所以只要按照Jekyll的规则来建立文件，然后把它push到GitHub上就能搭建出自己的博客。<br>当然，最方便的方式就是到<a href="http://jekyllthemes.org/" target="_blank" rel="noopener">Jekyll Themes</a>clone别人做好的主题。但如果有一定的前端知识，也可以自己一行一行代码敲出自己独一无二的博客来。下面<br>主要说的是用Jekyll搭建博客的总体思路。  </p>
-<h2 id="开始搭建"><a href="#开始搭建" class="headerlink" title="开始搭建　　"></a>开始搭建　　</h2><h3 id="一、到GitHub官网注册一个账号"><a href="#一、到GitHub官网注册一个账号" class="headerlink" title="一、到GitHub官网注册一个账号"></a>一、到GitHub官网注册一个账号</h3><h3 id="二、点击绿色的new-repository按钮新建一个代码仓库，这里假定新建了一个叫做blogDemo的仓库。"><a href="#二、点击绿色的new-repository按钮新建一个代码仓库，这里假定新建了一个叫做blogDemo的仓库。" class="headerlink" title="二、点击绿色的new repository按钮新建一个代码仓库，这里假定新建了一个叫做blogDemo的仓库。"></a>二、点击绿色的<code>new repository</code>按钮新建一个代码仓库，这里假定新建了一个叫做<code>blogDemo</code>的仓库。</h3><h3 id="三、把仓库克隆到本地进行编辑"><a href="#三、把仓库克隆到本地进行编辑" class="headerlink" title="三、把仓库克隆到本地进行编辑"></a>三、把仓库克隆到本地进行编辑</h3><h3 id="四、创建配置文件"><a href="#四、创建配置文件" class="headerlink" title="四、创建配置文件"></a>四、创建配置文件</h3><p>　　在项目的根目录下创建一个名为<code>_config.yml</code>的文件，打开输入以下内容：<br><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">baseurl:</span>/blogDemo</span><br></pre></td></tr></table></figure></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/11/04/2017-2017-12-18-使用Jekyll搭建博客/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
         
       
     </div>
@@ -876,6 +719,322 @@
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/11/04/2017-2017-12-29-Java利用JDBC连接SQLserver数据库/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://Wangsr.cn/2018/11/04/2017-2017-12-18-使用Jekyll搭建博客/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="子非鱼">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wangsr's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/04/2017-2017-12-18-使用Jekyll搭建博客/" itemprop="url">利用Jekyll搭建自己的GitHub博客</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-04T11:19:28+08:00">
+                2018-11-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/爬坑小项目/" itemprop="url" rel="index">
+                    <span itemprop="name">爬坑小项目</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/11/04/2017-2017-12-18-使用Jekyll搭建博客/" class="leancloud_visitors" data-flag-title="利用Jekyll搭建自己的GitHub博客">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>　　GitHub提供一种功能叫做GitHub Pages,可以利用它来搭建自己博客或者网站(只支持静态站点的搭建)。不仅如此，GitHub还<br>支持Jekyll解析。所以只要按照Jekyll的规则来建立文件，然后把它push到GitHub上就能搭建出自己的博客。<br>当然，最方便的方式就是到<a href="http://jekyllthemes.org/" target="_blank" rel="noopener">Jekyll Themes</a>clone别人做好的主题。但如果有一定的前端知识，也可以自己一行一行代码敲出自己独一无二的博客来。下面<br>主要说的是用Jekyll搭建博客的总体思路。  </p>
+<h2 id="开始搭建"><a href="#开始搭建" class="headerlink" title="开始搭建　　"></a>开始搭建　　</h2><h3 id="一、到GitHub官网注册一个账号"><a href="#一、到GitHub官网注册一个账号" class="headerlink" title="一、到GitHub官网注册一个账号"></a>一、到GitHub官网注册一个账号</h3><h3 id="二、点击绿色的new-repository按钮新建一个代码仓库，这里假定新建了一个叫做blogDemo的仓库。"><a href="#二、点击绿色的new-repository按钮新建一个代码仓库，这里假定新建了一个叫做blogDemo的仓库。" class="headerlink" title="二、点击绿色的new repository按钮新建一个代码仓库，这里假定新建了一个叫做blogDemo的仓库。"></a>二、点击绿色的<code>new repository</code>按钮新建一个代码仓库，这里假定新建了一个叫做<code>blogDemo</code>的仓库。</h3><h3 id="三、把仓库克隆到本地进行编辑"><a href="#三、把仓库克隆到本地进行编辑" class="headerlink" title="三、把仓库克隆到本地进行编辑"></a>三、把仓库克隆到本地进行编辑</h3><h3 id="四、创建配置文件"><a href="#四、创建配置文件" class="headerlink" title="四、创建配置文件"></a>四、创建配置文件</h3><p>　　在项目的根目录下创建一个名为<code>_config.yml</code>的文件，打开输入以下内容：<br><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">baseurl:</span>/blogDemo</span><br></pre></td></tr></table></figure></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/11/04/2017-2017-12-18-使用Jekyll搭建博客/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://Wangsr.cn/2018/11/04/2017-2017-12-18-JS常见问题及解决办法/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="子非鱼">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wangsr's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/04/2017-2017-12-18-JS常见问题及解决办法/" itemprop="url">网页编程常见问题及解决办法</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-04T11:19:28+08:00">
+                2018-11-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/网页编程常见问题/" itemprop="url" rel="index">
+                    <span itemprop="name">网页编程常见问题</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/11/04/2017-2017-12-18-JS常见问题及解决办法/" class="leancloud_visitors" data-flag-title="网页编程常见问题及解决办法">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="一、JS方面"><a href="#一、JS方面" class="headerlink" title="一、JS方面"></a>一、JS方面</h2><h3 id="屏蔽移动端弹出菜单"><a href="#屏蔽移动端弹出菜单" class="headerlink" title="屏蔽移动端弹出菜单"></a>屏蔽移动端弹出菜单</h3><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">node.addEventListener(<span class="string">'contextmenu'</span>, <span class="function"><span class="keyword">function</span><span class="params">(e)</span></span>&#123;</span><br><span class="line">  e.preventDefault();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="js实现移动端长按"><a href="#js实现移动端长按" class="headerlink" title="js实现移动端长按"></a>js实现移动端长按</h3><p>移动端有<code>ontouchstart</code>、<code>ontouchmove</code>、<code>ontouchend</code>三个属性来对点击事件控制。<br>ontouchstart：点击时触发。<br>ontouchmove：手指移动后触发。<br>ontouchend：手指离开时触发。<br><strong>只对移动端生效</strong><br>长按实现思路：<br>  当手指点击时触发<code>ontouchstart</code>,开始计时，如果到了定时时间则判断为长按，执行相应长按函数，否则清除定时。<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>长按测试<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"hit"</span> <span class="attr">style</span>=<span class="string">"width:100%; height:100px; background-color:#CCC;"</span> <span class="attr">ontouchstart</span>=<span class="string">"gtouchstart()"</span> <span class="attr">ontouchmove</span>=<span class="string">"gtouchmove()"</span> <span class="attr">ontouchend</span>=<span class="string">"gtouchend()"</span> <span class="attr">onclick</span>=<span class="string">""</span>&gt;</span>测试区域<span class="tag">&lt;/<span class="name">div</span>&gt;</span>    </span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined">  </span></span><br><span class="line"><span class="actionscript">    <span class="comment">//以下判断语句用来处理手机端出现两次点击问题</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">if</span> ((<span class="built_in">window</span>.screen.availHeight)&gt;<span class="number">710</span>) &#123;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> a = <span class="built_in">document</span>.getElementById(<span class="string">"hit"</span>);</span></span><br><span class="line"><span class="actionscript">            a.setAttribute(<span class="string">"onclick"</span>, <span class="string">"myclick()"</span>);</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="actionscript">    <span class="function"><span class="keyword">function</span> <span class="title">myclick</span><span class="params">()</span></span>&#123;</span></span><br><span class="line"><span class="actionscript">        alert(<span class="string">"电脑点击"</span>);</span></span><br><span class="line"><span class="undefined">    &#125;;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> timeOutEvent=<span class="number">0</span>;<span class="comment">//定时器   </span></span></span><br><span class="line"><span class="actionscript">    <span class="comment">//开始按   </span></span></span><br><span class="line"><span class="actionscript">    <span class="function"><span class="keyword">function</span> <span class="title">gtouchstart</span><span class="params">()</span></span>&#123;   </span></span><br><span class="line"><span class="actionscript">        timeOutEvent = setTimeout(<span class="string">"longPress()"</span>,<span class="number">500</span>);<span class="comment">//这里设置定时器，定义长按500毫秒触发长按事件，时间可以自己改，个人感觉500毫秒非常合适   </span></span></span><br><span class="line"><span class="actionscript">        <span class="keyword">return</span> <span class="literal">false</span>;   </span></span><br><span class="line"><span class="undefined">    &#125;;   </span></span><br><span class="line"><span class="actionscript">    <span class="comment">//手释放，如果在500毫秒内就释放，则取消长按事件，此时可以执行onclick应该执行的事件   </span></span></span><br><span class="line"><span class="actionscript">    <span class="function"><span class="keyword">function</span> <span class="title">gtouchend</span><span class="params">()</span></span>&#123;   </span></span><br><span class="line"><span class="actionscript">        clearTimeout(timeOutEvent);<span class="comment">//清除定时器   </span></span></span><br><span class="line"><span class="actionscript">        <span class="keyword">if</span>(timeOutEvent!=<span class="number">0</span>)&#123;   </span></span><br><span class="line"><span class="actionscript">            <span class="comment">//这里写要执行的内容（尤如onclick事件）   </span></span></span><br><span class="line"><span class="actionscript">            alert(<span class="string">"点击事件触发"</span>);</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">        &#125;  </span></span><br><span class="line"><span class="actionscript">        <span class="keyword">else</span>&#123;</span></span><br><span class="line"><span class="actionscript">            alert(<span class="string">"长按事件结束"</span>);</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="actionscript">        <span class="keyword">return</span> <span class="literal">false</span>;   </span></span><br><span class="line"><span class="undefined">    &#125;;   </span></span><br><span class="line"><span class="actionscript">    <span class="comment">//如果手指有移动，则取消所有事件，此时说明用户只是要移动而不是长按   </span></span></span><br><span class="line"><span class="actionscript">    <span class="function"><span class="keyword">function</span> <span class="title">gtouchmove</span><span class="params">()</span></span>&#123;   </span></span><br><span class="line"><span class="actionscript">        clearTimeout(timeOutEvent);<span class="comment">//清除定时器   </span></span></span><br><span class="line"><span class="undefined">        timeOutEvent = 0;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">document</span>.getElementById(<span class="string">"sum"</span>).innerHTML = <span class="string">"end..."</span>;  </span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">    &#125;;   </span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> i = <span class="number">0</span>;  </span></span><br><span class="line"><span class="actionscript">    <span class="comment">//真正长按后应该执行的内容   </span></span></span><br><span class="line"><span class="actionscript">    <span class="function"><span class="keyword">function</span> <span class="title">longPress</span><span class="params">()</span></span>&#123;   </span></span><br><span class="line"><span class="undefined">        timeOutEvent = 0;   </span></span><br><span class="line"><span class="actionscript">        <span class="comment">//执行长按要执行的内容，如弹出菜单  </span></span></span><br><span class="line"><span class="actionscript">        alert(<span class="string">"长按事件触发"</span>);</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">    &#125;;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>   </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/11/04/2017-2017-12-18-JS常见问题及解决办法/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1288,7 +1447,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">46</span>
+                  <span class="site-state-item-count">47</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

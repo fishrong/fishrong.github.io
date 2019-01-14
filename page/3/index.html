@@ -290,7 +290,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://Wangsr.cn/2018/11/04/2018-2018-09-16-树莓派爬坑系列（二）配置WiFi热点/">
+    <link itemprop="mainEntityOfPage" href="https://Wangsr.cn/2018/11/04/2018-2018-06-18-SSH登录服务器/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="子非鱼">
@@ -309,7 +309,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/11/04/2018-2018-09-16-树莓派爬坑系列（二）配置WiFi热点/" itemprop="url">树莓派爬坑系列（二）配置WiFi热点</a></h1>
+                <a class="post-title-link" href="/2018/11/04/2018-2018-06-18-SSH登录服务器/" itemprop="url">使用SSH连接Linux服务器</a></h1>
         
 
         <div class="post-meta">
@@ -344,8 +344,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/树莓派爬坑系列/" itemprop="url" rel="index">
-                    <span itemprop="name">树莓派爬坑系列</span>
+                  <a href="/categories/Linux系统相关/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux系统相关</span>
                   </a>
                 </span>
 
@@ -361,7 +361,7 @@
 
           
           
-             <span id="/2018/11/04/2018-2018-09-16-树莓派爬坑系列（二）配置WiFi热点/" class="leancloud_visitors" data-flag-title="树莓派爬坑系列（二）配置WiFi热点">
+             <span id="/2018/11/04/2018-2018-06-18-SSH登录服务器/" class="leancloud_visitors" data-flag-title="使用SSH连接Linux服务器">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -393,20 +393,992 @@
 
       
         
-          <h2 id="实现功能"><a href="#实现功能" class="headerlink" title="实现功能"></a>实现功能</h2><p>   使其它设备可以连接树莓派的热点，并实现上网。</p>
-<h2 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h2><p>  基本上有两种方式：1、手动配置，2、使用开源库</p>
-<h2 id="方式二的具体操作"><a href="#方式二的具体操作" class="headerlink" title="方式二的具体操作"></a>方式二的具体操作</h2><p>  使用GitHub开源库<a href="https://github.com/oblique/create_ap" target="_blank" rel="noopener">https://github.com/oblique/create_ap</a>来配置WiFi热点，<br>  此种方式简单快捷。</p>
-<ul>
-<li>1、安装依赖<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="builtin-name">get</span> install dnsmasq hostapd</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
+          <h2 id="使用SSH连接Linux服务器有两种方式："><a href="#使用SSH连接Linux服务器有两种方式：" class="headerlink" title="使用SSH连接Linux服务器有两种方式："></a>使用SSH连接Linux服务器有两种方式：</h2><h3 id="一、账号口令登录："><a href="#一、账号口令登录：" class="headerlink" title="一、账号口令登录："></a>一、账号口令登录：</h3><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>ssh root<span class="variable">@host_ip</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>即以root身份登录远程服务器，回车后需输入密码。</li>
+<li>这种方式相对不是很安全。</li>
+</ol>
+<h3 id="二、密钥登录-更安全的方式"><a href="#二、密钥登录-更安全的方式" class="headerlink" title="二、密钥登录(更安全的方式)"></a>二、密钥登录(更安全的方式)</h3><h4 id="1-首先在本地生成密钥对"><a href="#1-首先在本地生成密钥对" class="headerlink" title="1.首先在本地生成密钥对"></a>1.首先在本地生成密钥对</h4><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">ssh-keygen</span></span><br></pre></td></tr></table></figure>
+<h4 id="2-将公钥-id-rsa-pub-内容放到服务器的-ssh目录下的authorized-keys文件中-在客户端操作"><a href="#2-将公钥-id-rsa-pub-内容放到服务器的-ssh目录下的authorized-keys文件中-在客户端操作" class="headerlink" title="2.将公钥(id_rsa.pub)内容放到服务器的.ssh目录下的authorized_keys文件中(在客户端操作)"></a>2.将公钥(id_rsa.pub)内容放到服务器的.ssh目录下的authorized_keys文件中(在客户端操作)</h4><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-<span class="keyword">copy</span>-<span class="built_in">id</span> root@host_ip</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/11/04/2018-2018-09-16-树莓派爬坑系列（二）配置WiFi热点/#more" rel="contents">
+            <a class="btn" href="/2018/11/04/2018-2018-06-18-SSH登录服务器/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
           <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://Wangsr.cn/2018/11/04/2018-2018-08-19-hibernate常见问题/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="子非鱼">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wangsr's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/04/2018-2018-08-19-hibernate常见问题/" itemprop="url">hibernate常见问题</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-04T11:19:29+08:00">
+                2018-11-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">Java学习笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/11/04/2018-2018-08-19-hibernate常见问题/" class="leancloud_visitors" data-flag-title="hibernate常见问题">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="报错：java-lang-NoClassDefFoundError-javax-xml-bind-JAXBException（运行环境：jdk10"><a href="#报错：java-lang-NoClassDefFoundError-javax-xml-bind-JAXBException（运行环境：jdk10" class="headerlink" title="报错：java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException（运行环境：jdk10)"></a>报错：java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException（运行环境：jdk10)</h4><p>解决方法一：将JDK换成8或以下<br>解决办法二：导入下面4个jar包</p>
+<ol>
+<li><a href="http://search.maven.org/remotecontent?filepath=com/sun/activation/javax.activation/1.2.0/javax.activation-1.2.0.jar" target="_blank" rel="noopener">javax.activation-1.2.0.jar</a>  </li>
+<li><a href="http://search.maven.org/remotecontent?filepath=javax/xml/bind/jaxb-api/2.3.0/jaxb-api-2.3.0.jar" target="_blank" rel="noopener">jaxb-api-2.3.0.jar</a></li>
+<li><a href="http://search.maven.org/remotecontent?filepath=com/sun/xml/bind/jaxb-core/2.3.0/jaxb-core-2.3.0.jar" target="_blank" rel="noopener">jaxb-core-2.3.0.jar</a></li>
+<li><a href="http://search.maven.org/remotecontent?filepath=com/sun/xml/bind/jaxb-impl/2.3.0/jaxb-impl-2.3.0.jar" target="_blank" rel="noopener">jaxb-impl-2.3.0.jar</a><br>具体原因参考：<a href="https://stackoverflow.com/questions/43574426/how-to-resolve-java-lang-noclassdeffounderror-javax-xml-bind-jaxbexception-in-j" target="_blank" rel="noopener">https://stackoverflow.com/questions/43574426/how-to-resolve-java-lang-noclassdeffounderror-javax-xml-bind-jaxbexception-in-j</a></li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://Wangsr.cn/2018/11/04/2018-2018-09-08-Linux常用操作/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="子非鱼">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wangsr's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/04/2018-2018-09-08-Linux常用操作/" itemprop="url">Linux 常用操作</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-04T11:19:29+08:00">
+                2018-11-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux系统相关/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux系统相关</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/11/04/2018-2018-09-08-Linux常用操作/" class="leancloud_visitors" data-flag-title="Linux 常用操作">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="一、python相关"><a href="#一、python相关" class="headerlink" title="一、python相关"></a>一、python相关</h2><ul>
+<li><p>1、安装python包</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 <span class="keyword">install</span> baidu-aip</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>2、列出所安装的python包</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 <span class="built_in">list</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>3、卸载包</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">pip3</span> unstall baidu-aip</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>4、使用python模拟键盘输入（输入快捷键）<br>安装PyUserInput包</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 <span class="keyword">install</span> PyUserInput</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/11/04/2018-2018-09-08-Linux常用操作/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://Wangsr.cn/2018/11/04/2018-2018-08-19-hibernate的基本使用/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="子非鱼">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wangsr's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/04/2018-2018-08-19-hibernate的基本使用/" itemprop="url">hibernate的基本使用</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-04T11:19:29+08:00">
+                2018-11-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">Java学习笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/11/04/2018-2018-08-19-hibernate的基本使用/" class="leancloud_visitors" data-flag-title="hibernate的基本使用">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>hibernate框架的主要作用就是将面向对象语言转化为操作关系数据的语言。</p>
+<h2 id="一、导入相关jar包"><a href="#一、导入相关jar包" class="headerlink" title="一、导入相关jar包"></a>一、导入相关jar包</h2><ol>
+<li>1、将下载的hibernate解压缩，导入<code>hibernate-release-5.3.5.Final\lib\required</code>目录下的所有jar包。</li>
+<li>2、导入mysql驱动<h2 id="二、编写持久化类"><a href="#二、编写持久化类" class="headerlink" title="二、编写持久化类"></a>二、编写持久化类</h2>注意几点：</li>
+<li>1、类名对应表名</li>
+<li>2、成员变量对应数据库字段</li>
+<li>3、提供getter和setter方法即可<h2 id="三、创建持久类的映射文件"><a href="#三、创建持久类的映射文件" class="headerlink" title="三、创建持久类的映射文件"></a>三、创建持久类的映射文件</h2>注意：</li>
+</ol>
+<ul>
+<li>命名规则为：类名.hbm.xml</li>
+<li>位置：和持久化类同目录下<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 以下来自hibernate核心类下的 /org/hibernate/hibernate-mapping-3.0.dtd的约束--&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE hibernate-mapping PUBLIC</span></span><br><span class="line"><span class="meta">    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"</span></span><br><span class="line"><span class="meta">    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">hibernate-mapping</span> <span class="attr">package</span>=<span class="string">"cn.wangsr.domain"</span>&gt;</span><span class="comment">&lt;!-- 包名 --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">class</span> <span class="attr">name</span>=<span class="string">"Customer"</span> <span class="attr">table</span>=<span class="string">"Customer"</span>&gt;</span><span class="comment">&lt;!-- 表名 --&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">id</span> <span class="attr">name</span>=<span class="string">"custId"</span> <span class="attr">column</span>=<span class="string">"cust_id"</span>&gt;</span><span class="tag">&lt;/<span class="name">id</span>&gt;</span><span class="comment">&lt;!-- 主键 --&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"custName"</span> <span class="attr">column</span>=<span class="string">"cust_name"</span>&gt;</span><span class="tag">&lt;/<span class="name">property</span>&gt;</span><span class="comment">&lt;!-- 其它字段 --&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">class</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">hibernate-mapping</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/11/04/2018-2018-08-19-hibernate的基本使用/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://Wangsr.cn/2018/11/04/2018-2018-09-06-使用struts2的拦截器实现权限验证/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="子非鱼">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wangsr's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/04/2018-2018-09-06-使用struts2的拦截器实现权限验证/" itemprop="url">使用struts2的拦截器实现权限验证</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-04T11:19:29+08:00">
+                2018-11-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">Java学习笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/11/04/2018-2018-09-06-使用struts2的拦截器实现权限验证/" class="leancloud_visitors" data-flag-title="使用struts2的拦截器实现权限验证">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>应用场景：对于需要用户登录的网页进行身份验证，比如未登录不能浏览相关内容并跳转到登录页面。</p>
+<h2 id="一、在struts-xml配置文件中定义拦截器"><a href="#一、在struts-xml配置文件中定义拦截器" class="headerlink" title="一、在struts.xml配置文件中定义拦截器"></a>一、在struts.xml配置文件中定义拦截器</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">package</span> <span class="attr">name</span>=<span class="string">"default"</span> <span class="attr">extends</span>=<span class="string">"struts-default"</span>&gt;</span></span><br><span class="line">   <span class="comment">&lt;!-- 定义了一个名为authority的拦截器 --&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">interceptors</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">interceptor</span> <span class="attr">name</span>=<span class="string">"authority"</span> <span class="attr">class</span>=<span class="string">"cn.wangsr.AuthorityInterceptor"</span>/&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">interceptors</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">package</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="二、在需要进行拦截的action中使用拦截器"><a href="#二、在需要进行拦截的action中使用拦截器" class="headerlink" title="二、在需要进行拦截的action中使用拦截器"></a>二、在需要进行拦截的action中使用拦截器</h2><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;interceptor-<span class="keyword">ref</span> <span class="built_in">name</span>=<span class="string">"defaultStack"</span>&gt;&lt;/interceptor-<span class="keyword">ref</span>&gt;</span><br><span class="line">&lt;interceptor-<span class="keyword">ref</span> <span class="built_in">name</span>=<span class="string">"authority"</span>&gt;&lt;/interceptor-<span class="keyword">ref</span>&gt;</span><br></pre></td></tr></table></figure>
+<p>注：第一行为默认拦截器，如果不适用通过拦截器后将会丢失表单所提交数据。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/11/04/2018-2018-09-06-使用struts2的拦截器实现权限验证/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </p></div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://Wangsr.cn/2018/11/04/2018-2018-01-20-python学习笔记/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="子非鱼">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wangsr's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/04/2018-2018-01-20-python学习笔记/" itemprop="url">python学习笔记</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-04T11:19:29+08:00">
+                2018-11-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/python学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">python学习笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/11/04/2018-2018-01-20-python学习笔记/" class="leancloud_visitors" data-flag-title="python学习笔记">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="文件操作有关"><a href="#文件操作有关" class="headerlink" title="文件操作有关"></a>文件操作有关</h1><h2 id="列出指定文件夹及后缀的所有文件名"><a href="#列出指定文件夹及后缀的所有文件名" class="headerlink" title="列出指定文件夹及后缀的所有文件名"></a>列出指定文件夹及后缀的所有文件名</h2><figure class="highlight scheme"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="name">x</span> for x in os.listdir(<span class="symbol">'./static/images</span>') if os.path.splitext(<span class="name">x</span>)[<span class="name">1</span>] == <span class="symbol">'.jpg</span>']</span><br></pre></td></tr></table></figure>
+<h2 id="dataURL转化为文件并保存本地"><a href="#dataURL转化为文件并保存本地" class="headerlink" title="dataURL转化为文件并保存本地"></a>dataURL转化为文件并保存本地</h2>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/11/04/2018-2018-01-20-python学习笔记/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://Wangsr.cn/2018/11/04/2018-2018-08-25-python操作excel/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="子非鱼">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wangsr's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/04/2018-2018-08-25-python操作excel/" itemprop="url">python使用openpyxl库操作Excel</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-04T11:19:29+08:00">
+                2018-11-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/python学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">python学习笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/11/04/2018-2018-08-25-python操作excel/" class="leancloud_visitors" data-flag-title="python使用openpyxl库操作Excel">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="一、加载表格"><a href="#一、加载表格" class="headerlink" title="一、加载表格"></a>一、加载表格</h2><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wb = openpyxl.load_workbook(<span class="string">"abc.xlsx"</span>)<span class="comment">#加载工作簿</span></span><br><span class="line">ws = wb[<span class="string">"Sheet2"</span>]<span class="comment">#加载工作表</span></span><br></pre></td></tr></table></figure>
+<h2 id="二、读取单元格数值"><a href="#二、读取单元格数值" class="headerlink" title="二、读取单元格数值"></a>二、读取单元格数值</h2><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ws[<span class="string">"A1"</span>].<span class="keyword">value</span><span class="meta">#读取A1单元格的值</span></span><br></pre></td></tr></table></figure>
+<h2 id="三、单元格填充颜色"><a href="#三、单元格填充颜色" class="headerlink" title="三、单元格填充颜色"></a>三、单元格填充颜色</h2><figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fill = PatternFill(fill_type=<span class="string">"solid"</span>, fgColor=<span class="string">"54FF9F"</span>)</span><br><span class="line">ws[<span class="string">"A1"</span>].fill = fill</span><br><span class="line">wb.save(<span class="string">"abc.xlsx"</span>)</span><br></pre></td></tr></table></figure>
+<p>注：操作一次就执行一次<code>save()</code>方法，否则可能只保留最后一次的操作</p>
+
+          
         
       
     </div>
@@ -769,7 +1741,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://Wangsr.cn/2018/11/04/2018-2018-10-06-Django框架的快速入门笔记/">
+    <link itemprop="mainEntityOfPage" href="https://Wangsr.cn/2018/11/04/2018-2018-09-16-树莓派爬坑系列（二）配置WiFi热点/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="子非鱼">
@@ -788,165 +1760,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/11/04/2018-2018-10-06-Django框架的快速入门笔记/" itemprop="url">Django框架的快速入门笔记</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-04T11:19:29+08:00">
-                2018-11-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/python学习笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">python学习笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2018/11/04/2018-2018-10-06-Django框架的快速入门笔记/" class="leancloud_visitors" data-flag-title="Django框架的快速入门笔记">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="安装Django"><a href="#安装Django" class="headerlink" title="安装Django"></a>安装Django</h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip <span class="keyword">install</span> django</span><br></pre></td></tr></table></figure>
-<h2 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h2><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">django-admin startproject mysite</span></span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/11/04/2018-2018-10-06-Django框架的快速入门笔记/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://Wangsr.cn/2018/11/04/2018-2018-10-06-树莓派爬坑系列（五）使用snowboy做热词唤醒/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="子非鱼">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wangsr's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/04/2018-2018-10-06-树莓派爬坑系列（五）使用snowboy做热词唤醒/" itemprop="url">树莓派爬坑系列（五）使用snowboy做热词唤醒</a></h1>
+                <a class="post-title-link" href="/2018/11/04/2018-2018-09-16-树莓派爬坑系列（二）配置WiFi热点/" itemprop="url">树莓派爬坑系列（二）配置WiFi热点</a></h1>
         
 
         <div class="post-meta">
@@ -998,7 +1812,7 @@
 
           
           
-             <span id="/2018/11/04/2018-2018-10-06-树莓派爬坑系列（五）使用snowboy做热词唤醒/" class="leancloud_visitors" data-flag-title="树莓派爬坑系列（五）使用snowboy做热词唤醒">
+             <span id="/2018/11/04/2018-2018-09-16-树莓派爬坑系列（二）配置WiFi热点/" class="leancloud_visitors" data-flag-title="树莓派爬坑系列（二）配置WiFi热点">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1030,175 +1844,16 @@
 
       
         
-          
-            <h4 id="一、简要说明"><a href="#一、简要说明" class="headerlink" title="一、简要说明"></a>一、简要说明</h4><p>snowboy所实现的功能就是对说的话进行检测，如果与预设的语音信号匹配则做出响应。和微软小娜的唤醒功能类似。<br>官方文档：<a href="http://docs.kitt.ai/snowboy/" target="_blank" rel="noopener">http://docs.kitt.ai/snowboy/</a>里面有具体介绍如何使用。</p>
-<h4 id="二、使用"><a href="#二、使用" class="headerlink" title="二、使用"></a>二、使用</h4><p>snowboy可以使编译好的文件，也可以从github<a href="https://github.com/Kitt-AI/snowboy" target="_blank" rel="noopener">https://github.com/Kitt-AI/snowboy</a>下载源文件针对自己电脑环境进行编译。<br>需要注意的是：下载编译好的树莓派版本不能使用python3执行。</p>
-<h4 id="三、自己编译成Python3版本"><a href="#三、自己编译成Python3版本" class="headerlink" title="三、自己编译成Python3版本"></a>三、自己编译成Python3版本</h4><ul>
-<li>1、从GitHub<a href="https://github.com/Kitt-AI/snowboy" target="_blank" rel="noopener">https://github.com/Kitt-AI/snowboy</a>中下载压缩包，解压。</li>
-<li><p>2、切换到swig/Python目录</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cd</span> swig/Python</span><br><span class="line"><span class="keyword">make</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>3、执行完后在swig/Python目录下会生成几个文件，其中<code>snowboydetect.py</code>和<code>_snowboydetect.so</code><br>就是我们需要的，可以把它拷贝到我们的项目中</p>
-</li>
-<li><p>4、完整的执行snowboy还需要examples/Python3目录下的<code>snowboydecoder.py</code>和<code>demo.py</code>及根目录下的<code>resources</code>文件夹。<br>当然，还需要在官网训练自己的声音模型，然后下载下来放到相应目录。</p>
+          <h2 id="实现功能"><a href="#实现功能" class="headerlink" title="实现功能"></a>实现功能</h2><p>   使其它设备可以连接树莓派的热点，并实现上网。</p>
+<h2 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h2><p>  基本上有两种方式：1、手动配置，2、使用开源库</p>
+<h2 id="方式二的具体操作"><a href="#方式二的具体操作" class="headerlink" title="方式二的具体操作"></a>方式二的具体操作</h2><p>  使用GitHub开源库<a href="https://github.com/oblique/create_ap" target="_blank" rel="noopener">https://github.com/oblique/create_ap</a>来配置WiFi热点，<br>  此种方式简单快捷。</p>
+<ul>
+<li>1、安装依赖<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="builtin-name">get</span> install dnsmasq hostapd</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://Wangsr.cn/2018/11/04/2018-2018-01-20-python学习笔记/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="子非鱼">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wangsr's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/04/2018-2018-01-20-python学习笔记/" itemprop="url">python学习笔记</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-04T11:19:29+08:00">
-                2018-11-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/python学习笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">python学习笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2018/11/04/2018-2018-01-20-python学习笔记/" class="leancloud_visitors" data-flag-title="python学习笔记">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="文件操作有关"><a href="#文件操作有关" class="headerlink" title="文件操作有关"></a>文件操作有关</h1><h2 id="列出指定文件夹及后缀的所有文件名"><a href="#列出指定文件夹及后缀的所有文件名" class="headerlink" title="列出指定文件夹及后缀的所有文件名"></a>列出指定文件夹及后缀的所有文件名</h2><figure class="highlight scheme"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="name">x</span> for x in os.listdir(<span class="symbol">'./static/images</span>') if os.path.splitext(<span class="name">x</span>)[<span class="name">1</span>] == <span class="symbol">'.jpg</span>']</span><br></pre></td></tr></table></figure>
-<h2 id="dataURL转化为文件并保存本地"><a href="#dataURL转化为文件并保存本地" class="headerlink" title="dataURL转化为文件并保存本地"></a>dataURL转化为文件并保存本地</h2>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/11/04/2018-2018-01-20-python学习笔记/#more" rel="contents">
+            <a class="btn" href="/2018/11/04/2018-2018-09-16-树莓派爬坑系列（二）配置WiFi热点/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1206,656 +1861,6 @@
         
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://Wangsr.cn/2018/11/04/2018-2018-01-30-python爬虫/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="子非鱼">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wangsr's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/04/2018-2018-01-30-python爬虫/" itemprop="url">python爬虫</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-04T11:19:29+08:00">
-                2018-11-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/python学习笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">python学习笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2018/11/04/2018-2018-01-30-python爬虫/" class="leancloud_visitors" data-flag-title="python爬虫">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="请求库（requests）"><a href="#请求库（requests）" class="headerlink" title="请求库（requests）"></a>请求库（requests）</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip <span class="keyword">install</span> requests</span><br></pre></td></tr></table></figure>
-<h3 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h3><h4 id="带参数get请求"><a href="#带参数get请求" class="headerlink" title="带参数get请求"></a>带参数get请求</h4><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">response=requests.<span class="built_in">get</span>(<span class="string">"http://httpbin.org/get?name=Tome&amp;age=22"</span>)</span><br><span class="line"><span class="built_in">print</span>(response.<span class="built_in">text</span>)</span><br></pre></td></tr></table></figure>
-<figure class="highlight xl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">data</span>=&#123;</span><br><span class="line">	<span class="string">'name'</span>:<span class="string">'Tom'</span>,</span><br><span class="line">	<span class="string">'age'</span>:<span class="string">'22'</span></span><br><span class="line">&#125;</span><br><span class="line">response=requests.get(<span class="string">"http://httpbin.org/get"</span>,params=<span class="keyword">data</span>)</span><br><span class="line">print(response.<span class="keyword">text</span>)</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/11/04/2018-2018-01-30-python爬虫/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://Wangsr.cn/2018/11/04/2018-2018-02-03-git使用/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="子非鱼">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wangsr's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/04/2018-2018-02-03-git使用/" itemprop="url">git命令使用笔记</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-04T11:19:29+08:00">
-                2018-11-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/常用的命令行工具/" itemprop="url" rel="index">
-                    <span itemprop="name">常用的命令行工具</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2018/11/04/2018-2018-02-03-git使用/" class="leancloud_visitors" data-flag-title="git命令使用笔记">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="一、Git的基本使用"><a href="#一、Git的基本使用" class="headerlink" title="一、Git的基本使用"></a>一、Git的基本使用</h2><h3 id="1-Git安装-windows"><a href="#1-Git安装-windows" class="headerlink" title="1.Git安装(windows)"></a>1.Git安装(windows)</h3><ul>
-<li>·Git官网<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">下载安装程序</a></li>
-<li>·设置用户名和邮箱<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git<span class="built_in"> config </span>--global user.name <span class="string">"Your Name"</span></span><br><span class="line">$ git<span class="built_in"> config </span>--global user.email <span class="string">"email@example.com"</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="2-创建本地版本库"><a href="#2-创建本地版本库" class="headerlink" title="2.创建本地版本库"></a>2.创建本地版本库</h3><p>进入相应目录通过<code>git init</code>命令把这个目录变成Git可以管理的仓库：<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>git init</span><br></pre></td></tr></table></figure></p>
-<h3 id="3-使用git-add-命令把要提交的所有修改放到暂存区（Stage）"><a href="#3-使用git-add-命令把要提交的所有修改放到暂存区（Stage）" class="headerlink" title="3.使用git add .命令把要提交的所有修改放到暂存区（Stage）"></a>3.使用<code>git add .</code>命令把要提交的所有修改放到暂存区（Stage）</h3><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="keyword">add</span><span class="bash"> .</span></span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/11/04/2018-2018-02-03-git使用/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://Wangsr.cn/2018/11/04/2018-2018-03-01-selenium的使用/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="子非鱼">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wangsr's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/04/2018-2018-03-01-selenium的使用/" itemprop="url">selenium的使用</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-04T11:19:29+08:00">
-                2018-11-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/python学习笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">python学习笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2018/11/04/2018-2018-03-01-selenium的使用/" class="leancloud_visitors" data-flag-title="selenium的使用">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="下载相应浏览器驱动"><a href="#下载相应浏览器驱动" class="headerlink" title="下载相应浏览器驱动"></a>下载相应浏览器驱动</h2><p>放在python的根目录下</p>
-<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">from</span> selenium.common.exceptions <span class="keyword">import</span> TimeoutException</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.common.<span class="keyword">by</span> <span class="keyword">import</span> By</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.support.ui <span class="keyword">import</span> WebDriverWait</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.support <span class="keyword">import</span> expected_conditions <span class="keyword">as</span> EC</span><br><span class="line">browser = webdriver.Chrome()<span class="comment">#驱动谷歌浏览器</span></span><br><span class="line">wait = WebDriverWait(browser,<span class="number">10</span>)<span class="comment">#等待时间</span></span><br></pre></td></tr></table></figure>
-<p>需下载谷歌浏览器驱动<a href="http://npm.taobao.org/mirrors/chromedriver/" target="_blank" rel="noopener">chromedriver</a>。注意不同版本浏览器需下载相应的驱动。<br>将下载的chromedriver解压后移动到/usr/local/bin</p>
-<h2 id="输入文本及点击按钮"><a href="#输入文本及点击按钮" class="headerlink" title="输入文本及点击按钮"></a>输入文本及点击按钮</h2><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">def search():</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        browser.<span class="built_in">get</span>(<span class="string">'https://www.taobao.com/'</span>)</span><br><span class="line">        input = <span class="built_in">wait</span>.<span class="keyword">until</span>(</span><br><span class="line">            EC.presence_of_element_located((By.CSS_SELECTOR,<span class="string">'#q'</span>))</span><br><span class="line">        )</span><br><span class="line">        submit = <span class="built_in">wait</span>.<span class="keyword">until</span>(EC.element_to_be_clickable((By.CSS_SELECTOR,<span class="string">'#J_TSearchForm &gt; div.search-button &gt; button'</span>)))</span><br><span class="line">        input.send_keys(<span class="string">'美食'</span>)<span class="comment">#输入文字</span></span><br><span class="line">        submit.click()<span class="comment">#点击按钮</span></span><br><span class="line">        total = <span class="built_in">wait</span>.<span class="keyword">until</span>(EC.presence_of_element_located((By.CSS_SELECTOR,<span class="string">'#mainsrp-pager &gt; div &gt; div &gt; div &gt; div.total'</span>)))</span><br><span class="line">        get_products()</span><br><span class="line">        <span class="literal">return</span> total.<span class="keyword">text</span></span><br><span class="line">    except TimeoutException:</span><br><span class="line">        <span class="literal">return</span> search()<span class="comment">#发生错误再执行一遍</span></span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/11/04/2018-2018-03-01-selenium的使用/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://Wangsr.cn/2018/11/04/2018-2018-03-01-MONGODB的安装与使用/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="子非鱼">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wangsr's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/04/2018-2018-03-01-MONGODB的安装与使用/" itemprop="url">Linux下MONGODB的安装及使用</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-04T11:19:29+08:00">
-                2018-11-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux系统相关/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux系统相关</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2018/11/04/2018-2018-03-01-MONGODB的安装与使用/" class="leancloud_visitors" data-flag-title="Linux下MONGODB的安装及使用">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ol>
-<li>访问<a href="https://robomongo.org/download" target="_blank" rel="noopener">官网</a>下载相应的压缩包。</li>
-<li><p>解压缩：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">tar</span> <span class="selector-tag">-xvzf</span> <span class="selector-tag">robo3t-1</span><span class="selector-class">.2</span><span class="selector-class">.1-linux-x86_64-3e50a65</span><span class="selector-class">.tar</span><span class="selector-class">.gz</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>执行以下代码</p>
-<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gedit ~<span class="string">/.bashrc</span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>将以下代码添加到末尾<br><figure class="highlight monkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alias</span> <span class="title">robomongo</span>=<span class="string">"/usr/local/bin/robomongo/bin/robo3t"</span></span><br></pre></td></tr></table></figure></p>
-<p>再运行以下代码<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure></p>
-<p>以后就可以打开终端，输入robomongo就可以启动robo 3T了。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/11/04/2018-2018-03-01-MONGODB的安装与使用/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </p></div>
     
     
     
@@ -1938,7 +1943,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">46</span>
+                  <span class="site-state-item-count">47</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
