@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="搭建环境腾讯云的Linux服务器。 具体步骤 1、新建文件夹，文件名自定，后缀一般为.git 1mkdir mygit.git  2、初始化为git裸仓库（裸仓库push后看不到内容） 1git init --bare  3、向服务器中pushgit仓库 1git push 服务器登录名@服务器地址:目录/mygit.git master   服务器中查看push内容1git clone mygi">
+<meta name="description" content="搭建环境腾讯云的Linux服务器。 具体步骤创建git账户  此目的用于小团队可以利用这一个账户进行push，clone操作。  添加git用户：sudo adduser git,   切换到git用户：su git,  设置git用户权限 ssh权限： 在git用户的根目录下创建.ssh文件夹，在.ssh文件夹里边创建authorized_keys文件，将团队成员的ssh公钥复制在里边。   限">
 <meta name="keywords" content="git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="搭建git服务器">
 <meta property="og:url" content="https://Wangsr.cn/2019/02/23/搭建git服务器/index.html">
 <meta property="og:site_name" content="Wangsr&#39;s Notes">
-<meta property="og:description" content="搭建环境腾讯云的Linux服务器。 具体步骤 1、新建文件夹，文件名自定，后缀一般为.git 1mkdir mygit.git  2、初始化为git裸仓库（裸仓库push后看不到内容） 1git init --bare  3、向服务器中pushgit仓库 1git push 服务器登录名@服务器地址:目录/mygit.git master   服务器中查看push内容1git clone mygi">
+<meta property="og:description" content="搭建环境腾讯云的Linux服务器。 具体步骤创建git账户  此目的用于小团队可以利用这一个账户进行push，clone操作。  添加git用户：sudo adduser git,   切换到git用户：su git,  设置git用户权限 ssh权限： 在git用户的根目录下创建.ssh文件夹，在.ssh文件夹里边创建authorized_keys文件，将团队成员的ssh公钥复制在里边。   限">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-23T03:31:35.140Z">
+<meta property="og:updated_time" content="2019-04-03T02:36:25.550Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搭建git服务器">
-<meta name="twitter:description" content="搭建环境腾讯云的Linux服务器。 具体步骤 1、新建文件夹，文件名自定，后缀一般为.git 1mkdir mygit.git  2、初始化为git裸仓库（裸仓库push后看不到内容） 1git init --bare  3、向服务器中pushgit仓库 1git push 服务器登录名@服务器地址:目录/mygit.git master   服务器中查看push内容1git clone mygi">
+<meta name="twitter:description" content="搭建环境腾讯云的Linux服务器。 具体步骤创建git账户  此目的用于小团队可以利用这一个账户进行push，clone操作。  添加git用户：sudo adduser git,   切换到git用户：su git,  设置git用户权限 ssh权限： 在git用户的根目录下创建.ssh文件夹，在.ssh文件夹里边创建authorized_keys文件，将团队成员的ssh公钥复制在里边。   限">
 
 
 
@@ -370,18 +370,17 @@
 
       
         <h2 id="搭建环境"><a href="#搭建环境" class="headerlink" title="搭建环境"></a>搭建环境</h2><p>腾讯云的Linux服务器。</p>
-<h2 id="具体步骤"><a href="#具体步骤" class="headerlink" title="具体步骤"></a>具体步骤</h2><ul>
-<li><p>1、新建文件夹，文件名自定，后缀一般为<code>.git</code></p>
-<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> mygit.git</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>2、初始化为git裸仓库（裸仓库<code>push</code>后看不到内容）</p>
-<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init <span class="comment">--bare</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>3、向服务器中<code>push</code>git仓库</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push 服务器登录名@服务器地址:目录/mygit<span class="selector-class">.git</span> master</span><br></pre></td></tr></table></figure>
-</li>
+<h2 id="具体步骤"><a href="#具体步骤" class="headerlink" title="具体步骤"></a>具体步骤</h2><h3 id="创建git账户"><a href="#创建git账户" class="headerlink" title="创建git账户"></a>创建git账户</h3><p>  此目的用于小团队可以利用这一个账户进行push，clone操作。</p>
+<ul>
+<li>添加git用户：<code>sudo adduser git</code>,  </li>
+<li>切换到git用户：<code>su git</code>,  <h3 id="设置git用户权限"><a href="#设置git用户权限" class="headerlink" title="设置git用户权限"></a>设置git用户权限</h3></li>
+<li>ssh权限： 在git用户的根目录下创建<code>.ssh</code>文件夹，在<code>.ssh</code>文件夹里边创建<code>authorized_keys</code>文件，将团队成员的ssh公钥复制在里边。  </li>
+<li>限制git用户不能登录shell，修改<code>/etc/passwd</code>,找到git用户一行，把最后一个冒号后边改成<code>git-shell</code></li>
 </ul>
-<p><strong>服务器中查看push内容</strong><br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">mygit</span>.git</span><br></pre></td></tr></table></figure></p>
+<h3 id="新建文件夹，文件名自定，后缀一般为-git"><a href="#新建文件夹，文件名自定，后缀一般为-git" class="headerlink" title="新建文件夹，文件名自定，后缀一般为.git"></a>新建文件夹，文件名自定，后缀一般为<code>.git</code></h3><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> mygit.git</span><br></pre></td></tr></table></figure>
+<h3 id="初始化为git裸仓库（裸仓库push后看不到内容）"><a href="#初始化为git裸仓库（裸仓库push后看不到内容）" class="headerlink" title="初始化为git裸仓库（裸仓库push后看不到内容）"></a>初始化为git裸仓库（裸仓库<code>push</code>后看不到内容）</h3><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init <span class="comment">--bare</span></span><br></pre></td></tr></table></figure>
+<h3 id="向服务器中pushgit仓库"><a href="#向服务器中pushgit仓库" class="headerlink" title="向服务器中pushgit仓库"></a>向服务器中<code>push</code>git仓库</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push 服务器登录名@服务器地址:目录/mygit<span class="selector-class">.git</span> master</span><br></pre></td></tr></table></figure>
+<h3 id="服务器中查看push内容"><a href="#服务器中查看push内容" class="headerlink" title="服务器中查看push内容"></a>服务器中查看push内容</h3><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">mygit</span>.git</span><br></pre></td></tr></table></figure>
 <p>就会生成一个<code>mygit</code>的文件夹，里面即是push内容。以后若是<code>mygit.git</code> 有更新，可用<code>git pull ../mygit.git master</code>来更新文件夹内容。</p>
 <h2 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h2><ul>
 <li>版本控制</li>
@@ -426,6 +425,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/13/SSH整合常见问题/" rel="prev" title="SSH整合常见问题">
+                SSH整合常见问题 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -504,7 +507,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">48</span>
+                  <span class="site-state-item-count">49</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -575,7 +578,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#搭建环境"><span class="nav-number">1.</span> <span class="nav-text">搭建环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#具体步骤"><span class="nav-number">2.</span> <span class="nav-text">具体步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#优点"><span class="nav-number">3.</span> <span class="nav-text">优点</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#搭建环境"><span class="nav-number">1.</span> <span class="nav-text">搭建环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#具体步骤"><span class="nav-number">2.</span> <span class="nav-text">具体步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建git账户"><span class="nav-number">2.1.</span> <span class="nav-text">创建git账户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置git用户权限"><span class="nav-number">2.2.</span> <span class="nav-text">设置git用户权限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新建文件夹，文件名自定，后缀一般为-git"><span class="nav-number">2.3.</span> <span class="nav-text">新建文件夹，文件名自定，后缀一般为.git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#初始化为git裸仓库（裸仓库push后看不到内容）"><span class="nav-number">2.4.</span> <span class="nav-text">初始化为git裸仓库（裸仓库push后看不到内容）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#向服务器中pushgit仓库"><span class="nav-number">2.5.</span> <span class="nav-text">向服务器中pushgit仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#服务器中查看push内容"><span class="nav-number">2.6.</span> <span class="nav-text">服务器中查看push内容</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#优点"><span class="nav-number">3.</span> <span class="nav-text">优点</span></a></li></ol></div>
             
 
           </div>

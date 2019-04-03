@@ -290,7 +290,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://Wangsr.cn/2018/11/04/2018-2018-10-06-树莓派爬坑系列（五）使用snowboy做热词唤醒/">
+    <link itemprop="mainEntityOfPage" href="https://Wangsr.cn/2018/11/04/2018-2018-02-06-python虚拟环境搭建/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="子非鱼">
@@ -309,171 +309,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/11/04/2018-2018-10-06-树莓派爬坑系列（五）使用snowboy做热词唤醒/" itemprop="url">树莓派爬坑系列（五）使用snowboy做热词唤醒</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-04T11:19:29+08:00">
-                2018-11-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/树莓派爬坑系列/" itemprop="url" rel="index">
-                    <span itemprop="name">树莓派爬坑系列</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2018/11/04/2018-2018-10-06-树莓派爬坑系列（五）使用snowboy做热词唤醒/" class="leancloud_visitors" data-flag-title="树莓派爬坑系列（五）使用snowboy做热词唤醒">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="一、简要说明"><a href="#一、简要说明" class="headerlink" title="一、简要说明"></a>一、简要说明</h4><p>snowboy所实现的功能就是对说的话进行检测，如果与预设的语音信号匹配则做出响应。和微软小娜的唤醒功能类似。<br>官方文档：<a href="http://docs.kitt.ai/snowboy/" target="_blank" rel="noopener">http://docs.kitt.ai/snowboy/</a>里面有具体介绍如何使用。</p>
-<h4 id="二、使用"><a href="#二、使用" class="headerlink" title="二、使用"></a>二、使用</h4><p>snowboy可以使编译好的文件，也可以从github<a href="https://github.com/Kitt-AI/snowboy" target="_blank" rel="noopener">https://github.com/Kitt-AI/snowboy</a>下载源文件针对自己电脑环境进行编译。<br>需要注意的是：下载编译好的树莓派版本不能使用python3执行。</p>
-<h4 id="三、自己编译成Python3版本"><a href="#三、自己编译成Python3版本" class="headerlink" title="三、自己编译成Python3版本"></a>三、自己编译成Python3版本</h4><ul>
-<li>1、从GitHub<a href="https://github.com/Kitt-AI/snowboy" target="_blank" rel="noopener">https://github.com/Kitt-AI/snowboy</a>中下载压缩包，解压。</li>
-<li><p>2、切换到swig/Python目录</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cd</span> swig/Python</span><br><span class="line"><span class="keyword">make</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>3、执行完后在swig/Python目录下会生成几个文件，其中<code>snowboydetect.py</code>和<code>_snowboydetect.so</code><br>就是我们需要的，可以把它拷贝到我们的项目中</p>
-</li>
-<li><p>4、完整的执行snowboy还需要examples/Python3目录下的<code>snowboydecoder.py</code>和<code>demo.py</code>及根目录下的<code>resources</code>文件夹。<br>当然，还需要在官网训练自己的声音模型，然后下载下来放到相应目录。</p>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://Wangsr.cn/2018/11/04/2018-2018-10-06-Django框架的快速入门笔记/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="子非鱼">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wangsr's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/04/2018-2018-10-06-Django框架的快速入门笔记/" itemprop="url">Django框架的快速入门笔记</a></h1>
+                <a class="post-title-link" href="/2018/11/04/2018-2018-02-06-python虚拟环境搭建/" itemprop="url">Linux下python的虚拟环境搭建</a></h1>
         
 
         <div class="post-meta">
@@ -525,7 +361,7 @@
 
           
           
-             <span id="/2018/11/04/2018-2018-10-06-Django框架的快速入门笔记/" class="leancloud_visitors" data-flag-title="Django框架的快速入门笔记">
+             <span id="/2018/11/04/2018-2018-02-06-python虚拟环境搭建/" class="leancloud_visitors" data-flag-title="Linux下python的虚拟环境搭建">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -557,11 +393,14 @@
 
       
         
-          <h2 id="安装Django"><a href="#安装Django" class="headerlink" title="安装Django"></a>安装Django</h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip <span class="keyword">install</span> django</span><br></pre></td></tr></table></figure>
-<h2 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h2><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">django-admin startproject mysite</span></span><br></pre></td></tr></table></figure>
+          <h2 id="1-安装virtualenv"><a href="#1-安装virtualenv" class="headerlink" title="1.安装virtualenv"></a>1.安装virtualenv</h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pip3 <span class="keyword">install</span> virtualenv</span><br></pre></td></tr></table></figure>
+<h2 id="2-安装virtualenvwrapper"><a href="#2-安装virtualenvwrapper" class="headerlink" title="2.安装virtualenvwrapper"></a>2.安装virtualenvwrapper</h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pip3 <span class="keyword">install</span> virtualenvwrapper</span><br></pre></td></tr></table></figure>
+<h2 id="3-在-bashrc中添加以下三行："><a href="#3-在-bashrc中添加以下三行：" class="headerlink" title="3.在~/.bashrc中添加以下三行："></a>3.在~/.bashrc中添加以下三行：</h2><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="builtin-name">export</span> <span class="attribute">WORKON_HOME</span>=<span class="variable">$HOME</span>/.virtualenvs</span><br><span class="line">source /usr/local/bin/virtualenvwrapper.sh</span><br><span class="line"><span class="builtin-name">export</span> <span class="attribute">VIRTUALENVWRAPPER_PYTHON</span>=/usr/bin/python3</span><br></pre></td></tr></table></figure>
+<p>注意这里安装时所用命令为pip3所以上面第三行代码将Python版本路径设为/usr/bin/python3</p>
+<h2 id="4-运行"><a href="#4-运行" class="headerlink" title="4.运行:"></a>4.运行:</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/11/04/2018-2018-10-06-Django框架的快速入门笔记/#more" rel="contents">
+            <a class="btn" href="/2018/11/04/2018-2018-02-06-python虚拟环境搭建/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -612,7 +451,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://Wangsr.cn/2018/11/04/2018-2018-01-20-python学习笔记/">
+    <link itemprop="mainEntityOfPage" href="https://Wangsr.cn/2018/11/04/2018-2018-03-01-MONGODB的安装与使用/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="子非鱼">
@@ -631,7 +470,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/11/04/2018-2018-01-20-python学习笔记/" itemprop="url">python学习笔记</a></h1>
+                <a class="post-title-link" href="/2018/11/04/2018-2018-03-01-MONGODB的安装与使用/" itemprop="url">Linux下MONGODB的安装及使用</a></h1>
         
 
         <div class="post-meta">
@@ -666,8 +505,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/python学习笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">python学习笔记</span>
+                  <a href="/categories/Linux系统相关/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux系统相关</span>
                   </a>
                 </span>
 
@@ -683,7 +522,7 @@
 
           
           
-             <span id="/2018/11/04/2018-2018-01-20-python学习笔记/" class="leancloud_visitors" data-flag-title="python学习笔记">
+             <span id="/2018/11/04/2018-2018-03-01-MONGODB的安装与使用/" class="leancloud_visitors" data-flag-title="Linux下MONGODB的安装及使用">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -715,340 +554,28 @@
 
       
         
-          <h1 id="文件操作有关"><a href="#文件操作有关" class="headerlink" title="文件操作有关"></a>文件操作有关</h1><h2 id="列出指定文件夹及后缀的所有文件名"><a href="#列出指定文件夹及后缀的所有文件名" class="headerlink" title="列出指定文件夹及后缀的所有文件名"></a>列出指定文件夹及后缀的所有文件名</h2><figure class="highlight scheme"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="name">x</span> for x in os.listdir(<span class="symbol">'./static/images</span>') if os.path.splitext(<span class="name">x</span>)[<span class="name">1</span>] == <span class="symbol">'.jpg</span>']</span><br></pre></td></tr></table></figure>
-<h2 id="dataURL转化为文件并保存本地"><a href="#dataURL转化为文件并保存本地" class="headerlink" title="dataURL转化为文件并保存本地"></a>dataURL转化为文件并保存本地</h2>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/11/04/2018-2018-01-20-python学习笔记/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://Wangsr.cn/2018/11/04/2018-2018-01-30-python爬虫/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="子非鱼">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wangsr's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/04/2018-2018-01-30-python爬虫/" itemprop="url">python爬虫</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-04T11:19:29+08:00">
-                2018-11-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/python学习笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">python学习笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2018/11/04/2018-2018-01-30-python爬虫/" class="leancloud_visitors" data-flag-title="python爬虫">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="请求库（requests）"><a href="#请求库（requests）" class="headerlink" title="请求库（requests）"></a>请求库（requests）</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip <span class="keyword">install</span> requests</span><br></pre></td></tr></table></figure>
-<h3 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h3><h4 id="带参数get请求"><a href="#带参数get请求" class="headerlink" title="带参数get请求"></a>带参数get请求</h4><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">response=requests.<span class="built_in">get</span>(<span class="string">"http://httpbin.org/get?name=Tome&amp;age=22"</span>)</span><br><span class="line"><span class="built_in">print</span>(response.<span class="built_in">text</span>)</span><br></pre></td></tr></table></figure>
-<figure class="highlight xl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">data</span>=&#123;</span><br><span class="line">	<span class="string">'name'</span>:<span class="string">'Tom'</span>,</span><br><span class="line">	<span class="string">'age'</span>:<span class="string">'22'</span></span><br><span class="line">&#125;</span><br><span class="line">response=requests.get(<span class="string">"http://httpbin.org/get"</span>,params=<span class="keyword">data</span>)</span><br><span class="line">print(response.<span class="keyword">text</span>)</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/11/04/2018-2018-01-30-python爬虫/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://Wangsr.cn/2018/11/04/2018-2018-02-03-git使用/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="子非鱼">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wangsr's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/04/2018-2018-02-03-git使用/" itemprop="url">git命令使用笔记</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-04T11:19:29+08:00">
-                2018-11-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/常用的命令行工具/" itemprop="url" rel="index">
-                    <span itemprop="name">常用的命令行工具</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2018/11/04/2018-2018-02-03-git使用/" class="leancloud_visitors" data-flag-title="git命令使用笔记">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="一、Git的基本使用"><a href="#一、Git的基本使用" class="headerlink" title="一、Git的基本使用"></a>一、Git的基本使用</h2><h3 id="1-Git安装-windows"><a href="#1-Git安装-windows" class="headerlink" title="1.Git安装(windows)"></a>1.Git安装(windows)</h3><ul>
-<li>·Git官网<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">下载安装程序</a></li>
-<li>·设置用户名和邮箱<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git<span class="built_in"> config </span>--global user.name <span class="string">"Your Name"</span></span><br><span class="line">$ git<span class="built_in"> config </span>--global user.email <span class="string">"email@example.com"</span></span><br></pre></td></tr></table></figure>
+          <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ol>
+<li>访问<a href="https://robomongo.org/download" target="_blank" rel="noopener">官网</a>下载相应的压缩包。</li>
+<li><p>解压缩：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">tar</span> <span class="selector-tag">-xvzf</span> <span class="selector-tag">robo3t-1</span><span class="selector-class">.2</span><span class="selector-class">.1-linux-x86_64-3e50a65</span><span class="selector-class">.tar</span><span class="selector-class">.gz</span></span><br></pre></td></tr></table></figure>
 </li>
-</ul>
-<h3 id="2-创建本地版本库"><a href="#2-创建本地版本库" class="headerlink" title="2.创建本地版本库"></a>2.创建本地版本库</h3><p>进入相应目录通过<code>git init</code>命令把这个目录变成Git可以管理的仓库：<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>git init</span><br></pre></td></tr></table></figure></p>
-<h3 id="3-使用git-add-命令把要提交的所有修改放到暂存区（Stage）"><a href="#3-使用git-add-命令把要提交的所有修改放到暂存区（Stage）" class="headerlink" title="3.使用git add .命令把要提交的所有修改放到暂存区（Stage）"></a>3.使用<code>git add .</code>命令把要提交的所有修改放到暂存区（Stage）</h3><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="keyword">add</span><span class="bash"> .</span></span><br></pre></td></tr></table></figure>
+<li><p>执行以下代码</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gedit ~<span class="string">/.bashrc</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>将以下代码添加到末尾<br><figure class="highlight monkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alias</span> <span class="title">robomongo</span>=<span class="string">"/usr/local/bin/robomongo/bin/robo3t"</span></span><br></pre></td></tr></table></figure></p>
+<p>再运行以下代码<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure></p>
+<p>以后就可以打开终端，输入robomongo就可以启动robo 3T了。<br>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/11/04/2018-2018-02-03-git使用/#more" rel="contents">
+            <a class="btn" href="/2018/11/04/2018-2018-03-01-MONGODB的安装与使用/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
           <!--/noindex-->
         
       
-    </div>
+    </p></div>
     
     
     
@@ -1410,7 +937,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://Wangsr.cn/2018/11/04/2018-2018-02-06-python虚拟环境搭建/">
+    <link itemprop="mainEntityOfPage" href="https://Wangsr.cn/2018/11/04/2018-2018-01-20-python学习笔记/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="子非鱼">
@@ -1429,7 +956,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/11/04/2018-2018-02-06-python虚拟环境搭建/" itemprop="url">Linux下python的虚拟环境搭建</a></h1>
+                <a class="post-title-link" href="/2018/11/04/2018-2018-01-20-python学习笔记/" itemprop="url">python学习笔记</a></h1>
         
 
         <div class="post-meta">
@@ -1481,7 +1008,7 @@
 
           
           
-             <span id="/2018/11/04/2018-2018-02-06-python虚拟环境搭建/" class="leancloud_visitors" data-flag-title="Linux下python的虚拟环境搭建">
+             <span id="/2018/11/04/2018-2018-01-20-python学习笔记/" class="leancloud_visitors" data-flag-title="python学习笔记">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1513,18 +1040,175 @@
 
       
         
-          <h2 id="1-安装virtualenv"><a href="#1-安装virtualenv" class="headerlink" title="1.安装virtualenv"></a>1.安装virtualenv</h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pip3 <span class="keyword">install</span> virtualenv</span><br></pre></td></tr></table></figure>
-<h2 id="2-安装virtualenvwrapper"><a href="#2-安装virtualenvwrapper" class="headerlink" title="2.安装virtualenvwrapper"></a>2.安装virtualenvwrapper</h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pip3 <span class="keyword">install</span> virtualenvwrapper</span><br></pre></td></tr></table></figure>
-<h2 id="3-在-bashrc中添加以下三行："><a href="#3-在-bashrc中添加以下三行：" class="headerlink" title="3.在~/.bashrc中添加以下三行："></a>3.在~/.bashrc中添加以下三行：</h2><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="builtin-name">export</span> <span class="attribute">WORKON_HOME</span>=<span class="variable">$HOME</span>/.virtualenvs</span><br><span class="line">source /usr/local/bin/virtualenvwrapper.sh</span><br><span class="line"><span class="builtin-name">export</span> <span class="attribute">VIRTUALENVWRAPPER_PYTHON</span>=/usr/bin/python3</span><br></pre></td></tr></table></figure>
-<p>注意这里安装时所用命令为pip3所以上面第三行代码将Python版本路径设为/usr/bin/python3</p>
-<h2 id="4-运行"><a href="#4-运行" class="headerlink" title="4.运行:"></a>4.运行:</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure>
+          <h1 id="文件操作有关"><a href="#文件操作有关" class="headerlink" title="文件操作有关"></a>文件操作有关</h1><h2 id="列出指定文件夹及后缀的所有文件名"><a href="#列出指定文件夹及后缀的所有文件名" class="headerlink" title="列出指定文件夹及后缀的所有文件名"></a>列出指定文件夹及后缀的所有文件名</h2><figure class="highlight scheme"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="name">x</span> for x in os.listdir(<span class="symbol">'./static/images</span>') if os.path.splitext(<span class="name">x</span>)[<span class="name">1</span>] == <span class="symbol">'.jpg</span>']</span><br></pre></td></tr></table></figure>
+<h2 id="dataURL转化为文件并保存本地"><a href="#dataURL转化为文件并保存本地" class="headerlink" title="dataURL转化为文件并保存本地"></a>dataURL转化为文件并保存本地</h2>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/11/04/2018-2018-02-06-python虚拟环境搭建/#more" rel="contents">
+            <a class="btn" href="/2018/11/04/2018-2018-01-20-python学习笔记/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
           <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://Wangsr.cn/2018/11/04/2018-2018-03-27-统计好友QQ动态词频/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="子非鱼">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wangsr's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/04/2018-2018-03-27-统计好友QQ动态词频/" itemprop="url">统计QQ好友说说词频</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-04T11:19:29+08:00">
+                2018-11-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/爬坑小项目/" itemprop="url" rel="index">
+                    <span itemprop="name">爬坑小项目</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/11/04/2018-2018-03-27-统计好友QQ动态词频/" class="leancloud_visitors" data-flag-title="统计QQ好友说说词频">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="整体思路"><a href="#整体思路" class="headerlink" title="整体思路"></a>整体思路</h2><ol>
+<li>1.使用selenium及chrome浏览器自动登录QQ空间。</li>
+<li>2.获取网页源码。</li>
+<li>3.使用BeautifulSoup解析获取相关数据。</li>
+<li>4.使用jieba统计词频。</li>
+<li>5.使用matplotlib 画出柱状图。</li>
+</ol>
+<h3 id="项目GitHub地址"><a href="#项目GitHub地址" class="headerlink" title="项目GitHub地址"></a>项目GitHub地址</h3><p><a href="https://github.com/fishrong/QQzone_spider" target="_blank" rel="noopener">https://github.com/fishrong/QQzone_spider</a></p>
+
+          
         
       
     </div>
@@ -1726,7 +1410,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://Wangsr.cn/2018/11/04/2018-2018-03-27-统计好友QQ动态词频/">
+    <link itemprop="mainEntityOfPage" href="https://Wangsr.cn/2018/11/04/2018-2018-08-19-hibernate常见问题/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="子非鱼">
@@ -1745,7 +1429,338 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/11/04/2018-2018-03-27-统计好友QQ动态词频/" itemprop="url">统计QQ好友说说词频</a></h1>
+                <a class="post-title-link" href="/2018/11/04/2018-2018-08-19-hibernate常见问题/" itemprop="url">hibernate常见问题</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-04T11:19:29+08:00">
+                2018-11-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">Java学习笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/11/04/2018-2018-08-19-hibernate常见问题/" class="leancloud_visitors" data-flag-title="hibernate常见问题">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="报错：java-lang-NoClassDefFoundError-javax-xml-bind-JAXBException（运行环境：jdk10"><a href="#报错：java-lang-NoClassDefFoundError-javax-xml-bind-JAXBException（运行环境：jdk10" class="headerlink" title="报错：java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException（运行环境：jdk10)"></a>报错：java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException（运行环境：jdk10)</h4><p>解决方法一：将JDK换成8或以下<br>解决办法二：导入下面4个jar包</p>
+<ol>
+<li><a href="http://search.maven.org/remotecontent?filepath=com/sun/activation/javax.activation/1.2.0/javax.activation-1.2.0.jar" target="_blank" rel="noopener">javax.activation-1.2.0.jar</a>  </li>
+<li><a href="http://search.maven.org/remotecontent?filepath=javax/xml/bind/jaxb-api/2.3.0/jaxb-api-2.3.0.jar" target="_blank" rel="noopener">jaxb-api-2.3.0.jar</a></li>
+<li><a href="http://search.maven.org/remotecontent?filepath=com/sun/xml/bind/jaxb-core/2.3.0/jaxb-core-2.3.0.jar" target="_blank" rel="noopener">jaxb-core-2.3.0.jar</a></li>
+<li><a href="http://search.maven.org/remotecontent?filepath=com/sun/xml/bind/jaxb-impl/2.3.0/jaxb-impl-2.3.0.jar" target="_blank" rel="noopener">jaxb-impl-2.3.0.jar</a><br>具体原因参考：<a href="https://stackoverflow.com/questions/43574426/how-to-resolve-java-lang-noclassdeffounderror-javax-xml-bind-jaxbexception-in-j" target="_blank" rel="noopener">https://stackoverflow.com/questions/43574426/how-to-resolve-java-lang-noclassdeffounderror-javax-xml-bind-jaxbexception-in-j</a><h3 id="不自动生成更新表"><a href="#不自动生成更新表" class="headerlink" title="不自动生成更新表"></a>不自动生成更新表</h3>配置了<code>&quot;hibernate.hbm2ddl.auto&quot;</code>但却报错<code>ERROR: Table xxxx doesn&#39;t exist</code><br><strong>解决办法</strong> ：更改数据库方言版本为数据库相对应版本，比如8版本的数据库修改为：<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;property name=<span class="string">"hibernate.dialect"</span>&gt;org<span class="selector-class">.hibernate</span><span class="selector-class">.dialect</span><span class="selector-class">.MySQL8Dialect</span>&lt;/property&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h4 id="closing-inbound-before-receiving-peer’s-close-notify"><a href="#closing-inbound-before-receiving-peer’s-close-notify" class="headerlink" title="closing inbound before receiving peer’s close_notify"></a>closing inbound before receiving peer’s close_notify</h4><p>在主配置文件中在url中添加参数<code>?useSSL=false</code></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://Wangsr.cn/2018/11/04/2018-2018-07-29-系统、软件及常用工具/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="子非鱼">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wangsr's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/04/2018-2018-07-29-系统、软件及常用工具/" itemprop="url">操作系统、软件及常用工具</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-04T11:19:29+08:00">
+                2018-11-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/其它/" itemprop="url" rel="index">
+                    <span itemprop="name">其它</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/11/04/2018-2018-07-29-系统、软件及常用工具/" class="leancloud_visitors" data-flag-title="操作系统、软件及常用工具">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="一、Windows操作系统下载"><a href="#一、Windows操作系统下载" class="headerlink" title="一、Windows操作系统下载"></a>一、Windows操作系统下载</h2><ol>
+<li><a href="https://msdn.itellyou.cn/" target="_blank" rel="noopener">MSDN,我告诉你</a>;</li>
+<li><a href="https://www.microsoft.com/zh-cn/software-download/windows10/" target="_blank" rel="noopener">Microsoft官网</a>;</li>
+<li><a href="http://www.yishimei123.com/network/290.html" target="_blank" rel="noopener">亦是美网络</a>;  </li>
+</ol>
+<h2 id="二、office及visio下载"><a href="#二、office及visio下载" class="headerlink" title="二、office及visio下载"></a>二、office及visio下载</h2><ol>
+<li><a href="https://msdn.itellyou.cn/" target="_blank" rel="noopener">MSDN,我告诉你</a>;</li>
+<li><a href="http://www.yishimei123.com/network/290.html" target="_blank" rel="noopener">亦是美网络</a>;<h5 id="office与Visio版本需一致都为零售或者都为VOL，否则不能安装"><a href="#office与Visio版本需一致都为零售或者都为VOL，否则不能安装" class="headerlink" title="(office与Visio版本需一致都为零售或者都为VOL，否则不能安装)"></a>(office与Visio版本需一致都为零售或者都为VOL，否则不能安装)</h5></li>
+</ol>
+<h2 id="三、系统及Office破解工具"><a href="#三、系统及Office破解工具" class="headerlink" title="三、系统及Office破解工具"></a>三、系统及Office破解工具</h2><ol>
+<li><a href="http://www.yishimei123.com/network/319.html" target="_blank" rel="noopener">MicroKMS</a>;</li>
+</ol>
+<h2 id="四、解压工具"><a href="#四、解压工具" class="headerlink" title="四、解压工具"></a>四、解压工具</h2><ol>
+<li><a href="http://www.bandisoft.com/bandizip/" target="_blank" rel="noopener">bandizip</a>;<h2 id="不要下2345好压-会劫持浏览器主页-非常流氓"><a href="#不要下2345好压-会劫持浏览器主页-非常流氓" class="headerlink" title="(不要下2345好压,会劫持浏览器主页,非常流氓)"></a>(不要下2345好压,会劫持浏览器主页,非常流氓)</h2></li>
+</ol>
+<h2 id="五、科学上网工具"><a href="#五、科学上网工具" class="headerlink" title="五、科学上网工具"></a>五、科学上网工具</h2><ol>
+<li><a href="https://github.com/getlantern/lantern" target="_blank" rel="noopener">蓝灯</a>;</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://Wangsr.cn/2018/11/04/2018-2018-06-10-Java字符画转换/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="子非鱼">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wangsr's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/04/2018-2018-06-10-Java字符画转换/" itemprop="url">Java实现图片转字符画</a></h1>
         
 
         <div class="post-meta">
@@ -1797,7 +1812,7 @@
 
           
           
-             <span id="/2018/11/04/2018-2018-03-27-统计好友QQ动态词频/" class="leancloud_visitors" data-flag-title="统计QQ好友说说词频">
+             <span id="/2018/11/04/2018-2018-06-10-Java字符画转换/" class="leancloud_visitors" data-flag-title="Java实现图片转字符画">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1830,14 +1845,19 @@
       
         
           
-            <h2 id="整体思路"><a href="#整体思路" class="headerlink" title="整体思路"></a>整体思路</h2><ol>
-<li>1.使用selenium及chrome浏览器自动登录QQ空间。</li>
-<li>2.获取网页源码。</li>
-<li>3.使用BeautifulSoup解析获取相关数据。</li>
-<li>4.使用jieba统计词频。</li>
-<li>5.使用matplotlib 画出柱状图。</li>
+            <h3 id="一、实现思路："><a href="#一、实现思路：" class="headerlink" title="一、实现思路："></a>一、实现思路：</h3><ol>
+<li>1.获取彩色图片的RGB分量；</li>
+<li>2.根据公式<code>Gray = R*0.299 + G*0.587 + B*0.114</code>,获取图像灰度值（范围在0~255） </li>
+<li>3.不同灰度值用复杂度不同的字符输出即可</li>
 </ol>
-<h3 id="项目GitHub地址"><a href="#项目GitHub地址" class="headerlink" title="项目GitHub地址"></a>项目GitHub地址</h3><p><a href="https://github.com/fishrong/QQzone_spider" target="_blank" rel="noopener">https://github.com/fishrong/QQzone_spider</a></p>
+<h3 id="二、项目地址"><a href="#二、项目地址" class="headerlink" title="二、项目地址"></a>二、项目地址</h3><p><a href="https://github.com/fishrong/Pic2Char.git" target="_blank" rel="noopener">https://github.com/fishrong/Pic2Char.git</a> </p>
+<h3 id="三、项目相关说明"><a href="#三、项目相关说明" class="headerlink" title="三、项目相关说明"></a>三、项目相关说明</h3><ol>
+<li>1.生成了window可执行文件，可脱离Java开发环境运行 </li>
+<li>2.命令行中直接输入桌面下的图片名称即可进行转换 </li>
+<li>3.转换后在桌面生成与图片同名的txt文件，并自动打开 </li>
+<li>4.可多次转换</li>
+<li>5.设置最小字号才能看到效果</li>
+</ol>
 
           
         
@@ -1925,7 +1945,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">48</span>
+                  <span class="site-state-item-count">49</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

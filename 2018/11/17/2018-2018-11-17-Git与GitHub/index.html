@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Wangsr&#39;s Notes">
 <meta property="og:description" content="推送到远程库 git remote -v:查看地址别名   添加别名：1git remote add origin git@github.com:fishrong/TestGitInMac.git   即用origin代替地址。  推送1git push origin master   将master分支推送到远程仓库。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-02T13:13:35.310Z">
+<meta property="og:updated_time" content="2019-03-22T07:29:56.810Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git与GitHub">
 <meta name="twitter:description" content="推送到远程库 git remote -v:查看地址别名   添加别名：1git remote add origin git@github.com:fishrong/TestGitInMac.git   即用origin代替地址。  推送1git push origin master   将master分支推送到远程仓库。">
@@ -383,7 +383,9 @@
 <h1 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h1><h2 id="查看当前分支"><a href="#查看当前分支" class="headerlink" title="查看当前分支"></a>查看当前分支</h2><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">git status</span></span><br></pre></td></tr></table></figure>
 <h2 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h2><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">git</span> <span class="keyword">branch </span>hot_fix</span><br></pre></td></tr></table></figure>
 <h2 id="查看分支（所有）"><a href="#查看分支（所有）" class="headerlink" title="查看分支（所有）"></a>查看分支（所有）</h2><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">git</span> <span class="keyword">branch </span>-v</span><br></pre></td></tr></table></figure>
+<p>查看所有，包括远程。<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">git</span> <span class="keyword">branch </span>-a</span><br></pre></td></tr></table></figure></p>
 <h2 id="切换分支"><a href="#切换分支" class="headerlink" title="切换分支"></a>切换分支</h2><figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout <span class="string">[分支名]</span></span><br></pre></td></tr></table></figure>
+<p><code>git checkout -b dev origin/dev</code><br>意思是，创建一个dev分支（-b），并把远程dev分支（origin/dev）的内容放在该分支内。接着切换到该分支（checkout）</p>
 <h2 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h2><ul>
 <li>切换到被合并分支</li>
 <li>执行以下命令(将<code>hot_fix</code>合并到<code>master</code>分支)<figure class="highlight cos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">merge</span> hot_fix</span><br></pre></td></tr></table></figure>
@@ -531,7 +533,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">48</span>
+                  <span class="site-state-item-count">49</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

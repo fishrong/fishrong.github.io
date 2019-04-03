@@ -290,6 +290,138 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://Wangsr.cn/2019/03/13/SSH整合常见问题/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="子非鱼">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wangsr's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/13/SSH整合常见问题/" itemprop="url">SSH整合常见问题</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-13T10:30:16+08:00">
+                2019-03-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2019/03/13/SSH整合常见问题/" class="leancloud_visitors" data-flag-title="SSH整合常见问题">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="Spring中引用hibernate配置文件"><a href="#Spring中引用hibernate配置文件" class="headerlink" title="Spring中引用hibernate配置文件"></a>Spring中引用hibernate配置文件</h4><p>在这种情况下需要引入c3p0的相关jar包，否则报错<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">org.hibernate.service.UnknownUnwrapTypeException: Cannot unwrap <span class="keyword">to</span> requested<span class="built_in"> type </span>[javax.sql.DataSource]</span><br></pre></td></tr></table></figure></p>
+<p>此外还需<code>aspectjweaver-1.6.2.jar</code>。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://Wangsr.cn/2019/02/23/搭建git服务器/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -373,18 +505,17 @@
         
           
             <h2 id="搭建环境"><a href="#搭建环境" class="headerlink" title="搭建环境"></a>搭建环境</h2><p>腾讯云的Linux服务器。</p>
-<h2 id="具体步骤"><a href="#具体步骤" class="headerlink" title="具体步骤"></a>具体步骤</h2><ul>
-<li><p>1、新建文件夹，文件名自定，后缀一般为<code>.git</code></p>
-<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> mygit.git</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>2、初始化为git裸仓库（裸仓库<code>push</code>后看不到内容）</p>
-<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init <span class="comment">--bare</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>3、向服务器中<code>push</code>git仓库</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push 服务器登录名@服务器地址:目录/mygit<span class="selector-class">.git</span> master</span><br></pre></td></tr></table></figure>
-</li>
+<h2 id="具体步骤"><a href="#具体步骤" class="headerlink" title="具体步骤"></a>具体步骤</h2><h3 id="创建git账户"><a href="#创建git账户" class="headerlink" title="创建git账户"></a>创建git账户</h3><p>  此目的用于小团队可以利用这一个账户进行push，clone操作。</p>
+<ul>
+<li>添加git用户：<code>sudo adduser git</code>,  </li>
+<li>切换到git用户：<code>su git</code>,  <h3 id="设置git用户权限"><a href="#设置git用户权限" class="headerlink" title="设置git用户权限"></a>设置git用户权限</h3></li>
+<li>ssh权限： 在git用户的根目录下创建<code>.ssh</code>文件夹，在<code>.ssh</code>文件夹里边创建<code>authorized_keys</code>文件，将团队成员的ssh公钥复制在里边。  </li>
+<li>限制git用户不能登录shell，修改<code>/etc/passwd</code>,找到git用户一行，把最后一个冒号后边改成<code>git-shell</code></li>
 </ul>
-<p><strong>服务器中查看push内容</strong><br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">mygit</span>.git</span><br></pre></td></tr></table></figure></p>
+<h3 id="新建文件夹，文件名自定，后缀一般为-git"><a href="#新建文件夹，文件名自定，后缀一般为-git" class="headerlink" title="新建文件夹，文件名自定，后缀一般为.git"></a>新建文件夹，文件名自定，后缀一般为<code>.git</code></h3><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> mygit.git</span><br></pre></td></tr></table></figure>
+<h3 id="初始化为git裸仓库（裸仓库push后看不到内容）"><a href="#初始化为git裸仓库（裸仓库push后看不到内容）" class="headerlink" title="初始化为git裸仓库（裸仓库push后看不到内容）"></a>初始化为git裸仓库（裸仓库<code>push</code>后看不到内容）</h3><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init <span class="comment">--bare</span></span><br></pre></td></tr></table></figure>
+<h3 id="向服务器中pushgit仓库"><a href="#向服务器中pushgit仓库" class="headerlink" title="向服务器中pushgit仓库"></a>向服务器中<code>push</code>git仓库</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push 服务器登录名@服务器地址:目录/mygit<span class="selector-class">.git</span> master</span><br></pre></td></tr></table></figure>
+<h3 id="服务器中查看push内容"><a href="#服务器中查看push内容" class="headerlink" title="服务器中查看push内容"></a>服务器中查看push内容</h3><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">mygit</span>.git</span><br></pre></td></tr></table></figure>
 <p>就会生成一个<code>mygit</code>的文件夹，里面即是push内容。以后若是<code>mygit.git</code> 有更新，可用<code>git pull ../mygit.git master</code>来更新文件夹内容。</p>
 <h2 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h2><ul>
 <li>版本控制</li>
@@ -1606,162 +1737,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://Wangsr.cn/2018/12/02/2018-2018-12-02-Android初体验-六-handler/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="子非鱼">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wangsr's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/02/2018-2018-12-02-Android初体验-六-handler/" itemprop="url">Android初体验(六)Handler</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-02T16:28:20+08:00">
-                2018-12-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Android学习笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">Android学习笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2018/12/02/2018-2018-12-02-Android初体验-六-handler/" class="leancloud_visitors" data-flag-title="Android初体验(六)Handler">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>因为安卓只能在主线程中更新ui，且主线程最好不好有耗时操作（超过5s），所以有时候绘制动画时就必须使用多线程来实现。这时候更新UI就需要使用<code>handler</code>，可以理解为信使的作用。<br>也就是需要非主线程需要更新UI的时候需使用<code>handler</code>给主线程一个消息，主线程收到消息后完成更新UI动作。  </p>
-<h1 id="新建Handler对象"><a href="#新建Handler对象" class="headerlink" title="新建Handler对象"></a>新建Handler对象</h1><p>主线程中新建一个handler对象<br><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Handler <span class="keyword">handler</span> = <span class="keyword">new</span> Handler()&#123;</span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">handleMessage</span><span class="params">(Message msg)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">super</span>.handleMessage(msg);</span><br><span class="line">    <span class="keyword">if</span> (msg.what==<span class="number">0x01</span>) myView.invalidate();<span class="comment">//当收到消息为0x01时更新myView视图</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<h1 id="在需要更新UI的地方使用以下方法"><a href="#在需要更新UI的地方使用以下方法" class="headerlink" title="在需要更新UI的地方使用以下方法"></a>在需要更新UI的地方使用以下方法</h1><figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">handler.sendEmptyMessage(<span class="number">0</span>x001)<span class="comment">;</span></span><br></pre></td></tr></table></figure>
-<p>注意这里的<code>handler</code>与之前创建的为同一对象。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1814,7 +1789,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">48</span>
+                  <span class="site-state-item-count">49</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Wangsr&#39;s Notes">
 <meta property="og:description" content="报错：java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException（运行环境：jdk10)解决方法一：将JDK换成8或以下解决办法二：导入下面4个jar包  javax.activation-1.2.0.jar   jaxb-api-2.3.0.jar jaxb-core-2.3.0.jar jaxb-impl-2.3.0.jar具体原因">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-07T01:02:06.000Z">
+<meta property="og:updated_time" content="2019-03-01T13:37:38.790Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hibernate常见问题">
 <meta name="twitter:description" content="报错：java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException（运行环境：jdk10)解决方法一：将JDK换成8或以下解决办法二：导入下面4个jar包  javax.activation-1.2.0.jar   jaxb-api-2.3.0.jar jaxb-core-2.3.0.jar jaxb-impl-2.3.0.jar具体原因">
@@ -396,8 +396,10 @@
 <li><a href="http://search.maven.org/remotecontent?filepath=com/sun/activation/javax.activation/1.2.0/javax.activation-1.2.0.jar" target="_blank" rel="noopener">javax.activation-1.2.0.jar</a>  </li>
 <li><a href="http://search.maven.org/remotecontent?filepath=javax/xml/bind/jaxb-api/2.3.0/jaxb-api-2.3.0.jar" target="_blank" rel="noopener">jaxb-api-2.3.0.jar</a></li>
 <li><a href="http://search.maven.org/remotecontent?filepath=com/sun/xml/bind/jaxb-core/2.3.0/jaxb-core-2.3.0.jar" target="_blank" rel="noopener">jaxb-core-2.3.0.jar</a></li>
-<li><a href="http://search.maven.org/remotecontent?filepath=com/sun/xml/bind/jaxb-impl/2.3.0/jaxb-impl-2.3.0.jar" target="_blank" rel="noopener">jaxb-impl-2.3.0.jar</a><br>具体原因参考：<a href="https://stackoverflow.com/questions/43574426/how-to-resolve-java-lang-noclassdeffounderror-javax-xml-bind-jaxbexception-in-j" target="_blank" rel="noopener">https://stackoverflow.com/questions/43574426/how-to-resolve-java-lang-noclassdeffounderror-javax-xml-bind-jaxbexception-in-j</a></li>
+<li><a href="http://search.maven.org/remotecontent?filepath=com/sun/xml/bind/jaxb-impl/2.3.0/jaxb-impl-2.3.0.jar" target="_blank" rel="noopener">jaxb-impl-2.3.0.jar</a><br>具体原因参考：<a href="https://stackoverflow.com/questions/43574426/how-to-resolve-java-lang-noclassdeffounderror-javax-xml-bind-jaxbexception-in-j" target="_blank" rel="noopener">https://stackoverflow.com/questions/43574426/how-to-resolve-java-lang-noclassdeffounderror-javax-xml-bind-jaxbexception-in-j</a><h3 id="不自动生成更新表"><a href="#不自动生成更新表" class="headerlink" title="不自动生成更新表"></a>不自动生成更新表</h3>配置了<code>&quot;hibernate.hbm2ddl.auto&quot;</code>但却报错<code>ERROR: Table xxxx doesn&#39;t exist</code><br><strong>解决办法</strong> ：更改数据库方言版本为数据库相对应版本，比如8版本的数据库修改为：<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;property name=<span class="string">"hibernate.dialect"</span>&gt;org<span class="selector-class">.hibernate</span><span class="selector-class">.dialect</span><span class="selector-class">.MySQL8Dialect</span>&lt;/property&gt;</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
+<h4 id="closing-inbound-before-receiving-peer’s-close-notify"><a href="#closing-inbound-before-receiving-peer’s-close-notify" class="headerlink" title="closing inbound before receiving peer’s close_notify"></a>closing inbound before receiving peer’s close_notify</h4><p>在主配置文件中在url中添加参数<code>?useSSL=false</code></p>
 
       
     </div>
@@ -428,8 +430,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/04/2018-2018-08-25-python操作excel/" rel="next" title="python使用openpyxl库操作Excel">
-                <i class="fa fa-chevron-left"></i> python使用openpyxl库操作Excel
+              <a href="/2018/11/04/2018-2018-07-29-系统、软件及常用工具/" rel="next" title="操作系统、软件及常用工具">
+                <i class="fa fa-chevron-left"></i> 操作系统、软件及常用工具
               </a>
             
           </div>
@@ -438,8 +440,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/11/04/2018-2018-08-19-hibernate的基本使用/" rel="prev" title="hibernate的基本使用">
-                hibernate的基本使用 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/11/04/2018-2018-06-08-Java连接Mysql/" rel="prev" title="Java连接MySQL常见问题">
+                Java连接MySQL常见问题 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -519,7 +521,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">48</span>
+                  <span class="site-state-item-count">49</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -590,7 +592,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#报错：java-lang-NoClassDefFoundError-javax-xml-bind-JAXBException（运行环境：jdk10"><span class="nav-number">1.</span> <span class="nav-text">报错：java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException（运行环境：jdk10)</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#报错：java-lang-NoClassDefFoundError-javax-xml-bind-JAXBException（运行环境：jdk10"><span class="nav-number">1.</span> <span class="nav-text">报错：java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException（运行环境：jdk10)</span></a></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#不自动生成更新表"><span class="nav-number"></span> <span class="nav-text">不自动生成更新表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#closing-inbound-before-receiving-peer’s-close-notify"><span class="nav-number">1.</span> <span class="nav-text">closing inbound before receiving peer’s close_notify</span></a></li></ol></li></div>
             
 
           </div>

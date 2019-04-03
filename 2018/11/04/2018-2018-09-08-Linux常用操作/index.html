@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Wangsr&#39;s Notes">
 <meta property="og:description" content="一、python相关 1、安装python包 1pip3 install baidu-aip  2、列出所安装的python包 1pip3 list  3、卸载包 1pip3 unstall baidu-aip  4、使用python模拟键盘输入（输入快捷键）安装PyUserInput包 1pip3 install PyUserInput">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-14T14:13:37.080Z">
+<meta property="og:updated_time" content="2019-03-27T01:37:42.340Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux 常用操作">
 <meta name="twitter:description" content="一、python相关 1、安装python包 1pip3 install baidu-aip  2、列出所安装的python包 1pip3 list  3、卸载包 1pip3 unstall baidu-aip  4、使用python模拟键盘输入（输入快捷键）安装PyUserInput包 1pip3 install PyUserInput">
@@ -448,6 +448,24 @@
 <li>回到之前挂起的会话，<code>screen -r 1234</code>,参数为上一步查出的id</li>
 <li>终止会话，<code>ctrl +d</code></li>
 </ul>
+<h3 id="5、tmux的使用"><a href="#5、tmux的使用" class="headerlink" title="5、tmux的使用"></a>5、tmux的使用</h3><p>与<code>screen</code>类似功能。</p>
+<h4 id="会话操作"><a href="#会话操作" class="headerlink" title="会话操作"></a>会话操作</h4><ul>
+<li>新建会话<br><code>tmux new -s name</code></li>
+<li>挂起会话<br><code>tmux detach</code>或者快捷键<code>ctrl b d</code>,先按前两个松开后按后一个。</li>
+<li>会话列表<br><code>tmux ls</code></li>
+<li>连接会话<br><code>tmux a -t name</code></li>
+<li>终止会话<br><code>tmux kill-session name</code>或<code>tmux kill-server</code>终止所有</li>
+</ul>
+<h4 id="面板操作"><a href="#面板操作" class="headerlink" title="面板操作"></a>面板操作</h4><ul>
+<li><p>新建面板<br>水平：<code>ctrl b + %</code>，垂直：<code>ctrl b + &#39;</code></p>
+</li>
+<li><p>关闭面板<br><code>ctrl b + x</code></p>
+</li>
+<li><p>切换下一面板<br><code>ctrl b + o</code></p>
+</li>
+<li><p>显示时钟<br><code>ctrl b + t</code></p>
+</li>
+</ul>
 
       
     </div>
@@ -478,8 +496,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/04/2018-2018-09-30-树莓派爬坑系列（四）安装浏览器驱动/" rel="next" title="树莓派爬坑系列（四）安装浏览器驱动">
-                <i class="fa fa-chevron-left"></i> 树莓派爬坑系列（四）安装浏览器驱动
+              <a href="/2018/11/04/2018-2018-08-19-hibernate的基本使用/" rel="next" title="hibernate的基本使用">
+                <i class="fa fa-chevron-left"></i> hibernate的基本使用
               </a>
             
           </div>
@@ -488,8 +506,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/11/04/2018-2018-09-19-树莓派爬坑系列（三）使用USB麦克风进行录音/" rel="prev" title="树莓派爬坑系列（三）使用USB录音设备进行录音">
-                树莓派爬坑系列（三）使用USB录音设备进行录音 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/11/05/2018-2018-11-08-黑苹果折腾手记/" rel="prev" title="黑苹果的折腾手记">
+                黑苹果的折腾手记 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -569,7 +587,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">48</span>
+                  <span class="site-state-item-count">49</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -640,7 +658,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、python相关"><span class="nav-number">1.</span> <span class="nav-text">一、python相关</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、网络相关"><span class="nav-number">2.</span> <span class="nav-text">二、网络相关</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、文件-文件夹相关"><span class="nav-number">3.</span> <span class="nav-text">三、文件/文件夹相关</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#系统相关"><span class="nav-number">4.</span> <span class="nav-text">系统相关</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、播放音频"><span class="nav-number">4.1.</span> <span class="nav-text">1、播放音频</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、执行定时任务"><span class="nav-number">4.2.</span> <span class="nav-text">2、执行定时任务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、解决中文问题"><span class="nav-number">4.3.</span> <span class="nav-text">3、解决中文问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、多个命令行窗口"><span class="nav-number">4.4.</span> <span class="nav-text">4、多个命令行窗口</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、python相关"><span class="nav-number">1.</span> <span class="nav-text">一、python相关</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、网络相关"><span class="nav-number">2.</span> <span class="nav-text">二、网络相关</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、文件-文件夹相关"><span class="nav-number">3.</span> <span class="nav-text">三、文件/文件夹相关</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#系统相关"><span class="nav-number">4.</span> <span class="nav-text">系统相关</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、播放音频"><span class="nav-number">4.1.</span> <span class="nav-text">1、播放音频</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、执行定时任务"><span class="nav-number">4.2.</span> <span class="nav-text">2、执行定时任务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、解决中文问题"><span class="nav-number">4.3.</span> <span class="nav-text">3、解决中文问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、多个命令行窗口"><span class="nav-number">4.4.</span> <span class="nav-text">4、多个命令行窗口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、tmux的使用"><span class="nav-number">4.5.</span> <span class="nav-text">5、tmux的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#会话操作"><span class="nav-number">4.5.1.</span> <span class="nav-text">会话操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#面板操作"><span class="nav-number">4.5.2.</span> <span class="nav-text">面板操作</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
