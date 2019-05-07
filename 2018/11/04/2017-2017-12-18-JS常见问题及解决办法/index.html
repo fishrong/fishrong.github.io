@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://Wangsr.cn">
   <title>网页编程常见问题及解决办法 | Wangsr&#39;s Notes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、JS方面屏蔽移动端弹出菜单123node.addEventListener(&apos;contextmenu&apos;, function(e)&amp;#123;  e.preventDefault();&amp;#125;); js实现移动端长按移动端有ontouchstart、ontouchmove、ontouchend三个属性来对点击事件控制。ontouchstart：点击时触发。ontouchmove：手指移动后触">
+  <meta name="description" content="一、JS方面对象的深拷贝简单的实现拷贝后不再指向同一地址：12a = &amp;#123;&apos;a&apos;:1&amp;#125;;b = JSON.pare(JSON.stringfy(a)) 屏蔽移动端弹出菜单123node.addEventListener(&apos;contextmenu&apos;, function(e)&amp;#123;  e.preventDefault();&amp;#125;); js实现移动端长按移动端有ontouc">
 <meta name="keywords" content="JS,CS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="网页编程常见问题及解决办法">
 <meta property="og:url" content="https://Wangsr.cn/2018/11/04/2017-2017-12-18-JS常见问题及解决办法/index.html">
 <meta property="og:site_name" content="Wangsr&#39;s Notes">
-<meta property="og:description" content="一、JS方面屏蔽移动端弹出菜单123node.addEventListener(&apos;contextmenu&apos;, function(e)&amp;#123;  e.preventDefault();&amp;#125;); js实现移动端长按移动端有ontouchstart、ontouchmove、ontouchend三个属性来对点击事件控制。ontouchstart：点击时触发。ontouchmove：手指移动后触">
+<meta property="og:description" content="一、JS方面对象的深拷贝简单的实现拷贝后不再指向同一地址：12a = &amp;#123;&apos;a&apos;:1&amp;#125;;b = JSON.pare(JSON.stringfy(a)) 屏蔽移动端弹出菜单123node.addEventListener(&apos;contextmenu&apos;, function(e)&amp;#123;  e.preventDefault();&amp;#125;); js实现移动端长按移动端有ontouc">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-22T04:28:41.290Z">
+<meta property="og:updated_time" content="2019-05-03T02:58:51.740Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网页编程常见问题及解决办法">
-<meta name="twitter:description" content="一、JS方面屏蔽移动端弹出菜单123node.addEventListener(&apos;contextmenu&apos;, function(e)&amp;#123;  e.preventDefault();&amp;#125;); js实现移动端长按移动端有ontouchstart、ontouchmove、ontouchend三个属性来对点击事件控制。ontouchstart：点击时触发。ontouchmove：手指移动后触">
+<meta name="twitter:description" content="一、JS方面对象的深拷贝简单的实现拷贝后不再指向同一地址：12a = &amp;#123;&apos;a&apos;:1&amp;#125;;b = JSON.pare(JSON.stringfy(a)) 屏蔽移动端弹出菜单123node.addEventListener(&apos;contextmenu&apos;, function(e)&amp;#123;  e.preventDefault();&amp;#125;); js实现移动端长按移动端有ontouc">
   
     <link rel="alternative" href="/atom.xml" title="Wangsr&#39;s Notes" type="application/atom+xml">
   
@@ -38,7 +38,7 @@
   
 
 </head>
-</html>
+
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -159,7 +159,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="posts-2017-2017-12-18-JS常见问题及解决办法" class="article article-type-posts " itemscope="" itemprop="blogPost">
+            <article id="posts-2017-2017-12-18-JS常见问题及解决办法" class="article article-type-posts " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -179,7 +179,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="一、JS方面"><a href="#一、JS方面" class="headerlink" title="一、JS方面"></a>一、JS方面</h2><h3 id="屏蔽移动端弹出菜单"><a href="#屏蔽移动端弹出菜单" class="headerlink" title="屏蔽移动端弹出菜单"></a>屏蔽移动端弹出菜单</h3><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">node.addEventListener(<span class="string">'contextmenu'</span>, <span class="function"><span class="keyword">function</span><span class="params">(e)</span></span>&#123;</span><br><span class="line">  e.preventDefault();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+        <h2 id="一、JS方面"><a href="#一、JS方面" class="headerlink" title="一、JS方面"></a>一、JS方面</h2><h3 id="对象的深拷贝"><a href="#对象的深拷贝" class="headerlink" title="对象的深拷贝"></a>对象的深拷贝</h3><p>简单的实现拷贝后不再指向同一地址：<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">a</span> = &#123;<span class="string">'a'</span>:<span class="number">1</span>&#125;;</span><br><span class="line"><span class="attr">b</span> = JSON.pare(JSON.stringfy(a))</span><br></pre></td></tr></table></figure></p>
+<h3 id="屏蔽移动端弹出菜单"><a href="#屏蔽移动端弹出菜单" class="headerlink" title="屏蔽移动端弹出菜单"></a>屏蔽移动端弹出菜单</h3><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">node.addEventListener(<span class="string">'contextmenu'</span>, <span class="function"><span class="keyword">function</span><span class="params">(e)</span></span>&#123;</span><br><span class="line">  e.preventDefault();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <h3 id="js实现移动端长按"><a href="#js实现移动端长按" class="headerlink" title="js实现移动端长按"></a>js实现移动端长按</h3><p>移动端有<code>ontouchstart</code>、<code>ontouchmove</code>、<code>ontouchend</code>三个属性来对点击事件控制。<br>ontouchstart：点击时触发。<br>ontouchmove：手指移动后触发。<br>ontouchend：手指离开时触发。<br><strong>只对移动端生效</strong><br>长按实现思路：<br>  当手指点击时触发<code>ontouchstart</code>,开始计时，如果到了定时时间则判断为长按，执行相应长按函数，否则清除定时。<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>长按测试<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"hit"</span> <span class="attr">style</span>=<span class="string">"width:100%; height:100px; background-color:#CCC;"</span> <span class="attr">ontouchstart</span>=<span class="string">"gtouchstart()"</span> <span class="attr">ontouchmove</span>=<span class="string">"gtouchmove()"</span> <span class="attr">ontouchend</span>=<span class="string">"gtouchend()"</span> <span class="attr">onclick</span>=<span class="string">""</span>&gt;</span>测试区域<span class="tag">&lt;/<span class="name">div</span>&gt;</span>    </span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined">  </span></span><br><span class="line"><span class="actionscript">    <span class="comment">//以下判断语句用来处理手机端出现两次点击问题</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">if</span> ((<span class="built_in">window</span>.screen.availHeight)&gt;<span class="number">710</span>) &#123;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> a = <span class="built_in">document</span>.getElementById(<span class="string">"hit"</span>);</span></span><br><span class="line"><span class="actionscript">            a.setAttribute(<span class="string">"onclick"</span>, <span class="string">"myclick()"</span>);</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="actionscript">    <span class="function"><span class="keyword">function</span> <span class="title">myclick</span><span class="params">()</span></span>&#123;</span></span><br><span class="line"><span class="actionscript">        alert(<span class="string">"电脑点击"</span>);</span></span><br><span class="line"><span class="undefined">    &#125;;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> timeOutEvent=<span class="number">0</span>;<span class="comment">//定时器   </span></span></span><br><span class="line"><span class="actionscript">    <span class="comment">//开始按   </span></span></span><br><span class="line"><span class="actionscript">    <span class="function"><span class="keyword">function</span> <span class="title">gtouchstart</span><span class="params">()</span></span>&#123;   </span></span><br><span class="line"><span class="actionscript">        timeOutEvent = setTimeout(<span class="string">"longPress()"</span>,<span class="number">500</span>);<span class="comment">//这里设置定时器，定义长按500毫秒触发长按事件，时间可以自己改，个人感觉500毫秒非常合适   </span></span></span><br><span class="line"><span class="actionscript">        <span class="keyword">return</span> <span class="literal">false</span>;   </span></span><br><span class="line"><span class="undefined">    &#125;;   </span></span><br><span class="line"><span class="actionscript">    <span class="comment">//手释放，如果在500毫秒内就释放，则取消长按事件，此时可以执行onclick应该执行的事件   </span></span></span><br><span class="line"><span class="actionscript">    <span class="function"><span class="keyword">function</span> <span class="title">gtouchend</span><span class="params">()</span></span>&#123;   </span></span><br><span class="line"><span class="actionscript">        clearTimeout(timeOutEvent);<span class="comment">//清除定时器   </span></span></span><br><span class="line"><span class="actionscript">        <span class="keyword">if</span>(timeOutEvent!=<span class="number">0</span>)&#123;   </span></span><br><span class="line"><span class="actionscript">            <span class="comment">//这里写要执行的内容（尤如onclick事件）   </span></span></span><br><span class="line"><span class="actionscript">            alert(<span class="string">"点击事件触发"</span>);</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">        &#125;  </span></span><br><span class="line"><span class="actionscript">        <span class="keyword">else</span>&#123;</span></span><br><span class="line"><span class="actionscript">            alert(<span class="string">"长按事件结束"</span>);</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="actionscript">        <span class="keyword">return</span> <span class="literal">false</span>;   </span></span><br><span class="line"><span class="undefined">    &#125;;   </span></span><br><span class="line"><span class="actionscript">    <span class="comment">//如果手指有移动，则取消所有事件，此时说明用户只是要移动而不是长按   </span></span></span><br><span class="line"><span class="actionscript">    <span class="function"><span class="keyword">function</span> <span class="title">gtouchmove</span><span class="params">()</span></span>&#123;   </span></span><br><span class="line"><span class="actionscript">        clearTimeout(timeOutEvent);<span class="comment">//清除定时器   </span></span></span><br><span class="line"><span class="undefined">        timeOutEvent = 0;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">document</span>.getElementById(<span class="string">"sum"</span>).innerHTML = <span class="string">"end..."</span>;  </span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">    &#125;;   </span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> i = <span class="number">0</span>;  </span></span><br><span class="line"><span class="actionscript">    <span class="comment">//真正长按后应该执行的内容   </span></span></span><br><span class="line"><span class="actionscript">    <span class="function"><span class="keyword">function</span> <span class="title">longPress</span><span class="params">()</span></span>&#123;   </span></span><br><span class="line"><span class="undefined">        timeOutEvent = 0;   </span></span><br><span class="line"><span class="actionscript">        <span class="comment">//执行长按要执行的内容，如弹出菜单  </span></span></span><br><span class="line"><span class="actionscript">        alert(<span class="string">"长按事件触发"</span>);</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">    &#125;;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>   </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <a id="more"></a>
 <h3 id="js实现网页录音"><a href="#js实现网页录音" class="headerlink" title="js实现网页录音"></a>js实现网页录音</h3><p>参考Github中两个例子</p>
@@ -226,6 +227,8 @@
 <h3 id="同一行解决图片文字不对齐"><a href="#同一行解决图片文字不对齐" class="headerlink" title="同一行解决图片文字不对齐"></a>同一行解决图片文字不对齐</h3><p>设置图片的<code>margin-bottom:-10px</code>可使文字上移</p>
 <h3 id="将button放在父容器右边"><a href="#将button放在父容器右边" class="headerlink" title="将button放在父容器右边"></a>将button放在父容器右边</h3><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">float</span>:right</span><br></pre></td></tr></table></figure>
 <h3 id="宽高自适应"><a href="#宽高自适应" class="headerlink" title="宽高自适应"></a>宽高自适应</h3><p>即调整窗口大小时，元素宽高自动变化。<br><strong>宽度：</strong> 将父容器宽度设为100%，子元素根据需要设置百分比。</p>
+<h2 id="html方面"><a href="#html方面" class="headerlink" title="html方面"></a>html方面</h2><h3 id="Chrome-窗口打开时全屏"><a href="#Chrome-窗口打开时全屏" class="headerlink" title="Chrome 窗口打开时全屏"></a>Chrome 窗口打开时全屏</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"mobile-web-app-capable"</span> <span class="attr">content</span>=<span class="string">"yes"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"apple-mobile-web-app-capable"</span> <span class="attr">content</span>=<span class="string">"yes"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"theme-color"</span> <span class="attr">content</span>=<span class="string">"#212121"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>i-Music<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"shortcut icon"</span> <span class="attr">type</span>=<span class="string">"image/x-icon"</span> <span class="attr">href</span>=<span class="string">"favicon.ico"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<p>其中，<code>theme-color</code>为状态栏颜色。</p>
 <p>　　</p>
 
       
@@ -346,11 +349,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/11/04/2017-2017-12-26-php学习笔记/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/11/04/2017-2017-12-18-使用Jekyll搭建博客/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          PHP学习笔记
+          利用Jekyll搭建自己的GitHub博客
         
       </div>
     </a>
@@ -487,6 +490,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">JS</a>
               </li>
              
@@ -495,23 +502,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color4">Gunicorn</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Nginx</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Upload & download Files</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Jekyll安装</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">CS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Jekyll</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">搭建博客</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -520,10 +527,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">数据库</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Jekyll安装</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -539,6 +542,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Jekyll</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">搭建博客</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
@@ -551,10 +562,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">python虚拟环境</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">MONGODB</a>
               </li>
              
@@ -563,11 +570,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">matplot</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">词频</a>
+                <a href="javascript:void(0)" class="js-tag color1">python虚拟环境</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -579,11 +582,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">字符画</a>
+                <a href="javascript:void(0)" class="js-tag color3">词频</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">SSH</a>
+                <a href="javascript:void(0)" class="js-tag color3">matplot</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -595,19 +598,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">字符画</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hibernate</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">openpyxl</a>
+                <a href="javascript:void(0)" class="js-tag color4">SSH</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">struts2</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Liunx</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -616,6 +619,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">网线直连树莓派</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">openpyxl</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Liunx</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -631,19 +642,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">双网卡</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">热词唤醒</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">博客</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">双网卡</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">hackintosh</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -661,13 +668,21 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">VisuAlgo</a>
               </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">CS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">hackintosh</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
         </div>
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br>1、请确保node版本大于6.2<br>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br> npm i hexo-generator-json-content --save<br><br>
+            缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
             3、在根目录_config.yml里添加配置：
 <pre style="font-size: 12px;" q-show="jsonFail">
   jsonContent:

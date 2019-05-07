@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://Wangsr.cn">
   <title>Wangsr&#39;s Notes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -36,7 +36,7 @@
   
 
 </head>
-</html>
+
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -159,7 +159,199 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-简要的git团队协作流程" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+    <article id="post-Upload-and-download-files-using-Flask" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/07/Upload-and-download-files-using-Flask/">Upload and download files using Flask</a>
+    </h1>
+  
+
+        
+        <a href="/2019/05/07/Upload-and-download-files-using-Flask/" class="archive-article-date">
+  	<time datetime="2019-05-07T02:23:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>This post will show how to use Flask and JS to upload and download files.</p>
+<h2 id="upload-files"><a href="#upload-files" class="headerlink" title="upload files"></a>upload files</h2><h3 id="front-end-part"><a href="#front-end-part" class="headerlink" title="front-end part"></a>front-end part</h3><p>if the files that need to be upload are in the form,we can code like this:<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">var</span> <span class="string">form</span> <span class="string">=</span> <span class="string">new</span> <span class="string">FormData(document.getElementById('form_id'));</span></span><br><span class="line"><span class="string">$.ajax(&#123;</span></span><br><span class="line"><span class="attr">    method:</span><span class="string">'post'</span><span class="string">,</span></span><br><span class="line"><span class="attr">    url:</span><span class="string">'xxx'</span><span class="string">,</span></span><br><span class="line"><span class="attr">    cache:</span> <span class="literal">false</span><span class="string">,</span></span><br><span class="line"><span class="attr">    processData:</span> <span class="literal">false</span><span class="string">,</span></span><br><span class="line"><span class="attr">    contentType:</span> <span class="literal">false</span><span class="string">,</span></span><br><span class="line"><span class="string">&#125;)</span></span><br></pre></td></tr></table></figure></p>
+<p>on the other hand,we can also append the files to the FormData and then upload them.<br>attention,the last three parameters are important.</p>
+<h3 id="on-the-server"><a href="#on-the-server" class="headerlink" title="on the server"></a>on the server</h3><p>get the uploaded file<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@app.route(<span class="string">'/'</span>,methods=[<span class="string">'post'</span>,<span class="string">'get'</span>])</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">upload_file</span><span class="params">()</span></span><span class="symbol">:</span></span><br><span class="line">    file = request.files.get(<span class="string">'filename'</span>)</span><br><span class="line">    file.save(<span class="string">"path_and_filename"</span>)</span><br></pre></td></tr></table></figure></p>
+<h2 id="download-files"><a href="#download-files" class="headerlink" title="download files"></a>download files</h2><h3 id="on-the-server-1"><a href="#on-the-server-1" class="headerlink" title="on the server"></a>on the server</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@blueprint.route(<span class="string">'/getfile'</span>)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_file</span><span class="params">()</span></span><span class="symbol">:</span></span><br><span class="line">    path  = os.getcwd()+ request.args.get(<span class="string">'path'</span>)</span><br><span class="line">    <span class="keyword">return</span> send_from_directory(path,filename,as_attachment=True)</span><br></pre></td></tr></table></figure>
+<h3 id="on-the-front-end"><a href="#on-the-front-end" class="headerlink" title="on the front-end"></a>on the front-end</h3><p>we can create an “a” tag whose href is the the url to get file on the server,then click it and then the<br>browser will begin dowload the file.<br><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="built_in">document</span>.createElement(<span class="string">'a'</span>);</span><br><span class="line">a.setAttribute(<span class="string">'download'</span>, <span class="string">''</span>);</span><br><span class="line">a.href = <span class="string">"&#123;&#123; url_for('mark_blueprint.getDownloadFile') &#125;&#125;?path="</span> + <span class="string">"filepath"</span>;</span><br><span class="line">a.click();</span><br></pre></td></tr></table></figure></p>
+<h2 id="others"><a href="#others" class="headerlink" title="others"></a>others</h2><h3 id="Flask-get-parameters"><a href="#Flask-get-parameters" class="headerlink" title="Flask get parameters"></a>Flask get parameters</h3><ul>
+<li><code>get</code> method:<code>request.args.get(&#39;parameter_name&#39;)</code></li>
+<li><code>post</code> method<br>if args’s type is a file: <code>request.files.get(&#39;name&#39;)</code><br>others:`request.form.get(‘name’)</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Flask</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Upload & download Files</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/05/07/Upload-and-download-files-using-Flask/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Gunicorn-Nginx-部署Flask应用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/03/Gunicorn-Nginx-部署Flask应用/">Gunicorn+Nginx 部署Flask应用</a>
+    </h1>
+  
+
+        
+        <a href="/2019/05/03/Gunicorn-Nginx-部署Flask应用/" class="archive-article-date">
+  	<time datetime="2019-05-03T02:08:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Gunicorn"><a href="#Gunicorn" class="headerlink" title="Gunicorn"></a>Gunicorn</h2><p>  Gunicorn是一个应用容器，用来处理并发请求。使用如下。</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 <span class="keyword">install</span> gunicorn</span><br></pre></td></tr></table></figure>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><ul>
+<li>开启服务<br>切换到Flask应用根目录<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gunicorn rocket:app -<span class="selector-tag">p</span> rocket<span class="selector-class">.pid</span> -D</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>其中，<code>rocket</code>为应用文件名<code>rocket.py</code>，<code>app</code>为该文件中的app实例名，<code>-p rocket.pid</code>：将应用的进程id存在文件中，<code>-D</code>：后台运行。<br>上面命令运行后，程序默认运行在127.0.0.1:8000，可使用<code>-b 127.0.0.1:7999</code>更换端口</p>
+<ul>
+<li>停止服务<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">kill</span> cat rocket.pid</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="使用Nginx代理"><a href="#使用Nginx代理" class="headerlink" title="使用Nginx代理"></a>使用Nginx代理</h2><p>Gunicorn是运行在本地的，如果需要外网访问，可使用Nginx代理。也就是当外网访问某个地址时，将请求转发给Gunicorn处理。</p>
+<h3 id="配置Nginx"><a href="#配置Nginx" class="headerlink" title="配置Nginx"></a>配置Nginx</h3><ul>
+<li>编写配置<br>在<code>/etc/nginx/site-available</code>新建一个文件，名字随意比如<code>site.conf</code>,内容如下：<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">server</span> &#123;</span><br><span class="line">     <span class="attribute">listen</span> <span class="number">443</span>;</span><br><span class="line">     <span class="attribute">server_name</span> ****<span class="regexp">*.cn</span>; <span class="comment">#填写绑定证书的域名</span></span><br><span class="line">     <span class="attribute">ssl</span> <span class="literal">on</span>;</span><br><span class="line">     <span class="attribute">ssl_certificate</span> 1_*****<span class="regexp">*.crt</span>;</span><br><span class="line">     <span class="attribute">ssl_certificate_key</span> 2_*****<span class="regexp">*.key</span>;</span><br><span class="line">     <span class="attribute">ssl_session_timeout</span> <span class="number">5m</span>;</span><br><span class="line">     <span class="attribute">ssl_protocols</span> TLSv1 TLSv1.<span class="number">1</span> TLSv1.<span class="number">2</span>; <span class="comment">#按照这个协议配置</span></span><br><span class="line">     <span class="attribute">ssl_ciphers</span> ECDHE-RSA-AES128-GCM-SHA256:HIGH:!aNULL:!MD5:!RC4:!DHE;<span class="comment">#按照这个套件配置</span></span><br><span class="line">     <span class="attribute">ssl_prefer_server_ciphers</span> <span class="literal">on</span>;</span><br><span class="line">     <span class="attribute">location</span> / &#123;</span><br><span class="line">        <span class="attribute">root</span>   /var/www/html;</span><br><span class="line">        <span class="attribute">index</span>  index.html index.htm;&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">     <span class="attribute">location</span> /api/ &#123;</span><br><span class="line">        <span class="attribute">proxy_pass</span> http://127.0.0.1:8000/;</span><br><span class="line">     &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>说明：上面这个配置开启了443端口的监听也就是监听<code>https</code>，如果配置在80端口则所有ssl的配置都不需要。证书位置如果是上述格式需将文件放在<code>nginx</code>根目录下。<br>  <code>location</code>：访问<code>http://yourdomain/api/test.txt</code>会匹配到Flask中的<code>http://127.0.0.1:8000/test.txt</code>,注意在<code>:8000</code>后加<code>/</code>。</p>
+<ul>
+<li><p>创建软连接<br><code>sudo ln -s /etc/nginx/sites-available/site.conf
+/etc/nginx/sites-enabled/site.conf</code></p>
+</li>
+<li><p>重启nginx<br><code>service nginx restart</code></p>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Flask</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Gunicorn</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Nginx</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/05/03/Gunicorn-Nginx-部署Flask应用/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-简要的git团队协作流程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -244,7 +436,7 @@
 
 
   
-    <article id="post-SSH整合常见问题" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+    <article id="post-SSH整合常见问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -308,7 +500,7 @@
 
 
   
-    <article id="post-搭建git服务器" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+    <article id="post-搭建git服务器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -398,7 +590,7 @@
 
 
   
-    <article id="post-Linux服务器上安装dlib" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+    <article id="post-Linux服务器上安装dlib" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -470,7 +662,7 @@
 
 
   
-    <article id="post-Html5中Canvas标签的使用" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+    <article id="post-Html5中Canvas标签的使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -491,7 +683,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>canvas标签可用来在在网页中绘画，使用步骤如下：</p>
-<h2 id="html中定义标签"><a href="#html中定义标签" class="headerlink" title="html中定义标签"></a>html中定义标签</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">div</span> class=<span class="string">"CanvasContainer"</span>&gt;</span><br><span class="line">    &lt;<span class="selector-tag">canvas</span> id=<span class="string">"myCanvas"</span> <span class="attribute">width</span>=<span class="string">"740"</span> height=<span class="string">"400"</span>&gt;&lt;/canvas&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="html中定义标签"><a href="#html中定义标签" class="headerlink" title="html中定义标签"></a>html中定义标签</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"CanvasContainer"</span>&gt;</span><br><span class="line">    &lt;canvas id=<span class="string">"myCanvas"</span> width=<span class="string">"740"</span> height=<span class="string">"400"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></span></span><br><span class="line">&lt;<span class="regexp">/div&gt;</span></span><br></pre></td></tr></table></figure>
         
           <a class="article-more-a" href="/2019/01/06/Html5中Canvas标签的使用/#more">more >></a>
         
@@ -551,7 +743,7 @@
 
 
   
-    <article id="post-Flask入门笔记" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+    <article id="post-Flask入门笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -629,7 +821,7 @@
 
 
   
-    <article id="post-2018-2018-12-15-算法可视化的Android实现" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+    <article id="post-2018-2018-12-15-算法可视化的Android实现" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -721,7 +913,7 @@
 
 
   
-    <article id="post-2018-2018-12-09-Android初体验-十-layer-list" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+    <article id="post-2018-2018-12-09-Android初体验-十-layer-list" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -743,7 +935,7 @@
       
         <p><code>layer-list</code>可用来设计图层，如阴影效果。</p>
 <h1 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h1><p><img src="/images/layerlist.png" alt=""></p>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">layer-list</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 第一层图 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">item</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:left</span>=<span class="string">"50dp"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:top</span>=<span class="string">"50dp"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">shape</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">solid</span> <span class="attr">android:color</span>=<span class="string">"@color/colorPrimary"</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">corners</span> <span class="attr">android:radius</span>=<span class="string">"10dp"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">shape</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">item</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 第二层图 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">item</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:bottom</span>=<span class="string">"50dp"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:right</span>=<span class="string">"50dp"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">shape</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">solid</span> <span class="attr">android:color</span>=<span class="string">"#FFFFFF"</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">corners</span> <span class="attr">android:radius</span>=<span class="string">"10dp"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">shape</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">item</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">layer-list</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="php"><span class="meta">&lt;?</span>xml version=<span class="string">"1.0"</span> encoding=<span class="string">"utf-8"</span><span class="meta">?&gt;</span></span></span><br><span class="line"><span class="tag">&lt;<span class="name">layer-list</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 第一层图 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">item</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:left</span>=<span class="string">"50dp"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:top</span>=<span class="string">"50dp"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">shape</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">solid</span> <span class="attr">android:color</span>=<span class="string">"@color/colorPrimary"</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">corners</span> <span class="attr">android:radius</span>=<span class="string">"10dp"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">shape</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">item</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 第二层图 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">item</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:bottom</span>=<span class="string">"50dp"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:right</span>=<span class="string">"50dp"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">shape</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">solid</span> <span class="attr">android:color</span>=<span class="string">"#FFFFFF"</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">corners</span> <span class="attr">android:radius</span>=<span class="string">"10dp"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">shape</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">item</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">layer-list</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>其中，<code>left</code>，<code>top</code>为当前图层距离左边，顶部距离。<code>bottom</code>,<code>right</code>同理。</p>
 
       
@@ -798,187 +990,9 @@
 
 
   
-    <article id="post-2018-2018-12-09-Android初体验-九-canvas绘制动画" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/09/2018-2018-12-09-Android初体验-九-canvas绘制动画/">Android初体验(九)canvas绘制动画</a>
-    </h1>
-  
-
-        
-        <a href="/2018/12/09/2018-2018-12-09-Android初体验-九-canvas绘制动画/" class="archive-article-date">
-  	<time datetime="2018-12-09T03:05:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="实现效果"><a href="#实现效果" class="headerlink" title="实现效果"></a>实现效果</h1><p>自定义一个<code>view</code>绘制一个小方块，使其不断移动。<br><img src="/images/android_canvas.gif" alt=""></p>
-<h1 id="方式一"><a href="#方式一" class="headerlink" title="方式一"></a>方式一</h1><p>设置矩形坐标为变量并动态改变变量的值，重复调用重绘即可实现移动效果。</p>
-<p>#方式二</p>
-<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>绘制代码如下：<br>
-        
-          <a class="article-more-a" href="/2018/12/09/2018-2018-12-09-Android初体验-九-canvas绘制动画/#more">more >></a>
-        
-      
-
-      
-    </p></div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Android学习笔记//" class="article-tag-list-link color2">Android学习笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/12/09/2018-2018-12-09-Android初体验-九-canvas绘制动画/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2018-2018-12-05-Android初体验-八-toolbar" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/05/2018-2018-12-05-Android初体验-八-toolbar/">Android初体验(八)toolbar</a>
-    </h1>
-  
-
-        
-        <a href="/2018/12/05/2018-2018-12-05-Android初体验-八-toolbar/" class="archive-article-date">
-  	<time datetime="2018-12-05T14:19:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><code>toolbar</code>和与<code>actionbar</code>类似的组件，但前者更灵活。使用方法如下：</p>
-<h1 id="首先设置主题为no-actionbar"><a href="#首先设置主题为no-actionbar" class="headerlink" title="首先设置主题为no actionbar"></a>首先设置主题为no actionbar</h1><h1 id="在布局文件中加入以下代码"><a href="#在布局文件中加入以下代码" class="headerlink" title="在布局文件中加入以下代码"></a>在布局文件中加入以下代码</h1>
-        
-          <a class="article-more-a" href="/2018/12/05/2018-2018-12-05-Android初体验-八-toolbar/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Android学习笔记//" class="article-tag-list-link color2">Android学习笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/12/05/2018-2018-12-05-Android初体验-八-toolbar/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 
@@ -1077,6 +1091,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">JS</a>
               </li>
              
@@ -1085,23 +1103,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color4">Gunicorn</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Nginx</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Upload & download Files</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Jekyll安装</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">CS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Jekyll</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">搭建博客</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1110,10 +1128,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">数据库</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Jekyll安装</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1129,6 +1143,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Jekyll</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">搭建博客</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
@@ -1141,10 +1163,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">python虚拟环境</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">MONGODB</a>
               </li>
              
@@ -1153,11 +1171,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">matplot</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">词频</a>
+                <a href="javascript:void(0)" class="js-tag color1">python虚拟环境</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1169,11 +1183,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">字符画</a>
+                <a href="javascript:void(0)" class="js-tag color3">词频</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">SSH</a>
+                <a href="javascript:void(0)" class="js-tag color3">matplot</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1185,19 +1199,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">字符画</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hibernate</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">openpyxl</a>
+                <a href="javascript:void(0)" class="js-tag color4">SSH</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">struts2</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Liunx</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1206,6 +1220,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">网线直连树莓派</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">openpyxl</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Liunx</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1221,19 +1243,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">双网卡</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">热词唤醒</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">博客</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">双网卡</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">hackintosh</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1251,13 +1269,21 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">VisuAlgo</a>
               </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">CS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">hackintosh</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
         </div>
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br>1、请确保node版本大于6.2<br>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br> npm i hexo-generator-json-content --save<br><br>
+            缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
             3、在根目录_config.yml里添加配置：
 <pre style="font-size: 12px;" q-show="jsonFail">
   jsonContent:

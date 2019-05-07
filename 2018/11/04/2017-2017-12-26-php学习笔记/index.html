@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://Wangsr.cn">
   <title>PHP学习笔记 | Wangsr&#39;s Notes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -38,7 +38,7 @@
   
 
 </head>
-</html>
+
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -159,7 +159,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="posts-2017-2017-12-26-php学习笔记" class="article article-type-posts " itemscope="" itemprop="blogPost">
+            <article id="posts-2017-2017-12-26-php学习笔记" class="article article-type-posts " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -185,7 +185,7 @@
 <a id="more"></a>
 <h3 id="4-获取POST请求的变量"><a href="#4-获取POST请求的变量" class="headerlink" title="4.获取POST请求的变量"></a>4.获取POST请求的变量</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="php"><span class="meta">&lt;?php</span></span></span><br><span class="line"><span class="php">	<span class="keyword">require_once</span>(<span class="string">'../connect.php'</span>);<span class="comment">//连接数据库</span></span></span><br><span class="line"><span class="php">	print_r($_POST);<span class="comment">//输出表单提交的数据</span></span></span><br><span class="line"><span class="php">	<span class="keyword">if</span> (!(<span class="keyword">isset</span>($_POST[<span class="string">'title'</span>])&amp;&amp;(!<span class="keyword">empty</span>($_POST[<span class="string">'title'</span>])))) &#123;<span class="comment">//判断变量是否设置以及是否为空</span></span></span><br><span class="line"><span class="php">		<span class="keyword">echo</span> <span class="string">"&lt;script&gt;alert('标题不能为空');window.location.href='xxxx.html'&lt;/script&gt;"</span>;<span class="comment">//执行js代码</span></span></span><br><span class="line"><span class="php">	&#125;</span></span><br><span class="line"><span class="php">	$title=$_POST[<span class="string">'title'</span>];<span class="comment">//获取表单中name对应的value</span></span></span><br><span class="line"><span class="php">	date_default_timezone_set(<span class="string">'Asia/Shanghai'</span>);<span class="comment">//设置时区	</span></span></span><br><span class="line"><span class="php">	$Date=date(<span class="string">'Y-m-d H:i:s'</span>);<span class="comment">//获取系统时间</span></span></span><br><span class="line"><span class="php"><span class="meta">?&gt;</span></span></span><br><span class="line"><span class="comment">&lt;!-- more --&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="5-MySQL插入语句"><a href="#5-MySQL插入语句" class="headerlink" title="5.MySQL插入语句"></a>5.MySQL插入语句</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="php"><span class="meta">&lt;?php</span></span></span><br><span class="line"><span class="php">	<span class="keyword">require_once</span>(<span class="string">'../connect.php'</span>);<span class="comment">//连接数据库</span></span></span><br><span class="line"><span class="php">	$title=$_POST[<span class="string">'title'</span>];</span></span><br><span class="line"><span class="php">	$insertsql=<span class="string">"insert into test(title) values('$title')"</span>;<span class="comment">//其中test为表名</span></span></span><br><span class="line"><span class="php">	<span class="keyword">echo</span> $insertsql;<span class="comment">//打印sql语句，可以复制到客户端执行检查是否正确</span></span></span><br><span class="line"><span class="php">	<span class="keyword">if</span>(mysqli_query($con,$insertsql))&#123;</span></span><br><span class="line"><span class="php">		<span class="keyword">echo</span> <span class="string">"&lt;script&gt;alert('插入成功')&lt;/script&gt;"</span>;</span></span><br><span class="line"><span class="php">	</span></span><br><span class="line"><span class="php">	&#125;</span></span><br><span class="line"><span class="php">	<span class="keyword">else</span> &#123;	<span class="keyword">echo</span> <span class="string">"&lt;script&gt;alert('插入失败')"</span>;</span></span><br><span class="line"><span class="php">	&#125;</span></span><br><span class="line"><span class="php"><span class="meta">?&gt;</span></span></span><br></pre></td></tr></table></figure>
-<h3 id="6-MySQL查询-实现登录实例"><a href="#6-MySQL查询-实现登录实例" class="headerlink" title="6.MySQL查询(实现登录实例)"></a>6.MySQL查询(实现登录实例)</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="php"><span class="meta">&lt;?php</span></span></span><br><span class="line"><span class="php">	<span class="keyword">require_once</span>(<span class="string">'../connect.php'</span>);</span></span><br><span class="line"><span class="php">	$name=$_POST[<span class="string">'name'</span>];</span></span><br><span class="line"><span class="php">	$password=$_POST[<span class="string">'password'</span>];</span></span><br><span class="line"><span class="php">	$sql=<span class="string">"select * from user where name='$name'"</span>;<span class="comment">//从user的表中查询name为'$name'的全部属性</span></span></span><br><span class="line"><span class="php">	 $query=mysqli_query($con,$sql);<span class="comment">//执行sql语句</span></span></span><br><span class="line"><span class="php">	 $pass=mysqli_fetch_assoc($query);<span class="comment">//结果转化为关联数组</span></span></span><br><span class="line"><span class="php">	 $temp=$pass[<span class="string">'password'</span>];</span></span><br><span class="line"><span class="php">	 <span class="keyword">if</span> ($temp==$password) &#123;</span></span><br><span class="line"><span class="php">	 	setcookie(<span class="string">"username"</span>,$name,time()+<span class="number">3600</span>*<span class="number">3</span>);<span class="comment">//设置cookie</span></span></span><br><span class="line">	 	echo "&lt;script&gt;</span><br><span class="line">	 	alert('登录成功');window.location.href='xxx.html'</span><br><span class="line"><span class="php">	 	&lt;/script&gt;<span class="string">";</span></span></span><br><span class="line"><span class="php">	 &#125;</span></span><br><span class="line"><span class="php">	<span class="keyword">else</span> <span class="keyword">echo</span> <span class="string">"&lt;script&gt;alert('用户名或密码错误，请重试');window.location.href='login.html'&lt;/script&gt;"</span>;</span></span><br><span class="line"><span class="php"><span class="meta">?&gt;</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="6-MySQL查询-实现登录实例"><a href="#6-MySQL查询-实现登录实例" class="headerlink" title="6.MySQL查询(实现登录实例)"></a>6.MySQL查询(实现登录实例)</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="php"><span class="meta">&lt;?php</span></span></span><br><span class="line"><span class="php">	<span class="keyword">require_once</span>(<span class="string">'../connect.php'</span>);</span></span><br><span class="line"><span class="php">	$name=$_POST[<span class="string">'name'</span>];</span></span><br><span class="line"><span class="php">	$password=$_POST[<span class="string">'password'</span>];</span></span><br><span class="line"><span class="php">	$sql=<span class="string">"select * from user where name='$name'"</span>;<span class="comment">//从user的表中查询name为'$name'的全部属性</span></span></span><br><span class="line"><span class="php">	 $query=mysqli_query($con,$sql);<span class="comment">//执行sql语句</span></span></span><br><span class="line"><span class="php">	 $pass=mysqli_fetch_assoc($query);<span class="comment">//结果转化为关联数组</span></span></span><br><span class="line"><span class="php">	 $temp=$pass[<span class="string">'password'</span>];</span></span><br><span class="line"><span class="php">	 <span class="keyword">if</span> ($temp==$password) &#123;</span></span><br><span class="line"><span class="php">	 	setcookie(<span class="string">"username"</span>,$name,time()+<span class="number">3600</span>*<span class="number">3</span>);<span class="comment">//设置cookie</span></span></span><br><span class="line"><span class="php">	 	<span class="keyword">echo</span> <span class="string">"&lt;script&gt;</span></span></span><br><span class="line"><span class="php">	 	alert(<span class="string">'登录成功'</span>);window.location.href=<span class="string">'xxx.html'</span></span></span><br><span class="line"><span class="php">	 	&lt;/script&gt;<span class="string">";</span></span></span><br><span class="line"><span class="php">	 &#125;</span></span><br><span class="line"><span class="php">	<span class="keyword">else</span> <span class="keyword">echo</span> <span class="string">"&lt;script&gt;alert('用户名或密码错误，请重试');window.location.href='login.html'&lt;/script&gt;"</span>;</span></span><br><span class="line"><span class="php"><span class="meta">?&gt;</span></span></span><br></pre></td></tr></table></figure>
 <h3 id="7-MySQL删除"><a href="#7-MySQL删除" class="headerlink" title="7.MySQL删除"></a>7.MySQL删除</h3><figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name">highlight</span> php %&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml"><span class="php"><span class="meta">&lt;?php</span></span></span></span><br><span class="line"><span class="xml">	require_once('../connect.php');</span></span><br><span class="line"><span class="xml">	$id=$_GET['id'];</span></span><br><span class="line"><span class="xml">	$deletsql="delete from test where id=$id";</span></span><br><span class="line"><span class="xml">	if (mysqli_query($con,$deletsql)) &#123;</span></span><br><span class="line"><span class="xml">		echo "<span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="actionscript">alert(<span class="string">'删除成功'</span>)</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>";&#125;</span></span><br><span class="line"><span class="xml">	else&#123;echo "<span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="actionscript">alert(<span class="string">'删除失败'</span>)</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>";&#125;</span></span><br><span class="line"><span class="xml">?&gt;</span></span><br><span class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name">endhighlight</span> %&#125;</span><span class="xml"></span></span><br></pre></td></tr></table></figure>
 <h3 id="8-设置及获取cookie"><a href="#8-设置及获取cookie" class="headerlink" title="8.设置及获取cookie"></a>8.设置及获取cookie</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">setcookie(<span class="string">"username"</span>,$name,time()+<span class="number">3600</span>*<span class="number">3</span>);<span class="comment">//设置cookie</span></span><br><span class="line"><span class="meta">&lt;?php</span> <span class="keyword">echo</span> $_COOKIE[<span class="string">"username"</span>]<span class="meta">?&gt;</span>;<span class="comment">//获取cookie</span></span><br></pre></td></tr></table></figure>
 <h3 id="注："><a href="#注：" class="headerlink" title="注："></a>注：</h3><h4 id="1-php是在服务端解析的，所以需要在服务端配置php环境。"><a href="#1-php是在服务端解析的，所以需要在服务端配置php环境。" class="headerlink" title="1.php是在服务端解析的，所以需要在服务端配置php环境。"></a>1.php是在服务端解析的，所以需要在服务端配置php环境。</h4><h4 id="2-html可以嵌套php语句但文件后缀需命名为-php-否则不解析。"><a href="#2-html可以嵌套php语句但文件后缀需命名为-php-否则不解析。" class="headerlink" title="2.html可以嵌套php语句但文件后缀需命名为.php,否则不解析。"></a>2.html可以嵌套php语句但文件后缀需命名为.php,否则不解析。</h4><h4 id="3-php5版本以后连数据库用的是mysqli和PDO-需要在配置文件中打开相应扩展。"><a href="#3-php5版本以后连数据库用的是mysqli和PDO-需要在配置文件中打开相应扩展。" class="headerlink" title="3.php5版本以后连数据库用的是mysqli和PDO,需要在配置文件中打开相应扩展。"></a>3.php5版本以后连数据库用的是mysqli和PDO,需要在配置文件中打开相应扩展。</h4>
@@ -307,18 +307,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/11/04/2017-2017-12-17-Jekyll安装/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/11/04/2017-2017-12-16-常用Markdown语法/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Windows上安装Jekyll
+          常用Markdown语法
         
       </div>
     </a>
   
   
-    <a href="/2018/11/04/2017-2017-12-18-JS常见问题及解决办法/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">网页编程常见问题及解决办法</div>
+    <a href="/2018/11/04/2017-2017-12-29-Java利用JDBC连接SQLserver数据库/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java利用JDBC连接SQLserver数据库及简单的增删改操作</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -448,6 +448,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">JS</a>
               </li>
              
@@ -456,23 +460,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color4">Gunicorn</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Nginx</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Upload & download Files</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Jekyll安装</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">CS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Jekyll</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">搭建博客</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -481,10 +485,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">数据库</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Jekyll安装</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -500,6 +500,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Jekyll</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">搭建博客</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
@@ -512,10 +520,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">python虚拟环境</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">MONGODB</a>
               </li>
              
@@ -524,11 +528,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">matplot</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">词频</a>
+                <a href="javascript:void(0)" class="js-tag color1">python虚拟环境</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -540,11 +540,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">字符画</a>
+                <a href="javascript:void(0)" class="js-tag color3">词频</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">SSH</a>
+                <a href="javascript:void(0)" class="js-tag color3">matplot</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -556,19 +556,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">字符画</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hibernate</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">openpyxl</a>
+                <a href="javascript:void(0)" class="js-tag color4">SSH</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">struts2</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Liunx</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -577,6 +577,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">网线直连树莓派</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">openpyxl</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Liunx</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -592,19 +600,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">双网卡</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">热词唤醒</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">博客</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">双网卡</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">hackintosh</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -622,13 +626,21 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">VisuAlgo</a>
               </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">CS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">hackintosh</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
         </div>
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br>1、请确保node版本大于6.2<br>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br> npm i hexo-generator-json-content --save<br><br>
+            缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
             3、在根目录_config.yml里添加配置：
 <pre style="font-size: 12px;" q-show="jsonFail">
   jsonContent:
