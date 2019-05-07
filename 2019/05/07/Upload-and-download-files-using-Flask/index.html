@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Wangsr&#39;s Notes">
 <meta property="og:description" content="This post will show how to use Flask and JS to upload and download files. upload filesfront-end partif the files that need to be upload are in the form,we can code like this:12345678var form = new For">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-07T03:09:49.920Z">
+<meta property="og:updated_time" content="2019-05-07T03:16:10.460Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Upload and download files using Flask">
 <meta name="twitter:description" content="This post will show how to use Flask and JS to upload and download files. upload filesfront-end partif the files that need to be upload are in the form,we can code like this:12345678var form = new For">
@@ -187,7 +187,7 @@
 <h3 id="on-the-front-end"><a href="#on-the-front-end" class="headerlink" title="on the front-end"></a>on the front-end</h3><p>we can create an “a” tag whose href is the the url to get file on the server,then click it and then the<br>browser will begin dowload the file.<br><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="built_in">document</span>.createElement(<span class="string">'a'</span>);</span><br><span class="line">a.setAttribute(<span class="string">'download'</span>, <span class="string">''</span>);</span><br><span class="line">a.href = <span class="string">"&#123;&#123; url_for('mark_blueprint.getDownloadFile') &#125;&#125;?path="</span> + <span class="string">"filepath"</span>;</span><br><span class="line">a.click();</span><br></pre></td></tr></table></figure></p>
 <h2 id="others"><a href="#others" class="headerlink" title="others"></a>others</h2><h3 id="Flask-get-parameters"><a href="#Flask-get-parameters" class="headerlink" title="Flask get parameters"></a>Flask get parameters</h3><ul>
 <li><code>get</code> method:<code>request.args.get(&#39;parameter_name&#39;)</code></li>
-<li><code>post</code> method<br>if args’s type is a file: <code>request.files.get(&#39;name&#39;)</code><br>others:`request.form.get(‘name’)</li>
+<li><code>post</code> method<br>if args’s type is a file: <code>request.files.get(&#39;name&#39;)</code><br>others:<code>request.form.get(&#39;name&#39;)</code></li>
 </ul>
 
       
@@ -318,6 +318,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#upload-files"><span class="toc-number">1.</span> <span class="toc-text">upload files</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#front-end-part"><span class="toc-number">1.1.</span> <span class="toc-text">front-end part</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#on-the-server"><span class="toc-number">1.2.</span> <span class="toc-text">on the server</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#download-files"><span class="toc-number">2.</span> <span class="toc-text">download files</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#on-the-server-1"><span class="toc-number">2.1.</span> <span class="toc-text">on the server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#on-the-front-end"><span class="toc-number">2.2.</span> <span class="toc-text">on the front-end</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#others"><span class="toc-number">3.</span> <span class="toc-text">others</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Flask-get-parameters"><span class="toc-number">3.1.</span> <span class="toc-text">Flask get parameters</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>

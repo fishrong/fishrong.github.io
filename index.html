@@ -187,7 +187,7 @@
 <h3 id="on-the-front-end"><a href="#on-the-front-end" class="headerlink" title="on the front-end"></a>on the front-end</h3><p>we can create an “a” tag whose href is the the url to get file on the server,then click it and then the<br>browser will begin dowload the file.<br><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="built_in">document</span>.createElement(<span class="string">'a'</span>);</span><br><span class="line">a.setAttribute(<span class="string">'download'</span>, <span class="string">''</span>);</span><br><span class="line">a.href = <span class="string">"&#123;&#123; url_for('mark_blueprint.getDownloadFile') &#125;&#125;?path="</span> + <span class="string">"filepath"</span>;</span><br><span class="line">a.click();</span><br></pre></td></tr></table></figure></p>
 <h2 id="others"><a href="#others" class="headerlink" title="others"></a>others</h2><h3 id="Flask-get-parameters"><a href="#Flask-get-parameters" class="headerlink" title="Flask get parameters"></a>Flask get parameters</h3><ul>
 <li><code>get</code> method:<code>request.args.get(&#39;parameter_name&#39;)</code></li>
-<li><code>post</code> method<br>if args’s type is a file: <code>request.files.get(&#39;name&#39;)</code><br>others:`request.form.get(‘name’)</li>
+<li><code>post</code> method<br>if args’s type is a file: <code>request.files.get(&#39;name&#39;)</code><br>others:<code>request.form.get(&#39;name&#39;)</code></li>
 </ul>
 
       
