@@ -159,6 +159,166 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-prevent-multiple-binding-of-click-events-in-js" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/07/prevent-multiple-binding-of-click-events-in-js/">prevent multiple binding of click events with JQuery</a>
+    </h1>
+  
+
+        
+        <a href="/2019/05/07/prevent-multiple-binding-of-click-events-in-js/" class="archive-article-date">
+  	<time datetime="2019-05-07T06:28:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>   sometimes we will code like this to add a click event listener in js:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'selector'</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="keyword">do</span> something...&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>However,when this code is executed multiple times,the click event listener will be add repeatedly.<br>so,the method to prevent it is unbind it  before add this click event.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'selector'</span>).off(<span class="string">'click'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;<span class="keyword">do</span> something...&#125;);</span><br></pre></td></tr></table></figure></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">JQuery</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">click_envent</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/05/07/prevent-multiple-binding-of-click-events-in-js/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-zip-and-unzip-files-in-python" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/07/zip-and-unzip-files-in-python/">zip and unzip files in python</a>
+    </h1>
+  
+
+        
+        <a href="/2019/05/07/zip-and-unzip-files-in-python/" class="archive-article-date">
+  	<time datetime="2019-05-07T06:12:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <pre><code>using `zipfile` modules in python can easy to zip or unzip files
+</code></pre><h2 id="zip-files"><a href="#zip-files" class="headerlink" title="zip files"></a>zip files</h2><p>  Use the following codes can zip folds and files.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">def zip_file(src_dir,filename):</span><br><span class="line">    zip_name = filename</span><br><span class="line">    z = zipfile.ZipFile(zip_name,&apos;w&apos;,zipfile.ZIP_DEFLATED)</span><br><span class="line">    for dirpath, dirnames, filenames in os.walk(src_dir):</span><br><span class="line">        fpath = dirpath.replace(src_dir,&apos;&apos;)</span><br><span class="line">        fpath = fpath and fpath + os.sep or &apos;&apos;</span><br><span class="line">        for filename in filenames:</span><br><span class="line">            z.write(os.path.join(dirpath, filename),fpath+filename)</span><br><span class="line">    z.close()</span><br></pre></td></tr></table></figure></p>
+<p><code>src_dir</code>:the path of fold that need to zip,<code>filename</code>:path and name to save the zip result.</p>
+<h2 id="unzip-files"><a href="#unzip-files" class="headerlink" title="unzip files"></a>unzip files</h2><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">zipFile = zipfile.ZipFile(<span class="string">"zip_filename"</span>)</span><br><span class="line">zipFile.extractall(<span class="string">"path_to_result"</span>)</span><br><span class="line">zipFile.close()</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">zip&unzip</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/05/07/zip-and-unzip-files-in-python/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Upload-and-download-files-using-Flask" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -821,175 +981,6 @@
 
 
   
-    <article id="post-2018-2018-12-15-算法可视化的Android实现" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/15/2018-2018-12-15-算法可视化的Android实现/">算法可视化的Android实现</a>
-    </h1>
-  
-
-        
-        <a href="/2018/12/15/2018-2018-12-15-算法可视化的Android实现/" class="archive-article-date">
-  	<time datetime="2018-12-15T00:57:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="算法可视化的Android实现"><a href="#算法可视化的Android实现" class="headerlink" title="算法可视化的Android实现"></a>算法可视化的Android实现</h1><p>此项目主要是对一些经典的算法在Android上实现可视化的运行过程。项目目的是为了帮助理解算法的运行过程，所以app实现的是对数据类型为整型的数组排序，实际中的算法可以是对任何实现Comparable接口的数据类型进行排序,且app 中也没有各算法间的性能优劣进行体现。目前已完成排序的一些经典算法，项目还在完善中。</p>
-<h2 id="已完成算法"><a href="#已完成算法" class="headerlink" title="已完成算法"></a>已完成算法</h2>
-        
-          <a class="article-more-a" href="/2018/12/15/2018-2018-12-15-算法可视化的Android实现/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">算法可视化</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">VisuAlgo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/爬坑小项目//" class="article-tag-list-link color1">爬坑小项目</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/12/15/2018-2018-12-15-算法可视化的Android实现/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2018-2018-12-09-Android初体验-十-layer-list" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/09/2018-2018-12-09-Android初体验-十-layer-list/">Android初体验(十)layer-list</a>
-    </h1>
-  
-
-        
-        <a href="/2018/12/09/2018-2018-12-09-Android初体验-十-layer-list/" class="archive-article-date">
-  	<time datetime="2018-12-09T13:55:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><code>layer-list</code>可用来设计图层，如阴影效果。</p>
-<h1 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h1><p><img src="/images/layerlist.png" alt=""></p>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="php"><span class="meta">&lt;?</span>xml version=<span class="string">"1.0"</span> encoding=<span class="string">"utf-8"</span><span class="meta">?&gt;</span></span></span><br><span class="line"><span class="tag">&lt;<span class="name">layer-list</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 第一层图 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">item</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:left</span>=<span class="string">"50dp"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:top</span>=<span class="string">"50dp"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">shape</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">solid</span> <span class="attr">android:color</span>=<span class="string">"@color/colorPrimary"</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">corners</span> <span class="attr">android:radius</span>=<span class="string">"10dp"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">shape</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">item</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 第二层图 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">item</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:bottom</span>=<span class="string">"50dp"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:right</span>=<span class="string">"50dp"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">shape</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">solid</span> <span class="attr">android:color</span>=<span class="string">"#FFFFFF"</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">corners</span> <span class="attr">android:radius</span>=<span class="string">"10dp"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">shape</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">item</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">layer-list</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>其中，<code>left</code>，<code>top</code>为当前图层距离左边，顶部距离。<code>bottom</code>,<code>right</code>同理。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/12/09/2018-2018-12-09-Android初体验-十-layer-list/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1091,10 +1082,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">JS</a>
               </li>
              
@@ -1103,11 +1090,31 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Gunicorn</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Nginx</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">zip&unzip</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">JQuery</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">click_envent</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1120,6 +1127,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Jekyll</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">搭建博客</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1140,18 +1155,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">SQLserver</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Jekyll</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">搭建博客</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1203,11 +1206,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">SSH</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hibernate</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">SSH</a>
+                <a href="javascript:void(0)" class="js-tag color4">openpyxl</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1219,19 +1226,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">WiFi热点</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">网线直连树莓派</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">openpyxl</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Liunx</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">WiFi热点</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1243,11 +1246,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">双网卡</a>
+                <a href="javascript:void(0)" class="js-tag color5">热词唤醒</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">热词唤醒</a>
+                <a href="javascript:void(0)" class="js-tag color4">双网卡</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -159,6 +159,194 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="posts-2018-2018-03-27-统计好友QQ动态词频" class="article article-type-posts  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/04/2018-2018-03-27-统计好友QQ动态词频/">统计QQ好友说说词频</a>
+    </h1>
+  
+
+        
+        <a href="/2018/11/04/2018-2018-03-27-统计好友QQ动态词频/" class="archive-article-date">
+  	<time datetime="2018-11-04T03:19:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="整体思路"><a href="#整体思路" class="headerlink" title="整体思路"></a>整体思路</h2><ol>
+<li>1.使用selenium及chrome浏览器自动登录QQ空间。</li>
+<li>2.获取网页源码。</li>
+<li>3.使用BeautifulSoup解析获取相关数据。</li>
+<li>4.使用jieba统计词频。</li>
+<li>5.使用matplotlib 画出柱状图。</li>
+</ol>
+<h3 id="项目GitHub地址"><a href="#项目GitHub地址" class="headerlink" title="项目GitHub地址"></a>项目GitHub地址</h3><p><a href="https://github.com/fishrong/QQzone_spider" target="_blank" rel="noopener">https://github.com/fishrong/QQzone_spider</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">词频</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/爬坑小项目//" class="article-tag-list-link color1">爬坑小项目</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/11/04/2018-2018-03-27-统计好友QQ动态词频/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="posts-2018-2018-03-26-matplotlib画柱状图" class="article article-type-posts  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/04/2018-2018-03-26-matplotlib画柱状图/">使用matplot画柱状图</a>
+    </h1>
+  
+
+        
+        <a href="/2018/11/04/2018-2018-03-26-matplotlib画柱状图/" class="archive-article-date">
+  	<time datetime="2018-11-04T03:19:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">data = [<span class="number">5</span>, <span class="number">20</span>, <span class="number">15</span>, <span class="number">25</span>, <span class="number">10</span>]</span><br><span class="line">labels = [<span class="string">'Tom'</span>, <span class="string">'Dick'</span>, <span class="string">'Harry'</span>, <span class="string">'Slim'</span>, <span class="string">'Jim'</span>]<span class="comment">#横坐标标记</span></span><br><span class="line">xx=range(len(data))</span><br><span class="line">plt.bar(range(len(data)), data, tick_label=labels)</span><br><span class="line"><span class="comment"># bar(left, height, width=0.8, bottom=None, hold=None, **kwargs)  </span></span><br><span class="line"><span class="comment"># 绘制柱形图  </span></span><br><span class="line"><span class="comment"># left:柱形图的x坐标  </span></span><br><span class="line"><span class="comment"># height柱形图的高度，以0.0为基准  </span></span><br><span class="line"><span class="comment"># width:柱形图的宽度，默认0.8  </span></span><br><span class="line"><span class="comment"># facecolor:颜色  </span></span><br><span class="line"><span class="comment"># edgecolor:边框颜色n  </span></span><br><span class="line"><span class="comment"># bottom:表示底部从y轴的哪个刻度开始画  </span></span><br><span class="line"><span class="comment"># yerr:应该是对应的数据的误差范围，加上这个参数，柱状图头部会有一个蓝色的范围标识,标出允许的误差范围,在水平柱状图中这个参数为xerr  </span></span><br><span class="line"><span class="keyword">for</span> x,y <span class="keyword">in</span> zip(xx,data):<span class="comment">#用来在显示每一条的上方显示y值</span></span><br><span class="line">    plt.text(x,y+<span class="number">0.05</span>,<span class="string">'%.2f'</span> % y,ha=<span class="string">'center'</span>,va=<span class="string">'bottom'</span>)</span><br><span class="line">    <span class="comment">#x, y+0.05表示在每一柱子对应x值、y值上方0.05处标注文字说明， '%.0f' % y,代表标注的文字，即每个柱子对应的y值， ha='center', va= 'bottom'代表horizontalalignment（水平对齐）、verticalalignment（垂直对齐）的方式</span></span><br><span class="line">plt.title(<span class="string">'学生成绩'</span>)</span><br><span class="line">plt.savefig(<span class="string">r'F:\QQzone_spider\\'</span> +<span class="string">r'\\'</span>+name+ <span class="string">".png"</span>)<span class="comment">#图片保存路径,在show()之前</span></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<h2 id="效果如图"><a href="#效果如图" class="headerlink" title="效果如图:"></a>效果如图:</h2>
+        
+          <a class="article-more-a" href="/2018/11/04/2018-2018-03-26-matplotlib画柱状图/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">matplot</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/python学习笔记//" class="article-tag-list-link color1">python学习笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/11/04/2018-2018-03-26-matplotlib画柱状图/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="posts-2018-2018-07-29-系统、软件及常用工具" class="article article-type-posts  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -366,99 +554,6 @@
 
 
   
-    <article id="posts-2018-2018-08-19-hibernate常见问题" class="article article-type-posts  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/04/2018-2018-08-19-hibernate常见问题/">hibernate常见问题</a>
-    </h1>
-  
-
-        
-        <a href="/2018/11/04/2018-2018-08-19-hibernate常见问题/" class="archive-article-date">
-  	<time datetime="2018-11-04T03:19:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="报错：java-lang-NoClassDefFoundError-javax-xml-bind-JAXBException（运行环境：jdk10"><a href="#报错：java-lang-NoClassDefFoundError-javax-xml-bind-JAXBException（运行环境：jdk10" class="headerlink" title="报错：java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException（运行环境：jdk10)"></a>报错：java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException（运行环境：jdk10)</h4><p>解决方法一：将JDK换成8或以下<br>解决办法二：导入下面4个jar包</p>
-<ol>
-<li><a href="http://search.maven.org/remotecontent?filepath=com/sun/activation/javax.activation/1.2.0/javax.activation-1.2.0.jar" target="_blank" rel="noopener">javax.activation-1.2.0.jar</a>  </li>
-<li><a href="http://search.maven.org/remotecontent?filepath=javax/xml/bind/jaxb-api/2.3.0/jaxb-api-2.3.0.jar" target="_blank" rel="noopener">jaxb-api-2.3.0.jar</a></li>
-<li><a href="http://search.maven.org/remotecontent?filepath=com/sun/xml/bind/jaxb-core/2.3.0/jaxb-core-2.3.0.jar" target="_blank" rel="noopener">jaxb-core-2.3.0.jar</a></li>
-<li><a href="http://search.maven.org/remotecontent?filepath=com/sun/xml/bind/jaxb-impl/2.3.0/jaxb-impl-2.3.0.jar" target="_blank" rel="noopener">jaxb-impl-2.3.0.jar</a><br>具体原因参考：<a href="https://stackoverflow.com/questions/43574426/how-to-resolve-java-lang-noclassdeffounderror-javax-xml-bind-jaxbexception-in-j" target="_blank" rel="noopener">https://stackoverflow.com/questions/43574426/how-to-resolve-java-lang-noclassdeffounderror-javax-xml-bind-jaxbexception-in-j</a><h3 id="不自动生成更新表"><a href="#不自动生成更新表" class="headerlink" title="不自动生成更新表"></a>不自动生成更新表</h3>配置了<code>&quot;hibernate.hbm2ddl.auto&quot;</code>但却报错<code>ERROR: Table xxxx doesn&#39;t exist</code><br><strong>解决办法</strong> ：更改数据库方言版本为数据库相对应版本，比如8版本的数据库修改为：<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;property name=<span class="string">"hibernate.dialect"</span>&gt;org<span class="selector-class">.hibernate</span><span class="selector-class">.dialect</span><span class="selector-class">.MySQL8Dialect</span>&lt;/property&gt;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h4 id="closing-inbound-before-receiving-peer’s-close-notify"><a href="#closing-inbound-before-receiving-peer’s-close-notify" class="headerlink" title="closing inbound before receiving peer’s close_notify"></a>closing inbound before receiving peer’s close_notify</h4><p>在主配置文件中在url中添加参数<code>?useSSL=false</code></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hibernate</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Java学习笔记//" class="article-tag-list-link color4">Java学习笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/04/2018-2018-08-19-hibernate常见问题/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="posts-2018-2018-06-18-SSH登录服务器" class="article article-type-posts  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -556,19 +651,19 @@
 
 
   
-    <article id="posts-2018-2018-08-19-hibernate的基本使用" class="article article-type-posts  article-index" itemscope itemprop="blogPost">
+    <article id="posts-2018-2018-08-19-hibernate常见问题" class="article article-type-posts  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/04/2018-2018-08-19-hibernate的基本使用/">hibernate的基本使用</a>
+      <a class="article-title" href="/2018/11/04/2018-2018-08-19-hibernate常见问题/">hibernate常见问题</a>
     </h1>
   
 
         
-        <a href="/2018/11/04/2018-2018-08-19-hibernate的基本使用/" class="archive-article-date">
+        <a href="/2018/11/04/2018-2018-08-19-hibernate常见问题/" class="archive-article-date">
   	<time datetime="2018-11-04T03:19:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-04</time>
 </a>
         
@@ -576,22 +671,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>hibernate框架的主要作用就是将面向对象语言转化为操作关系数据的语言。</p>
-<h2 id="一、导入相关jar包"><a href="#一、导入相关jar包" class="headerlink" title="一、导入相关jar包"></a>一、导入相关jar包</h2><ol>
-<li>1、将下载的hibernate解压缩，导入<code>hibernate-release-5.3.5.Final\lib\required</code>目录下的所有jar包。</li>
-<li>2、导入mysql驱动<h2 id="二、编写持久化类"><a href="#二、编写持久化类" class="headerlink" title="二、编写持久化类"></a>二、编写持久化类</h2>注意几点：</li>
-<li>1、类名对应表名</li>
-<li>2、成员变量对应数据库字段</li>
-<li>3、提供getter和setter方法即可<h2 id="三、创建持久类的映射文件"><a href="#三、创建持久类的映射文件" class="headerlink" title="三、创建持久类的映射文件"></a>三、创建持久类的映射文件</h2>注意：</li>
-</ol>
-<ul>
-<li>命名规则为：类名.hbm.xml</li>
-<li>位置：和持久化类同目录下<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="php"><span class="meta">&lt;?</span>xml version=<span class="string">"1.0"</span> encoding=<span class="string">"UTF-8"</span><span class="meta">?&gt;</span></span></span><br><span class="line"><span class="comment">&lt;!-- 以下来自hibernate核心类下的 /org/hibernate/hibernate-mapping-3.0.dtd的约束--&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE hibernate-mapping PUBLIC</span></span><br><span class="line"><span class="meta">    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"</span></span><br><span class="line"><span class="meta">    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">hibernate-mapping</span> <span class="attr">package</span>=<span class="string">"cn.wangsr.domain"</span>&gt;</span><span class="comment">&lt;!-- 包名 --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">class</span> <span class="attr">name</span>=<span class="string">"Customer"</span> <span class="attr">table</span>=<span class="string">"Customer"</span>&gt;</span><span class="comment">&lt;!-- 表名 --&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">id</span> <span class="attr">name</span>=<span class="string">"custId"</span> <span class="attr">column</span>=<span class="string">"cust_id"</span>&gt;</span><span class="tag">&lt;/<span class="name">id</span>&gt;</span><span class="comment">&lt;!-- 主键 --&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"custName"</span> <span class="attr">column</span>=<span class="string">"cust_name"</span>&gt;</span><span class="tag">&lt;/<span class="name">property</span>&gt;</span><span class="comment">&lt;!-- 其它字段 --&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">class</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">hibernate-mapping</span>&gt;</span></span><br></pre></td></tr></table></figure>
+        <h4 id="报错：java-lang-NoClassDefFoundError-javax-xml-bind-JAXBException（运行环境：jdk10"><a href="#报错：java-lang-NoClassDefFoundError-javax-xml-bind-JAXBException（运行环境：jdk10" class="headerlink" title="报错：java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException（运行环境：jdk10)"></a>报错：java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException（运行环境：jdk10)</h4><p>解决方法一：将JDK换成8或以下<br>解决办法二：导入下面4个jar包</p>
+<ol>
+<li><a href="http://search.maven.org/remotecontent?filepath=com/sun/activation/javax.activation/1.2.0/javax.activation-1.2.0.jar" target="_blank" rel="noopener">javax.activation-1.2.0.jar</a>  </li>
+<li><a href="http://search.maven.org/remotecontent?filepath=javax/xml/bind/jaxb-api/2.3.0/jaxb-api-2.3.0.jar" target="_blank" rel="noopener">jaxb-api-2.3.0.jar</a></li>
+<li><a href="http://search.maven.org/remotecontent?filepath=com/sun/xml/bind/jaxb-core/2.3.0/jaxb-core-2.3.0.jar" target="_blank" rel="noopener">jaxb-core-2.3.0.jar</a></li>
+<li><a href="http://search.maven.org/remotecontent?filepath=com/sun/xml/bind/jaxb-impl/2.3.0/jaxb-impl-2.3.0.jar" target="_blank" rel="noopener">jaxb-impl-2.3.0.jar</a><br>具体原因参考：<a href="https://stackoverflow.com/questions/43574426/how-to-resolve-java-lang-noclassdeffounderror-javax-xml-bind-jaxbexception-in-j" target="_blank" rel="noopener">https://stackoverflow.com/questions/43574426/how-to-resolve-java-lang-noclassdeffounderror-javax-xml-bind-jaxbexception-in-j</a><h3 id="不自动生成更新表"><a href="#不自动生成更新表" class="headerlink" title="不自动生成更新表"></a>不自动生成更新表</h3>配置了<code>&quot;hibernate.hbm2ddl.auto&quot;</code>但却报错<code>ERROR: Table xxxx doesn&#39;t exist</code><br><strong>解决办法</strong> ：更改数据库方言版本为数据库相对应版本，比如8版本的数据库修改为：<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;property name=<span class="string">"hibernate.dialect"</span>&gt;org<span class="selector-class">.hibernate</span><span class="selector-class">.dialect</span><span class="selector-class">.MySQL8Dialect</span>&lt;/property&gt;</span><br></pre></td></tr></table></figure>
 </li>
-</ul>
-        
-          <a class="article-more-a" href="/2018/11/04/2018-2018-08-19-hibernate的基本使用/#more">more >></a>
-        
+</ol>
+<h4 id="closing-inbound-before-receiving-peer’s-close-notify"><a href="#closing-inbound-before-receiving-peer’s-close-notify" class="headerlink" title="closing inbound before receiving peer’s close_notify"></a>closing inbound before receiving peer’s close_notify</h4><p>在主配置文件中在url中添加参数<code>?useSSL=false</code></p>
+
       
 
       
@@ -625,7 +714,99 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/04/2018-2018-08-19-hibernate的基本使用/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/11/04/2018-2018-08-19-hibernate常见问题/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="posts-2018-2018-08-25-python操作excel" class="article article-type-posts  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/04/2018-2018-08-25-python操作excel/">python使用openpyxl库操作Excel</a>
+    </h1>
+  
+
+        
+        <a href="/2018/11/04/2018-2018-08-25-python操作excel/" class="archive-article-date">
+  	<time datetime="2018-11-04T03:19:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一、加载表格"><a href="#一、加载表格" class="headerlink" title="一、加载表格"></a>一、加载表格</h2><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wb = openpyxl.load_workbook(<span class="string">"abc.xlsx"</span>)<span class="comment">#加载工作簿</span></span><br><span class="line">ws = wb[<span class="string">"Sheet2"</span>]<span class="comment">#加载工作表</span></span><br></pre></td></tr></table></figure>
+<h2 id="二、读取单元格数值"><a href="#二、读取单元格数值" class="headerlink" title="二、读取单元格数值"></a>二、读取单元格数值</h2><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ws[<span class="string">"A1"</span>].<span class="keyword">value</span><span class="meta">#读取A1单元格的值</span></span><br></pre></td></tr></table></figure>
+<h2 id="三、单元格填充颜色"><a href="#三、单元格填充颜色" class="headerlink" title="三、单元格填充颜色"></a>三、单元格填充颜色</h2><figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fill = PatternFill(fill_type=<span class="string">"solid"</span>, fgColor=<span class="string">"54FF9F"</span>)</span><br><span class="line">ws[<span class="string">"A1"</span>].fill = fill</span><br><span class="line">wb.save(<span class="string">"abc.xlsx"</span>)</span><br></pre></td></tr></table></figure>
+<p>注：操作一次就执行一次<code>save()</code>方法，否则可能只保留最后一次的操作</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">openpyxl</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/python学习笔记//" class="article-tag-list-link color1">python学习笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/11/04/2018-2018-08-25-python操作excel/">展开全文 >></a>
         </p>
       
 
@@ -749,19 +930,19 @@
 
 
   
-    <article id="posts-2018-2018-09-16-树莓派爬坑系列（一）电脑连接树莓派" class="article article-type-posts  article-index" itemscope itemprop="blogPost">
+    <article id="posts-2018-2018-08-19-hibernate的基本使用" class="article article-type-posts  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/04/2018-2018-09-16-树莓派爬坑系列（一）电脑连接树莓派/">树莓派爬坑系列（一）电脑连接树莓派</a>
+      <a class="article-title" href="/2018/11/04/2018-2018-08-19-hibernate的基本使用/">hibernate的基本使用</a>
     </h1>
   
 
         
-        <a href="/2018/11/04/2018-2018-09-16-树莓派爬坑系列（一）电脑连接树莓派/" class="archive-article-date">
+        <a href="/2018/11/04/2018-2018-08-19-hibernate的基本使用/" class="archive-article-date">
   	<time datetime="2018-11-04T03:19:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-04</time>
 </a>
         
@@ -769,22 +950,21 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>电脑连接树莓派有以下几种方式：</p>
+        <p>hibernate框架的主要作用就是将面向对象语言转化为操作关系数据的语言。</p>
+<h2 id="一、导入相关jar包"><a href="#一、导入相关jar包" class="headerlink" title="一、导入相关jar包"></a>一、导入相关jar包</h2><ol>
+<li>1、将下载的hibernate解压缩，导入<code>hibernate-release-5.3.5.Final\lib\required</code>目录下的所有jar包。</li>
+<li>2、导入mysql驱动<h2 id="二、编写持久化类"><a href="#二、编写持久化类" class="headerlink" title="二、编写持久化类"></a>二、编写持久化类</h2>注意几点：</li>
+<li>1、类名对应表名</li>
+<li>2、成员变量对应数据库字段</li>
+<li>3、提供getter和setter方法即可<h2 id="三、创建持久类的映射文件"><a href="#三、创建持久类的映射文件" class="headerlink" title="三、创建持久类的映射文件"></a>三、创建持久类的映射文件</h2>注意：</li>
+</ol>
 <ul>
-<li>1、ssh连接</li>
-<li>2、Windows远程桌面连接</li>
-<li>3、VNC连接</li>
-</ul>
-<p>不管是以上哪一种都需要先知道树莓派ip。</p>
-<h2 id="树莓派IP的获取"><a href="#树莓派IP的获取" class="headerlink" title="树莓派IP的获取"></a>树莓派IP的获取</h2><ul>
-<li>第一种方式：与电脑连接在同一个路由器或者wifi下。然后通过路由器查看树莓派IP（带屏幕的可在树莓派上查看）。<br>前提是在该网络中没有对一些端口（如3389、22）屏蔽，这种方法才适用。</li>
-<li>第二种方式：网线直连。用网线直接连接树莓派和电脑，将电脑的无线的网络分享到以太网还能实现访问互联网。<br>命令行使用<code>arp -a</code>来查看树莓派ip,其IP在192.168.137.1接口下，一般为第一个。如图：<br><img src="/images/arp.png" alt="arp -a"><br>注意：使用网线直连，默认树莓派为自动获取ip,也就意味着，ip地址是动态变化的。可以使用以下方法设置静态ip:</li>
-<li>1、第一种方式：树莓派图形界面进行配置网络参数</li>
-<li>2、第二种方式：编辑配置文件<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="keyword">vim</span> /etc/dhcpcd.<span class="keyword">conf</span></span><br></pre></td></tr></table></figure>
+<li>命名规则为：类名.hbm.xml</li>
+<li>位置：和持久化类同目录下<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="php"><span class="meta">&lt;?</span>xml version=<span class="string">"1.0"</span> encoding=<span class="string">"UTF-8"</span><span class="meta">?&gt;</span></span></span><br><span class="line"><span class="comment">&lt;!-- 以下来自hibernate核心类下的 /org/hibernate/hibernate-mapping-3.0.dtd的约束--&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE hibernate-mapping PUBLIC</span></span><br><span class="line"><span class="meta">    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"</span></span><br><span class="line"><span class="meta">    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">hibernate-mapping</span> <span class="attr">package</span>=<span class="string">"cn.wangsr.domain"</span>&gt;</span><span class="comment">&lt;!-- 包名 --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">class</span> <span class="attr">name</span>=<span class="string">"Customer"</span> <span class="attr">table</span>=<span class="string">"Customer"</span>&gt;</span><span class="comment">&lt;!-- 表名 --&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">id</span> <span class="attr">name</span>=<span class="string">"custId"</span> <span class="attr">column</span>=<span class="string">"cust_id"</span>&gt;</span><span class="tag">&lt;/<span class="name">id</span>&gt;</span><span class="comment">&lt;!-- 主键 --&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"custName"</span> <span class="attr">column</span>=<span class="string">"cust_name"</span>&gt;</span><span class="tag">&lt;/<span class="name">property</span>&gt;</span><span class="comment">&lt;!-- 其它字段 --&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">class</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">hibernate-mapping</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
         
-          <a class="article-more-a" href="/2018/11/04/2018-2018-09-16-树莓派爬坑系列（一）电脑连接树莓派/#more">more >></a>
+          <a class="article-more-a" href="/2018/11/04/2018-2018-08-19-hibernate的基本使用/#more">more >></a>
         
       
 
@@ -798,11 +978,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">树莓派</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">网线直连树莓派</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hibernate</a>
         		</li>
       		
 		</ul>
@@ -814,7 +990,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/树莓派爬坑系列//" class="article-tag-list-link color3">树莓派爬坑系列</a>
+        			<a href="/categories/Java学习笔记//" class="article-tag-list-link color4">Java学习笔记</a>
         		</li>
       		
 		</ul>
@@ -823,199 +999,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/04/2018-2018-09-16-树莓派爬坑系列（一）电脑连接树莓派/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="posts-2018-2018-08-25-python操作excel" class="article article-type-posts  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/04/2018-2018-08-25-python操作excel/">python使用openpyxl库操作Excel</a>
-    </h1>
-  
-
-        
-        <a href="/2018/11/04/2018-2018-08-25-python操作excel/" class="archive-article-date">
-  	<time datetime="2018-11-04T03:19:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="一、加载表格"><a href="#一、加载表格" class="headerlink" title="一、加载表格"></a>一、加载表格</h2><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wb = openpyxl.load_workbook(<span class="string">"abc.xlsx"</span>)<span class="comment">#加载工作簿</span></span><br><span class="line">ws = wb[<span class="string">"Sheet2"</span>]<span class="comment">#加载工作表</span></span><br></pre></td></tr></table></figure>
-<h2 id="二、读取单元格数值"><a href="#二、读取单元格数值" class="headerlink" title="二、读取单元格数值"></a>二、读取单元格数值</h2><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ws[<span class="string">"A1"</span>].<span class="keyword">value</span><span class="meta">#读取A1单元格的值</span></span><br></pre></td></tr></table></figure>
-<h2 id="三、单元格填充颜色"><a href="#三、单元格填充颜色" class="headerlink" title="三、单元格填充颜色"></a>三、单元格填充颜色</h2><figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fill = PatternFill(fill_type=<span class="string">"solid"</span>, fgColor=<span class="string">"54FF9F"</span>)</span><br><span class="line">ws[<span class="string">"A1"</span>].fill = fill</span><br><span class="line">wb.save(<span class="string">"abc.xlsx"</span>)</span><br></pre></td></tr></table></figure>
-<p>注：操作一次就执行一次<code>save()</code>方法，否则可能只保留最后一次的操作</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">openpyxl</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/python学习笔记//" class="article-tag-list-link color1">python学习笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/04/2018-2018-08-25-python操作excel/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="posts-2018-2018-09-08-Linux常用操作" class="article article-type-posts  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/04/2018-2018-09-08-Linux常用操作/">Linux 常用操作</a>
-    </h1>
-  
-
-        
-        <a href="/2018/11/04/2018-2018-09-08-Linux常用操作/" class="archive-article-date">
-  	<time datetime="2018-11-04T03:19:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="一、python相关"><a href="#一、python相关" class="headerlink" title="一、python相关"></a>一、python相关</h2><ul>
-<li><p>1、安装python包</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 <span class="keyword">install</span> baidu-aip</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>2、列出所安装的python包</p>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 <span class="built_in">list</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>3、卸载包</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">pip3</span> unstall baidu-aip</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>4、使用python模拟键盘输入（输入快捷键）<br>安装PyUserInput包</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 <span class="keyword">install</span> PyUserInput</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-        
-          <a class="article-more-a" href="/2018/11/04/2018-2018-09-08-Linux常用操作/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Liunx</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Linux系统相关//" class="article-tag-list-link color5">Linux系统相关</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/04/2018-2018-09-08-Linux常用操作/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/11/04/2018-2018-08-19-hibernate的基本使用/">展开全文 >></a>
         </p>
       
 
@@ -1243,10 +1227,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">JS</a>
               </li>
              
@@ -1255,11 +1235,31 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Gunicorn</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Nginx</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">zip&unzip</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">JQuery</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">click_envent</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1272,6 +1272,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Jekyll</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">搭建博客</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1292,18 +1300,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">SQLserver</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Jekyll</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">搭建博客</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1355,11 +1351,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">SSH</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hibernate</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">SSH</a>
+                <a href="javascript:void(0)" class="js-tag color4">openpyxl</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1371,19 +1371,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">WiFi热点</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">网线直连树莓派</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">openpyxl</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Liunx</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">WiFi热点</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1395,11 +1391,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">双网卡</a>
+                <a href="javascript:void(0)" class="js-tag color5">热词唤醒</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">热词唤醒</a>
+                <a href="javascript:void(0)" class="js-tag color4">双网卡</a>
               </li>
              
               <li class="article-tag-list-item">

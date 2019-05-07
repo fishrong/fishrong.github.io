@@ -159,6 +159,210 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="posts-2018-2018-09-16-树莓派爬坑系列（一）电脑连接树莓派" class="article article-type-posts  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/04/2018-2018-09-16-树莓派爬坑系列（一）电脑连接树莓派/">树莓派爬坑系列（一）电脑连接树莓派</a>
+    </h1>
+  
+
+        
+        <a href="/2018/11/04/2018-2018-09-16-树莓派爬坑系列（一）电脑连接树莓派/" class="archive-article-date">
+  	<time datetime="2018-11-04T03:19:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>电脑连接树莓派有以下几种方式：</p>
+<ul>
+<li>1、ssh连接</li>
+<li>2、Windows远程桌面连接</li>
+<li>3、VNC连接</li>
+</ul>
+<p>不管是以上哪一种都需要先知道树莓派ip。</p>
+<h2 id="树莓派IP的获取"><a href="#树莓派IP的获取" class="headerlink" title="树莓派IP的获取"></a>树莓派IP的获取</h2><ul>
+<li>第一种方式：与电脑连接在同一个路由器或者wifi下。然后通过路由器查看树莓派IP（带屏幕的可在树莓派上查看）。<br>前提是在该网络中没有对一些端口（如3389、22）屏蔽，这种方法才适用。</li>
+<li>第二种方式：网线直连。用网线直接连接树莓派和电脑，将电脑的无线的网络分享到以太网还能实现访问互联网。<br>命令行使用<code>arp -a</code>来查看树莓派ip,其IP在192.168.137.1接口下，一般为第一个。如图：<br><img src="/images/arp.png" alt="arp -a"><br>注意：使用网线直连，默认树莓派为自动获取ip,也就意味着，ip地址是动态变化的。可以使用以下方法设置静态ip:</li>
+<li>1、第一种方式：树莓派图形界面进行配置网络参数</li>
+<li>2、第二种方式：编辑配置文件<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="keyword">vim</span> /etc/dhcpcd.<span class="keyword">conf</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+        
+          <a class="article-more-a" href="/2018/11/04/2018-2018-09-16-树莓派爬坑系列（一）电脑连接树莓派/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">树莓派</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">网线直连树莓派</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/树莓派爬坑系列//" class="article-tag-list-link color3">树莓派爬坑系列</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/11/04/2018-2018-09-16-树莓派爬坑系列（一）电脑连接树莓派/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="posts-2018-2018-09-08-Linux常用操作" class="article article-type-posts  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/04/2018-2018-09-08-Linux常用操作/">Linux 常用操作</a>
+    </h1>
+  
+
+        
+        <a href="/2018/11/04/2018-2018-09-08-Linux常用操作/" class="archive-article-date">
+  	<time datetime="2018-11-04T03:19:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一、python相关"><a href="#一、python相关" class="headerlink" title="一、python相关"></a>一、python相关</h2><ul>
+<li><p>1、安装python包</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 <span class="keyword">install</span> baidu-aip</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>2、列出所安装的python包</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 <span class="built_in">list</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>3、卸载包</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">pip3</span> unstall baidu-aip</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>4、使用python模拟键盘输入（输入快捷键）<br>安装PyUserInput包</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 <span class="keyword">install</span> PyUserInput</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+        
+          <a class="article-more-a" href="/2018/11/04/2018-2018-09-08-Linux常用操作/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Liunx</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Linux系统相关//" class="article-tag-list-link color5">Linux系统相关</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/11/04/2018-2018-09-08-Linux常用操作/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="posts-2018-2018-09-30-树莓派爬坑系列（四）安装浏览器驱动" class="article article-type-posts  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -251,6 +455,96 @@
 
 
   
+    <article id="posts-2018-2018-09-19-树莓派爬坑系列（三）使用USB麦克风进行录音" class="article article-type-posts  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/04/2018-2018-09-19-树莓派爬坑系列（三）使用USB麦克风进行录音/">树莓派爬坑系列（三）使用USB录音设备进行录音</a>
+    </h1>
+  
+
+        
+        <a href="/2018/11/04/2018-2018-09-19-树莓派爬坑系列（三）使用USB麦克风进行录音/" class="archive-article-date">
+  	<time datetime="2018-11-04T03:19:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>  树莓派本身不带录音功能，即使连接有麦的耳机也不ok。所以需要另外购买麦克风设备<br>  可以是下面这种：<br>  <img src="/images/micro.jpg" alt="麦克风"></p>
+<h2 id="第一步【连接】"><a href="#第一步【连接】" class="headerlink" title="第一步【连接】"></a>第一步【连接】</h2><pre><code>将麦克风插到树莓派上。
+</code></pre><h2 id="第二步【配置】"><a href="#第二步【配置】" class="headerlink" title="第二步【配置】"></a>第二步【配置】</h2><p>  树莓派没有设置默认的录音设备，而且我们需要使用不同的声卡进行录音和播放。<br>  所以需要进行配置。否则就可能出现下面这种报错：<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">raspberry rec FAIL formats: can't <span class="keyword">open</span> <span class="keyword">input</span> <span class="symbol">`default'</span>: snd_pcm_open <span class="keyword">error</span>: <span class="keyword">No</span> such <span class="keyword">file</span> or directory</span><br></pre></td></tr></table></figure></p>
+<p>首先进入配置文件：<br><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nano ~<span class="string">/.asoundrc</span></span><br></pre></td></tr></table></figure></p>
+        
+          <a class="article-more-a" href="/2018/11/04/2018-2018-09-19-树莓派爬坑系列（三）使用USB麦克风进行录音/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">树莓派</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/树莓派爬坑系列//" class="article-tag-list-link color3">树莓派爬坑系列</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/11/04/2018-2018-09-19-树莓派爬坑系列（三）使用USB麦克风进行录音/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-2018-2018-10-06-Django框架的快速入门笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -314,96 +608,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/11/04/2018-2018-10-06-Django框架的快速入门笔记/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="posts-2018-2018-09-19-树莓派爬坑系列（三）使用USB麦克风进行录音" class="article article-type-posts  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/04/2018-2018-09-19-树莓派爬坑系列（三）使用USB麦克风进行录音/">树莓派爬坑系列（三）使用USB录音设备进行录音</a>
-    </h1>
-  
-
-        
-        <a href="/2018/11/04/2018-2018-09-19-树莓派爬坑系列（三）使用USB麦克风进行录音/" class="archive-article-date">
-  	<time datetime="2018-11-04T03:19:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>  树莓派本身不带录音功能，即使连接有麦的耳机也不ok。所以需要另外购买麦克风设备<br>  可以是下面这种：<br>  <img src="/images/micro.jpg" alt="麦克风"></p>
-<h2 id="第一步【连接】"><a href="#第一步【连接】" class="headerlink" title="第一步【连接】"></a>第一步【连接】</h2><pre><code>将麦克风插到树莓派上。
-</code></pre><h2 id="第二步【配置】"><a href="#第二步【配置】" class="headerlink" title="第二步【配置】"></a>第二步【配置】</h2><p>  树莓派没有设置默认的录音设备，而且我们需要使用不同的声卡进行录音和播放。<br>  所以需要进行配置。否则就可能出现下面这种报错：<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">raspberry rec FAIL formats: can't <span class="keyword">open</span> <span class="keyword">input</span> <span class="symbol">`default'</span>: snd_pcm_open <span class="keyword">error</span>: <span class="keyword">No</span> such <span class="keyword">file</span> or directory</span><br></pre></td></tr></table></figure></p>
-<p>首先进入配置文件：<br><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nano ~<span class="string">/.asoundrc</span></span><br></pre></td></tr></table></figure></p>
-        
-          <a class="article-more-a" href="/2018/11/04/2018-2018-09-19-树莓派爬坑系列（三）使用USB麦克风进行录音/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">树莓派</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/树莓派爬坑系列//" class="article-tag-list-link color3">树莓派爬坑系列</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/04/2018-2018-09-19-树莓派爬坑系列（三）使用USB麦克风进行录音/">展开全文 >></a>
         </p>
       
 
@@ -718,196 +922,6 @@
 
 
   
-    <article id="posts-2017-2017-12-26-php学习笔记" class="article article-type-posts  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/04/2017-2017-12-26-php学习笔记/">PHP学习笔记</a>
-    </h1>
-  
-
-        
-        <a href="/2018/11/04/2017-2017-12-26-php学习笔记/" class="archive-article-date">
-  	<time datetime="2018-11-04T03:19:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-定义常量"><a href="#1-定义常量" class="headerlink" title="1.定义常量"></a>1.定义常量</h3><figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">	<span class="keyword">header</span>(<span class="string">"Content-type:text/html;charset=utf-8"</span>);</span><br><span class="line">	<span class="class"><span class="keyword">define</span></span>(<span class="string">'HOST'</span>, <span class="string">'127.0.0.1'</span>);</span><br><span class="line">	<span class="class"><span class="keyword">define</span></span>(<span class="string">'USERNAME'</span>, <span class="string">'root'</span>);</span><br><span class="line">	<span class="class"><span class="keyword">define</span></span>(<span class="string">'PASSWORD'</span>, <span class="string">'1111'</span>);</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="2-引用其它页面"><a href="#2-引用其它页面" class="headerlink" title="2.引用其它页面"></a>2.引用其它页面</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="php"><span class="meta">&lt;?php</span> </span></span><br><span class="line"><span class="php">	<span class="keyword">require_once</span>(<span class="string">'config.php'</span>);</span></span><br><span class="line"><span class="php"><span class="meta">?&gt;</span></span></span><br></pre></td></tr></table></figure>
-<h3 id="3-连接MySQL数据库并设定数据库字符集"><a href="#3-连接MySQL数据库并设定数据库字符集" class="headerlink" title="3.连接MySQL数据库并设定数据库字符集"></a>3.连接MySQL数据库并设定数据库字符集</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="php"><span class="meta">&lt;?php</span> </span></span><br><span class="line"><span class="php"></span></span><br><span class="line"><span class="php">	<span class="keyword">require_once</span>(<span class="string">'config.php'</span>);</span></span><br><span class="line"><span class="php">    $con=mysqli_connect(HOST,USERNAME,PASSWORD,<span class="string">"mydb"</span>); <span class="comment">//mydb为数据库名</span></span></span><br><span class="line"><span class="php">    mysqli_set_charset($con,<span class="string">"utf8"</span>);</span></span><br><span class="line"><span class="php"></span></span><br><span class="line"><span class="php"><span class="meta">?&gt;</span></span></span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2018/11/04/2017-2017-12-26-php学习笔记/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">php</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">数据库</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/php学习笔记//" class="article-tag-list-link color3">php学习笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/04/2017-2017-12-26-php学习笔记/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="posts-2017-2017-12-29-Java利用JDBC连接SQLserver数据库" class="article article-type-posts  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/04/2017-2017-12-29-Java利用JDBC连接SQLserver数据库/">Java利用JDBC连接SQLserver数据库及简单的增删改操作</a>
-    </h1>
-  
-
-        
-        <a href="/2018/11/04/2017-2017-12-29-Java利用JDBC连接SQLserver数据库/" class="archive-article-date">
-  	<time datetime="2018-11-04T03:19:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><h4 id="1-下载JDBC驱动包。sqljdbc4-jar-也可以从官网下载https-www-microsoft-com-zh-cn-download-details-aspx-id-11774。"><a href="#1-下载JDBC驱动包。sqljdbc4-jar-也可以从官网下载https-www-microsoft-com-zh-cn-download-details-aspx-id-11774。" class="headerlink" title="1.下载JDBC驱动包。sqljdbc4.jar,也可以从官网下载https://www.microsoft.com/zh-cn/download/details.aspx?id=11774。"></a>1.下载JDBC驱动包。<a href="https://pan.baidu.com/s/1kU9JoLD" target="_blank" rel="noopener">sqljdbc4.jar</a>,也可以从官网下载<a href="https://www.microsoft.com/zh-cn/download/details.aspx?id=11774" target="_blank" rel="noopener">https://www.microsoft.com/zh-cn/download/details.aspx?id=11774</a>。</h4><h4 id="2-用sql-server身份验证方式连接数据库。"><a href="#2-用sql-server身份验证方式连接数据库。" class="headerlink" title="2.用sql server身份验证方式连接数据库。"></a>2.用sql server身份验证方式连接数据库。</h4><p>如果安装sql server时是以windows身份验证安装的，没有为sql server添加sql sever身份用户，需要首先添加用户：<br>打开Microsoft SQL Server Management Studio并以windows验证方式登录，左侧的对象资源管理器-&gt;安全性-&gt;登录名，右击sa-&gt;属性，为sa用户添加密码，选择sql server身份验证，在“状态”项中授予连接到数据库和登录启用;</p>
-<h4 id="3-以下代码是基于新建了一个名为test的数据库，在该库下的建了一个student表。"><a href="#3-以下代码是基于新建了一个名为test的数据库，在该库下的建了一个student表。" class="headerlink" title="3.以下代码是基于新建了一个名为test的数据库，在该库下的建了一个student表。"></a>3.以下代码是基于新建了一个名为<code>test</code>的数据库，在该库下的建了一个<code>student</code>表。</h4><p>　　1.表的结构如下：<br><img src="http://onkin31ah.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20171229135531.jpg" alt=""><br>　　2.可以先在表中增加一些值。右键<code>dbo.student</code>这个表-&gt;编辑前200行。<br><img src="http://onkin31ah.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE.jpg" alt=""></p>
-<h2 id="开始编程"><a href="#开始编程" class="headerlink" title="开始编程"></a>开始编程</h2><h4 id="1-打开Eclipse新建一个项目。"><a href="#1-打开Eclipse新建一个项目。" class="headerlink" title="1.打开Eclipse新建一个项目。"></a>1.打开Eclipse新建一个项目。</h4>
-        
-          <a class="article-more-a" href="/2018/11/04/2017-2017-12-29-Java利用JDBC连接SQLserver数据库/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">JDBC</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">SQLserver</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Java学习笔记//" class="article-tag-list-link color4">Java学习笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/04/2017-2017-12-29-Java利用JDBC连接SQLserver数据库/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="posts-2017-2017-12-18-使用Jekyll搭建博客" class="article article-type-posts  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1000,19 +1014,19 @@
 
 
   
-    <article id="posts-2017-2017-12-18-JS常见问题及解决办法" class="article article-type-posts  article-index" itemscope itemprop="blogPost">
+    <article id="posts-2017-2017-12-26-php学习笔记" class="article article-type-posts  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/04/2017-2017-12-18-JS常见问题及解决办法/">网页编程常见问题及解决办法</a>
+      <a class="article-title" href="/2018/11/04/2017-2017-12-26-php学习笔记/">PHP学习笔记</a>
     </h1>
   
 
         
-        <a href="/2018/11/04/2017-2017-12-18-JS常见问题及解决办法/" class="archive-article-date">
+        <a href="/2018/11/04/2017-2017-12-26-php学习笔记/" class="archive-article-date">
   	<time datetime="2018-11-04T03:19:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-04</time>
 </a>
         
@@ -1020,11 +1034,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="一、JS方面"><a href="#一、JS方面" class="headerlink" title="一、JS方面"></a>一、JS方面</h2><h3 id="对象的深拷贝"><a href="#对象的深拷贝" class="headerlink" title="对象的深拷贝"></a>对象的深拷贝</h3><p>简单的实现拷贝后不再指向同一地址：<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">a</span> = &#123;<span class="string">'a'</span>:<span class="number">1</span>&#125;;</span><br><span class="line"><span class="attr">b</span> = JSON.pare(JSON.stringfy(a))</span><br></pre></td></tr></table></figure></p>
-<h3 id="屏蔽移动端弹出菜单"><a href="#屏蔽移动端弹出菜单" class="headerlink" title="屏蔽移动端弹出菜单"></a>屏蔽移动端弹出菜单</h3><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">node.addEventListener(<span class="string">'contextmenu'</span>, <span class="function"><span class="keyword">function</span><span class="params">(e)</span></span>&#123;</span><br><span class="line">  e.preventDefault();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h3 id="js实现移动端长按"><a href="#js实现移动端长按" class="headerlink" title="js实现移动端长按"></a>js实现移动端长按</h3><p>移动端有<code>ontouchstart</code>、<code>ontouchmove</code>、<code>ontouchend</code>三个属性来对点击事件控制。<br>ontouchstart：点击时触发。<br>ontouchmove：手指移动后触发。<br>ontouchend：手指离开时触发。<br><strong>只对移动端生效</strong><br>长按实现思路：<br>  当手指点击时触发<code>ontouchstart</code>,开始计时，如果到了定时时间则判断为长按，执行相应长按函数，否则清除定时。<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>长按测试<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"hit"</span> <span class="attr">style</span>=<span class="string">"width:100%; height:100px; background-color:#CCC;"</span> <span class="attr">ontouchstart</span>=<span class="string">"gtouchstart()"</span> <span class="attr">ontouchmove</span>=<span class="string">"gtouchmove()"</span> <span class="attr">ontouchend</span>=<span class="string">"gtouchend()"</span> <span class="attr">onclick</span>=<span class="string">""</span>&gt;</span>测试区域<span class="tag">&lt;/<span class="name">div</span>&gt;</span>    </span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined">  </span></span><br><span class="line"><span class="actionscript">    <span class="comment">//以下判断语句用来处理手机端出现两次点击问题</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">if</span> ((<span class="built_in">window</span>.screen.availHeight)&gt;<span class="number">710</span>) &#123;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> a = <span class="built_in">document</span>.getElementById(<span class="string">"hit"</span>);</span></span><br><span class="line"><span class="actionscript">            a.setAttribute(<span class="string">"onclick"</span>, <span class="string">"myclick()"</span>);</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="actionscript">    <span class="function"><span class="keyword">function</span> <span class="title">myclick</span><span class="params">()</span></span>&#123;</span></span><br><span class="line"><span class="actionscript">        alert(<span class="string">"电脑点击"</span>);</span></span><br><span class="line"><span class="undefined">    &#125;;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> timeOutEvent=<span class="number">0</span>;<span class="comment">//定时器   </span></span></span><br><span class="line"><span class="actionscript">    <span class="comment">//开始按   </span></span></span><br><span class="line"><span class="actionscript">    <span class="function"><span class="keyword">function</span> <span class="title">gtouchstart</span><span class="params">()</span></span>&#123;   </span></span><br><span class="line"><span class="actionscript">        timeOutEvent = setTimeout(<span class="string">"longPress()"</span>,<span class="number">500</span>);<span class="comment">//这里设置定时器，定义长按500毫秒触发长按事件，时间可以自己改，个人感觉500毫秒非常合适   </span></span></span><br><span class="line"><span class="actionscript">        <span class="keyword">return</span> <span class="literal">false</span>;   </span></span><br><span class="line"><span class="undefined">    &#125;;   </span></span><br><span class="line"><span class="actionscript">    <span class="comment">//手释放，如果在500毫秒内就释放，则取消长按事件，此时可以执行onclick应该执行的事件   </span></span></span><br><span class="line"><span class="actionscript">    <span class="function"><span class="keyword">function</span> <span class="title">gtouchend</span><span class="params">()</span></span>&#123;   </span></span><br><span class="line"><span class="actionscript">        clearTimeout(timeOutEvent);<span class="comment">//清除定时器   </span></span></span><br><span class="line"><span class="actionscript">        <span class="keyword">if</span>(timeOutEvent!=<span class="number">0</span>)&#123;   </span></span><br><span class="line"><span class="actionscript">            <span class="comment">//这里写要执行的内容（尤如onclick事件）   </span></span></span><br><span class="line"><span class="actionscript">            alert(<span class="string">"点击事件触发"</span>);</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">        &#125;  </span></span><br><span class="line"><span class="actionscript">        <span class="keyword">else</span>&#123;</span></span><br><span class="line"><span class="actionscript">            alert(<span class="string">"长按事件结束"</span>);</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="actionscript">        <span class="keyword">return</span> <span class="literal">false</span>;   </span></span><br><span class="line"><span class="undefined">    &#125;;   </span></span><br><span class="line"><span class="actionscript">    <span class="comment">//如果手指有移动，则取消所有事件，此时说明用户只是要移动而不是长按   </span></span></span><br><span class="line"><span class="actionscript">    <span class="function"><span class="keyword">function</span> <span class="title">gtouchmove</span><span class="params">()</span></span>&#123;   </span></span><br><span class="line"><span class="actionscript">        clearTimeout(timeOutEvent);<span class="comment">//清除定时器   </span></span></span><br><span class="line"><span class="undefined">        timeOutEvent = 0;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">document</span>.getElementById(<span class="string">"sum"</span>).innerHTML = <span class="string">"end..."</span>;  </span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">    &#125;;   </span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> i = <span class="number">0</span>;  </span></span><br><span class="line"><span class="actionscript">    <span class="comment">//真正长按后应该执行的内容   </span></span></span><br><span class="line"><span class="actionscript">    <span class="function"><span class="keyword">function</span> <span class="title">longPress</span><span class="params">()</span></span>&#123;   </span></span><br><span class="line"><span class="undefined">        timeOutEvent = 0;   </span></span><br><span class="line"><span class="actionscript">        <span class="comment">//执行长按要执行的内容，如弹出菜单  </span></span></span><br><span class="line"><span class="actionscript">        alert(<span class="string">"长按事件触发"</span>);</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">    &#125;;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>   </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+        <h3 id="1-定义常量"><a href="#1-定义常量" class="headerlink" title="1.定义常量"></a>1.定义常量</h3><figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">	<span class="keyword">header</span>(<span class="string">"Content-type:text/html;charset=utf-8"</span>);</span><br><span class="line">	<span class="class"><span class="keyword">define</span></span>(<span class="string">'HOST'</span>, <span class="string">'127.0.0.1'</span>);</span><br><span class="line">	<span class="class"><span class="keyword">define</span></span>(<span class="string">'USERNAME'</span>, <span class="string">'root'</span>);</span><br><span class="line">	<span class="class"><span class="keyword">define</span></span>(<span class="string">'PASSWORD'</span>, <span class="string">'1111'</span>);</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-引用其它页面"><a href="#2-引用其它页面" class="headerlink" title="2.引用其它页面"></a>2.引用其它页面</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="php"><span class="meta">&lt;?php</span> </span></span><br><span class="line"><span class="php">	<span class="keyword">require_once</span>(<span class="string">'config.php'</span>);</span></span><br><span class="line"><span class="php"><span class="meta">?&gt;</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="3-连接MySQL数据库并设定数据库字符集"><a href="#3-连接MySQL数据库并设定数据库字符集" class="headerlink" title="3.连接MySQL数据库并设定数据库字符集"></a>3.连接MySQL数据库并设定数据库字符集</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="php"><span class="meta">&lt;?php</span> </span></span><br><span class="line"><span class="php"></span></span><br><span class="line"><span class="php">	<span class="keyword">require_once</span>(<span class="string">'config.php'</span>);</span></span><br><span class="line"><span class="php">    $con=mysqli_connect(HOST,USERNAME,PASSWORD,<span class="string">"mydb"</span>); <span class="comment">//mydb为数据库名</span></span></span><br><span class="line"><span class="php">    mysqli_set_charset($con,<span class="string">"utf8"</span>);</span></span><br><span class="line"><span class="php"></span></span><br><span class="line"><span class="php"><span class="meta">?&gt;</span></span></span><br></pre></td></tr></table></figure>
         
-          <a class="article-more-a" href="/2018/11/04/2017-2017-12-18-JS常见问题及解决办法/#more">more >></a>
+          <a class="article-more-a" href="/2018/11/04/2017-2017-12-26-php学习笔记/#more">more >></a>
         
       
 
@@ -1038,11 +1052,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JS</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">php</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">CS</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">数据库</a>
         		</li>
       		
 		</ul>
@@ -1054,7 +1068,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/网页编程常见问题//" class="article-tag-list-link color4">网页编程常见问题</a>
+        			<a href="/categories/php学习笔记//" class="article-tag-list-link color3">php学习笔记</a>
         		</li>
       		
 		</ul>
@@ -1063,7 +1077,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/04/2017-2017-12-18-JS常见问题及解决办法/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/11/04/2017-2017-12-26-php学习笔记/">展开全文 >></a>
         </p>
       
 
@@ -1194,10 +1208,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">JS</a>
               </li>
              
@@ -1206,11 +1216,31 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Gunicorn</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Nginx</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">zip&unzip</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">JQuery</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">click_envent</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1223,6 +1253,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Jekyll</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">搭建博客</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1243,18 +1281,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">SQLserver</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Jekyll</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">搭建博客</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1306,11 +1332,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">SSH</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hibernate</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">SSH</a>
+                <a href="javascript:void(0)" class="js-tag color4">openpyxl</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1322,19 +1352,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">WiFi热点</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">网线直连树莓派</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">openpyxl</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Liunx</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">WiFi热点</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1346,11 +1372,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">双网卡</a>
+                <a href="javascript:void(0)" class="js-tag color5">热词唤醒</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">热词唤醒</a>
+                <a href="javascript:void(0)" class="js-tag color4">双网卡</a>
               </li>
              
               <li class="article-tag-list-item">
